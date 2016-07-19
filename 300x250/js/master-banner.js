@@ -30,12 +30,13 @@ function enablerInitialized() {
 asDynamic.init = function () {
   console.log('asDynamic.init();');
 
-  //oc: switch statement goes here.
+  //oc: handle variations independently.
   switch ('accidentForgiveness1'){//oc: placeholder for now
     case 'accidentForgiveness1': 
       asDynamic.accidentForgivenessInit('option1');
 
       break;
+
     default : console.log('run default ad');
   }//end switch
 };//end asDynamic.init
@@ -70,4 +71,7 @@ asDynamic.init = function () {
 */
 asDynamic.accidentForgivenessInit = function($option){
   console.log('accidentForgivenessInit: option: '+ $option);
-}
+
+  //oc: se
+
+}//end
