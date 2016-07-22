@@ -210,9 +210,14 @@ asDynamic.parseDynamicContent = function(){
   //oc: Usage Example 
   var Is_Default = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default;
 
-  //oc: More Practical Example
-  var img1 = document.getElementById('bgImg1');
+  //oc: Set bg color
+  var bg = document.getElementById('bg');
+  
+  
+  //oc: Map Images
+  var img1 = document.getElementById('img1');
   img1.src = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url;
+
 };//end asDynamic.parseDynamicContent() function
 
 

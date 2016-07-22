@@ -67,7 +67,7 @@ a { text-decoration: none; color:#ffffff; }
 /* COPY */
 #frame1, #frame2, #frame3, #landing, #toBeIn, #ctaCopy {
 	font-family: 'ITC Avant Garde Gothic';	
-	font-weight: 900;
+	font-weight: 700;
 	-webkit-font-smoothing: antialiased; 
 	text-transform: uppercase;
 }

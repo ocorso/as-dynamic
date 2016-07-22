@@ -138,14 +138,13 @@ position: absolute;
 	position: absolute;
 	font-size: 15px;
 	line-height: 16px;
-	font-weight: 500;
-	top:126px;
-	left:300px;
-	z-index: 210;
-	width: 300px;
 	font-family: 'ITC Avant Garde Gothic';	
-	font-weight: 500;
 	-webkit-font-smoothing: antialiased; 
+  font-weight: 700;
+  top:126px;
+  left:300px;
+  z-index: 210;
+  width: 300px;
 
 }
 
@@ -172,18 +171,10 @@ position: absolute;
 	font-size: 20px; 
 	line-height: 20px;
 	margin-left:-13px;
-    left: 0px;
-    bottom: 15px;
-    position: absolute;
+  left: 0px;
+  bottom: 15px;
+  position: absolute;
 }
-
-
-
-/* CTA */
-/* Quote Now */
-/*#btn_cta { font-weight: 700; position: absolute; width: 165px; height:25px; top: 195px; right:-165px; background: #001C71; text-transform: uppercase; padding: 3px 10px 4px 15px; font-size: 20px; font-weight:900; text-align: left; overflow: hidden; z-index: 350; cursor: pointer; opacity: 0 }
-#ctaCopy { position: relative; z-index: 350; color:#fff; }
-#arrow { position: absolute; top:0; left:130px; padding-top: 5px; padding-left: 18px; }*/
 
 /*GET IN*/
 #btn_cta { font-weight: 700; position: absolute; width:120px; height:35px; bottom: 20px; right:-110px; background: #001C71; text-transform: uppercase; padding:0px 10px 0px 10px; font-size:23px; font-weight:900; text-align: left; overflow: hidden; z-index: 350; cursor: pointer; opacity: 0;line-height:35px; }

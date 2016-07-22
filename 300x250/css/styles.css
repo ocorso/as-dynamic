@@ -7,8 +7,6 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 
 #bgImg3 { position: absolute; top:0; left:-300px; }
 
-
-
 .colorIN{ 
 	color:#FF9E16;
 }
@@ -154,9 +152,9 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	font-size: 20px; 
 	line-height: 20px;
 	margin-left:-13px;
-    left: 0px;
-    bottom: 15px;
-    position: absolute;
+  left: 0px;
+  bottom: 15px;
+  position: absolute;
 }
 
 #landing { 
@@ -197,7 +195,7 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	position: absolute;
 	color:white;
 	left: 15px;
-    top: 115px;
+  top: 115px;
 	font-family: 'Allstate Sans';
 	font-size: 17px; 
 	line-height: 17px;
