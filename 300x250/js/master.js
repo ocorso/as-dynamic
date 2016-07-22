@@ -241,9 +241,7 @@ asDynamic.splitText = function(){
     type: "words",
     wordsClass: "word++"
   });
-  landing = new SplitText('#landing', {
-    type: "lines"
-  });
+
   $("#getIN .word2").attr('class', 'whiteIN');
   // $("#frame2 .word5").attr('class', 'colorIN');
 
@@ -396,14 +394,15 @@ asDynamic.accidentForgivenessInit = function() {
     delay: -0.5
   });
 
+  tl.to("#btn_cta", 0.3, {
+    right: -20,
+    repeat:2,
+    yoyo: true,
+    ease: Linear.easeNone
+  });
+
 
 } //end function
-
-asDynamic.bundleSaveInit = function($option) {
-  console.info('asDynamic.bundleSaveInit');
-
-  console.debug('is this working?');
-}; //end function bundleSaveInit
 
 // oc: CTA Mouseover handlers
 var div1 = $("div#btn_cta"),
@@ -423,3 +422,11 @@ div1.mouseleave(function() {
   var currentTime = tn1.time();
   tn1.reverse(currentTime);
 });
+
+asDynamic.bundleSaveInit = function($option) {
+  console.info('asDynamic.bundleSaveInit');
+
+  console.debug('is this working?');
+}; //end function bundleSaveInit
+
+
