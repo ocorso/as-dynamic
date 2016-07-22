@@ -9,9 +9,6 @@ $(document).ready(function() {
     $("#frame1 .word2").attr('class', 'whiteIN');
     $("#frame2 .word5").attr('class', 'colorIN'); 
 
-    
-
-
     CSSPlugin.useSVGTransformAttr = true
 
 

@@ -31,15 +31,16 @@ asDynamic.init = function () {
   console.log('asDynamic.init();');
 
   //oc: handle variations independently.
-  switch ('accidentForgiveness1'){//oc: placeholder for now
-    case 'accidentForgiveness1': 
-      asDynamic.accidentForgivenessInit('option1');
+  switch ('AF'){//oc: placeholder for now
+    case 'AF': 
+      asDynamic.accidentForgivenessInit();
 
       break;
 
     default : console.log('run default ad');
   }//end switch
 };//end asDynamic.init
+
 
 /**
   * This function handles the Accident Forgiveness variations
@@ -69,8 +70,8 @@ asDynamic.init = function () {
           Smaller copy - 18px
 
 */
-asDynamic.accidentForgivenessInit = function($option){
-  console.log('accidentForgivenessInit: option: '+ $option);
+asDynamic.accidentForgivenessInit = function(){
+  console.log('accidentForgivenessInit');
 
   //oc: se
 

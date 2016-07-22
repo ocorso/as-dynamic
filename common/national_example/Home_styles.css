@@ -1,0 +1,334 @@
+#border { position: absolute; width: 298px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
+
+#atAd { position: absolute; width: 300px; height: 250px; overflow: hidden;  } 
+
+#a_atAd { position: absolute; width: 300px; height: 250px; overflow: hidden;  } 
+
+#aAd_header { position: absolute; width: 300px; height: 250px; overflow: hidden;  } 
+
+#bgImg { position: absolute; top:0; z-index: 1 }
+
+#bgImg1 { position: absolute; top:0; }
+
+#bgImg2 { position: absolute; top:0; left:-300px; }
+
+#wrapIN {
+	display: inline-block;
+}
+
+#wrapIN {
+	display: inline-block;
+	color:#F55197;
+}
+
+#flash {
+	position: absolute;
+	width:1000px;
+	height:1000px;
+	z-index: 600;
+	overflow: hidden;
+}
+
+/* logos */
+#Allstate{
+	position: absolute;
+    width: 81px;
+    height: 26px;
+    top: 7px;
+    right: 5px;
+    background-image:url(AllstateDS_H.svg);
+    background-repeat: no-repeat;
+    z-index: 300;
+}
+
+
+#hands{
+	position: absolute;
+	width: 80px;
+    top: 182px;
+    left: 90px;
+    z-index: 300;
+    opacity: 1;
+}
+
+/* landing page styles */
+
+#landing { 
+	position: absolute;
+	width:300px;
+	font-size:41px;
+	line-height: 36px;
+	left:15px;
+	top:35px;
+  	text-align: left;
+	z-index: 210;
+}
+
+#landing .word1 { 
+	display: inline-block;
+	font-size:26px;
+	line-height: 23px;
+}
+
+#onlyAllstate {
+	position: absolute;
+	top:148px;
+	left:300px;
+	z-index: 210;
+}
+
+
+#homeInsurance {
+	display: inline;
+	vertical-align: bottom;
+	font-size: 18px;
+	left: 123px;
+	width: 200px;
+	color:white;
+	font-weight: 500;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+
+#frame1, #frame2, #frame3, #landing, #toBeIn, #ctaCopy {
+	font-family: 'ITC Avant Garde Gothic';	
+	font-weight: 900;
+	-webkit-font-smoothing: antialiased; 
+	text-transform: uppercase;
+}
+
+.colorIN{ 
+	color:#FF9E16;
+}
+.whiteIN{ 
+	color:#FFFFFF;
+}
+
+#frame1{
+	position: absolute;
+	font-size:21px;
+	line-height: 19px; 
+	top:182px;
+	left: 14px;
+  	text-align: left;
+	z-index: 100;
+}
+
+#frame2 { 
+	position: absolute;
+	font-size:21px;
+	line-height: 19px; 
+	top:182px;
+	left: 14px;
+  	text-align: left;
+	z-index: 100;
+}
+
+#frame3{
+	position: absolute;
+	width:270px;
+	font-size:28px;
+	line-height: 25px;
+	left:15px;
+	top:65px;
+  	text-align: left;
+	z-index: 210;
+}
+
+.reg{
+}
+
+#toBeIn { 
+	position: absolute;
+	color:#001C71;
+	font-size:64px;
+	line-height: 53px;
+	width: 200px;
+	left:15px;
+	top:20px;
+  	font-weight: 900;
+  	text-align: left;
+	-webkit-font-smoothing: antialiased; 
+	text-transform: uppercase;
+	z-index: 210;
+}
+
+.in1, .in2, .in3, .in4, .in5 {
+	opacity: 0;
+}
+.apostrophe {
+	margin-left:-5px;
+	margin-right:5px;
+	font-style: italic;
+}
+#bkgReveal {
+	position: absolute;
+	width: 500px;
+	height:500px;
+	-ms-transform: rotate(-35deg); /* IE 9 */
+    -webkit-transform: rotate(-35deg); /* Chrome, Safari, Opera */
+    transform: rotate(-35deg);
+    left: -100px;
+    top:-200px;
+}
+
+/* CTA */
+#btn_cta { font-weight: 700; position: absolute; width: 165px; height:25px; top: 195px; right:-165px; background: #001C71; text-transform: uppercase; padding: 3px 10px 4px 15px; font-size: 20px; font-weight:900; text-align: left; overflow: hidden; z-index: 350; cursor: pointer; opacity: 0 }
+#ctaCopy { position: relative; z-index: 350; color:#fff; }
+#arrow { position: absolute; top:0; left:130px; padding-top: 5px; padding-left: 18px; }
+
+
+/* AUTO */
+#a_Allstate{
+	position: absolute;
+    width: 25%;
+    top: 8px;
+    right: 5px;
+    z-index: 103;
+    background-image:url(AllstateDS.svg);
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 300;
+}
+
+#a_hands{
+	position: absolute;
+	width: 80px;
+    top: 172px;
+    left: 90px;
+    z-index: 300;
+    opacity: 1;
+}
+
+#a_onlyAllstate {
+	position: absolute;
+	top:100px;
+	left:310px;
+	z-index: 210;
+
+}
+#onlyAllstate img{
+
+}
+#a_onlyfrom {
+	font-size: 18px;
+	line-height: 24px;
+	color:white;
+	font-weight: 500;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+#a_frame1, #a_frame2, #a_frame3, #a_landing, #a_toBeIn, #a_ctaCopy {
+	font-family: 'ITC Avant Garde Gothic';	
+	font-weight: 900;
+	-webkit-font-smoothing: antialiased; 
+	text-transform: uppercase;
+}
+
+#a_frame3 .word8{
+	font-size: 20px;
+	margin-left: -13px;
+	vertical-align: super;
+	line-height:0;
+}
+
+#a_landing .word4{
+	font-size: 20px;
+	margin-left: -13px;
+	vertical-align: super;
+	line-height:0;
+}
+
+#a_frame1{
+	position: absolute;
+	width:230px;
+	font-size:45px;
+	line-height: 40px;
+	left:15px;
+	top:50px;
+  	font-weight: 900;
+  	text-align: left;
+	-webkit-font-smoothing: antialiased; 
+	z-index: 100;
+	text-transform: uppercase;
+}
+
+
+#a_frame2 { 
+	position: absolute;
+	width:230px;
+	font-size:23px;
+	line-height: 20px; 
+	top:150px;
+	left:13px;
+  	font-weight: 900;
+  	text-align: left;
+	-webkit-font-smoothing: antialiased; 
+	z-index: 100;
+	text-transform: uppercase;
+}
+
+#a_bkgReveal {
+	position: absolute;
+	width: 500px;
+	height:500px;
+	-ms-transform: rotate(-35deg); /* IE 9 */
+    -webkit-transform: rotate(-35deg); /* Chrome, Safari, Opera */
+    transform: rotate(-35deg);
+    left: -100px;
+    top:-200px;
+    z-index: 20;
+
+}
+
+#a_landing { 
+	position: absolute;
+	font-size:41px;
+	line-height: 35px;
+	width: 200px;
+	left:15px;
+	top:38px;
+  	font-weight: 900;
+  	text-align: left;
+	-webkit-font-smoothing: antialiased; 
+	z-index: 110;
+	text-transform: uppercase;
+	z-index: 210;
+}
+
+.reg{
+	font-family: 'Allstate Sans';
+	font-size: 15px; 
+	line-height: 15px;
+	margin-left:-8px;
+	left: 0px;
+    bottom: 10px;
+    position: absolute;
+
+}
+
+.reg2{
+	font-family: 'Allstate Sans';
+    font-size: 23px;
+    line-height: 23px;
+    margin-left: -13px;
+    left: 0px;
+    bottom: 14px;
+    position: absolute;
+}
+
+#a_toBeIn { 
+	position: absolute;
+	font-size:42px;
+	line-height: 35px;
+	width: 200px;
+	left:15px;
+	top:20px;
+  	text-align: left;
+	z-index: 210;
+}
+
+/* CTA */
+#a_btn_cta { font-weight: 700; position: absolute; width: 165px; height:25px; top: 195px; right:-165px; background: #001C71; text-transform: uppercase; padding: 3px 10px 4px 15px; font-size: 20px; font-weight:900; text-align: left; overflow: hidden; z-index: 350; cursor: pointer; opacity: 0 }
+#a_ctaCopy { position: relative; z-index: 350; color:#fff; }
+#a_arrow { position: absolute; top:0; left:130px; padding-top: 5px; padding-left: 18px; }

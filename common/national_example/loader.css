@@ -1,0 +1,20 @@
+#Home, #Auto{
+  display: none;
+}
+#frame1, #frame2, #landing, #hands, #a_frame1, #a_frame2, #a_landing{
+  opacity: 0;
+}
+#loader{
+    width: 300px;
+    height: 250px;
+    z-index: 1000;
+    background-color: white;
+    position: relative;
+/*    border: 1px solid black;*/
+}
+#loader img{
+  display: block;
+  margin: 35% auto;
+  width: 48px;
+  height: 48px;
+}

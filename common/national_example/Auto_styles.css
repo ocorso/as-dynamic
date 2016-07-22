@@ -1,0 +1,215 @@
+/* constant */
+body { margin: 0; padding: 0; font-family: 'Allstate Sans'; width: 100%; }
+
+a { text-decoration: none; color:#ffffff; }
+
+#border { position: absolute; width: 298px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
+
+#atAd { position: absolute; width: 300px; height: 250px; overflow: hidden;  } 
+
+#bgImg {  }
+
+#wrapIN {
+	display: inline-block;
+	color:#F55197;
+}
+
+#flash {
+	position: absolute;
+	width:1000px;
+	height:1000px;
+	z-index: 600;
+	overflow: hidden;
+}
+
+/* colors */
+.bgBlue { background-color: #001C71; }
+.bgPink { background-color: #F55197; }
+.bgOrange { background-color: #FF9E16; }
+.bgYellow { background-color: #FFD100; }
+.bgGreen { background-color: #95D600; }
+.bgLtBlue { background-color: #57C1E8; }
+.bgTeal { background-color: #49C3B1; }
+.bgPurple { background-color: #8b86ca; }
+
+.txtBlue { color: #001C71; }
+.txtPink { color: #F55197; }
+.txtOrange { color: #FF9E16; }
+.txtYellow { color: #FFD100; }
+.txtGreen { color: #95D600; }
+.txtLtBlue { color: #57C1E8; }
+.txtTeal { color: #49C3B1; }
+.txtPurple { color: #8b86ca; }
+.txtWhite { color: #FFFFFF; }
+
+.logoBlue { fill:#001C71; }
+.logoWhite{ fill:#FFFFFF; }
+.logoPink{ fill:#F55197; }
+.logoYellow { fill:#FFD100; }
+
+.shadow {
+	text-shadow: rgb(0, 0, 0) -2px 2px 9px;
+}
+
+/* logos */
+#Allstate{
+	position: absolute;
+    width: 25%;
+    top: 8px;
+    right: 5px;
+    z-index: 103;
+    background-image:url(AllstateDS.svg);
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 300;
+}
+
+#hands{
+	position: absolute;
+	width: 80px;
+    top: 172px;
+    left: 90px;
+    z-index: 300;
+    opacity: 1;
+}
+
+#onlyAllstate {
+	position: absolute;
+	top:100px;
+	left:310px;
+	z-index: 210;
+
+}
+#onlyAllstate img{
+
+}
+#onlyfrom {
+	font-size: 18px;
+	line-height: 24px;
+	color:white;
+	font-weight: 500;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+#frame1, #frame2, #frame3, #landing, #toBeIn, #ctaCopy {
+	font-family: 'ITC Avant Garde Gothic';	
+	font-weight: 900;
+	-webkit-font-smoothing: antialiased; 
+	text-transform: uppercase;
+}
+
+#frame3 .word8{
+	font-size: 20px;
+	margin-left: -13px;
+	vertical-align: super;
+	line-height:0;
+}
+
+#landing .word4{
+	font-size: 20px;
+	margin-left: -13px;
+	vertical-align: super;
+	line-height:0;
+}
+
+#frame1{
+	position: absolute;
+	width:230px;
+	font-size:45px;
+	line-height: 40px;
+	left:15px;
+	top:50px;
+  	font-weight: 900;
+  	text-align: left;
+	-webkit-font-smoothing: antialiased; 
+	z-index: 100;
+	text-transform: uppercase;
+}
+
+
+#frame2 { 
+	position: absolute;
+	width:230px;
+	font-size:23px;
+	line-height: 20px; 
+	top:150px;
+	left:13px;
+  	font-weight: 900;
+  	text-align: left;
+	-webkit-font-smoothing: antialiased; 
+	z-index: 100;
+	text-transform: uppercase;
+}
+
+#bkgReveal {
+	position: absolute;
+	width: 500px;
+	height:500px;
+	-ms-transform: rotate(-35deg); /* IE 9 */
+    -webkit-transform: rotate(-35deg); /* Chrome, Safari, Opera */
+    transform: rotate(-35deg);
+    left: -100px;
+    top:-200px;
+
+}
+
+#landing { 
+	position: absolute;
+	font-size:41px;
+	line-height: 35px;
+	width: 200px;
+	left:15px;
+	top:38px;
+  	font-weight: 900;
+  	text-align: left;
+	-webkit-font-smoothing: antialiased; 
+	z-index: 110;
+	text-transform: uppercase;
+	z-index: 210;
+}
+
+.reg{
+	font-family: 'Allstate Sans';
+	font-size: 15px; 
+	line-height: 15px;
+	margin-left:-8px;
+	left: 0px;
+    bottom: 10px;
+    position: absolute;
+
+}
+
+.reg2{
+	font-family: 'Allstate Sans';
+    font-size: 23px;
+    line-height: 23px;
+    margin-left: -13px;
+    left: 0px;
+    bottom: 14px;
+    position: absolute;
+}
+
+#toBeIn { 
+	position: absolute;
+	font-size:42px;
+	line-height: 35px;
+	width: 200px;
+	left:15px;
+	top:20px;
+  	text-align: left;
+	z-index: 210;
+}
+
+/* CTA */
+#btn_cta { font-weight: 700; position: absolute; width: 165px; height:25px; top: 195px; right:-165px; background: #001C71; text-transform: uppercase; padding: 3px 10px 4px 15px; font-size: 20px; font-weight:900; text-align: left; overflow: hidden; z-index: 350; cursor: pointer; opacity: 0 }
+#ctaCopy { position: relative; z-index: 350; color:#fff; }
+#arrow { position: absolute; top:0; left:130px; padding-top: 5px; padding-left: 18px; }
+
+/* LEGAL */
+#btnLegal { position: absolute; z-index: 300; width:100%; color: #ffffff; font-size: 10px; text-align: right; cursor: pointer; }
+#legal { background:#333333; position: absolute; top:-80px; height:30px; color: #ffffff; font-size: 11px; padding: 15px; z-index: 300;  }
+#legal #legalClose { text-align: right; font-size: 9px; cursor: pointer; }
+
+/* CLICK TAG */
+#clickArea { position: absolute; z-index: 350; width: 100%; height: 100%; }
+#clickArea .clickAreaFull { width: 100%; height: 100%; background-color: #ff9900; }

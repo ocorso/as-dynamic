@@ -1,0 +1,42 @@
+/* constant */
+body { margin: 0; padding: 0; font-family: 'Allstate Sans'; width: 100%; }
+
+a { text-decoration: none; color:#ffffff; }
+
+/* colors */
+.bgBlue { background-color: #001C71; }
+.bgPink { background-color: #F55197; }
+.bgOrange { background-color: #FF9E16; }
+.bgYellow { background-color: #FFD100; }
+.bgGreen { background-color: #95D600; }
+.bgLtBlue { background-color: #57C1E8; }
+.bgTeal { background-color: #49C3B1; }
+.bgPurple { background-color: #8b86ca; }
+
+.txtBlue { color: #001C71; }
+.txtPink { color: #F55197; }
+.txtOrange { color: #FF9E16; }
+.txtYellow { color: #FFD100; }
+.txtGreen { color: #95D600; }
+.txtLtBlue { color: #57C1E8; }
+.txtTeal { color: #49C3B1; }
+.txtPurple { color: #8b86ca; }
+.txtWhite { color: #FFFFFF; }
+
+.logoBlue { fill:#001C71; }
+.logoWhite{ fill:#FFFFFF; }
+.logoPink{ fill:#F55197; }
+.logoYellow { fill:#FFD100; }
+
+.shadow {
+	text-shadow: rgb(0, 0, 0) -2px 2px 2px;
+}
+
+/* LEGAL */
+#btnLegal { position: absolute; z-index: 300; width:100%; color: #ffffff; font-size: 10px; text-align: right; cursor: pointer; }
+#legal { background:#333333; position: absolute; top:-80px; height:30px; color: #ffffff; font-size: 11px; padding: 15px; z-index: 300;  }
+#legal #legalClose { text-align: right; font-size: 9px; cursor: pointer; }
+
+/* CLICK TAG */
+#clickArea { position: absolute; z-index: 350; width: 100%; height: 100%; }
+#clickArea .clickAreaFull { width: 100%; height: 100%; background-color: #ff9900; }
