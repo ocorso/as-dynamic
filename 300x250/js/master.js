@@ -1,3 +1,72 @@
+/**
+ * Dynamic Content Enable code for Profile: 1085016
+ *
+ * The following code initializes the following dynamic variables for
+ * development testing and live serving of Fields associated to the above profile
+
+ *   DynamicContent Start: HTML5 invocation code.
+*/
+
+// Dynamic Content variables and sample values
+    Enabler.setProfileId(1085016);
+    var devDynamicContent = {};
+
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "N\/A";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#001C69";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    Enabler.setDevDynamicContent(devDynamicContent);
+
+/**
+ * You may access the variables in the following manner
+ * AFTER the Studio Enabler is initialized.
+ * var Is_Default = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default;
+ * Note: be sure to use "dynamicContent", not "devDynamicContent"
+ * Note: be sure to use ExitOverride to create your exit URL dynamically; follow the instructions on our Help center: https://support.google.com/richmedia/answer/2664807
+*/
+
 var asDynamic = {};
 
 
