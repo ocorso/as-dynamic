@@ -11,7 +11,7 @@
     Enabler.setProfileId(1085016);
     var devDynamicContent = {};
 
-     devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DF";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
@@ -21,7 +21,7 @@
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "N\/A";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#001C69";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600.Type = "file";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
@@ -104,6 +104,18 @@ asDynamic.init = function() {
   //oc: Step 1: map dynamic values to elements in markup
   asDynamic.parseDynamicContent();
 
+  //oc: Google Fonts Fix.
+  TweenLite.set("#atAd300x250", {
+    visibility: "visible"
+  });
+
+  //oc: config split text
+  asDynamic.splitText();
+
+  CSSPlugin.useSVGTransformAttr = true;
+
+
+  tl = new TimelineMax();
 
   //oc: Step 2: handle variations independently.
   //switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode to variation for dev
@@ -132,20 +144,11 @@ asDynamic.init = function() {
     case 'BSAHM':
       asDynamic.bundleSave('ahm');
       break;
-    case 'BSHLI':
-      asDynamic.bundleSave('hli');
-      break;
     case 'BSACP':
       asDynamic.bundleSave('acp');
       break;
     case 'BSAC':
       asDynamic.bundleSave('ac');
-      break;
-    case 'BSIP':
-      asDynamic.bundleSave('ip');
-      break;
-    case 'BSI':
-      asDynamic.bundleSave('i');
       break;
     case 'CFD':
       asDynamic.claimFreeDiscount();
@@ -211,15 +214,77 @@ asDynamic.parseDynamicContent = function(){
   var Is_Default = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default;
 
   //oc: Set bg color
-  var bg = document.getElementById('bg');
-  
-  
+  var bg = document.getElementById('bkgReveal');
+  bg.style.backgroundColor = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color;
+
   //oc: Map Images
   var img1 = document.getElementById('img1');
   img1.src = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url;
+  var img2 = document.getElementById('img2');
+  img2.src = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Url;
+  var img3 = document.getElementById('img3');
+  img3.src = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Url;
 
 };//end asDynamic.parseDynamicContent() function
 
+asDynamic.splitText = function(){
+
+  getIN = new SplitText('#getIN', {
+    type: "words",
+    wordsClass: "word++"
+  });
+  frame3 = new SplitText('.frame3', {
+    type: "words",
+    wordsClass: "word++"
+  });
+  frame4 = new SplitText('.frame4', {
+    type: "words",
+    wordsClass: "word++"
+  });
+  landing = new SplitText('#landing', {
+    type: "lines"
+  });
+  $("#getIN .word2").attr('class', 'whiteIN');
+  // $("#frame2 .word5").attr('class', 'colorIN');
+
+};
+
+/**
+ * This function takes the timeline as a parameter and 
+ * puts the Hands animation on it.
+ */
+asDynamic.addHandsFrameToTimeline = function(tl){
+
+ tl.to(".in1", 0.2, {
+    autoAlpha: 1
+  });
+  tl.to(".in2", 0.2, {
+    autoAlpha: 1
+  });
+  tl.to(".in3", 0.2, {
+    autoAlpha: 1
+  });
+  tl.to(".in4", 0.2, {
+    autoAlpha: 1
+  });
+  tl.to(".in5", 0.2, {
+    autoAlpha: 1
+  });
+
+  tl.from("#hands", .6, {
+    scaleX: 0,
+    scaleY: 0,
+    ease: Back.easeInOut,
+    easeParams: [2],
+    transformOrigin: "40% 40%",
+    opacity: 0
+  });
+
+  tl.to(".message", .5, {
+    autoAlpha: 0,
+    delay: 1
+  });
+};//end function
 
 /**
   * This function handles the Accident Forgiveness variations
@@ -252,70 +317,15 @@ asDynamic.parseDynamicContent = function(){
 asDynamic.accidentForgivenessInit = function() {
   console.log('accidentForgivenessInit');
 
-  //oc: from banner.js
-  TweenLite.set("#atAd300x250", {
-    visibility: "visible"
-  });
-  var tl,
-    frame1,
-    frame2,
-    frame3,
-    landing;
-
-  getIN = new SplitText('#getIN', {
-    type: "words",
-    wordsClass: "word++"
-  });
-  frame3 = new SplitText('.frame3', {
-    type: "words",
-    wordsClass: "word++"
-  });
-  frame4 = new SplitText('.frame4', {
-    type: "words",
-    wordsClass: "word++"
-  });
-  landing = new SplitText('#landing', {
-    type: "lines"
-  });
-  $("#getIN .word2").attr('class', 'whiteIN');
-  // $("#frame2 .word5").attr('class', 'colorIN');
-
-  CSSPlugin.useSVGTransformAttr = true
 
 
-  tl = new TimelineMax();
+      asDynamic.addHandsFrameToTimeline(tl);
+     // asDynamic.addGetIN(tl);
 
 
-  tl.to(".in1", 0.2, {
-    autoAlpha: 1
-  });
-  tl.to(".in2", 0.2, {
-    autoAlpha: 1
-  });
-  tl.to(".in3", 0.2, {
-    autoAlpha: 1
-  });
-  tl.to(".in4", 0.2, {
-    autoAlpha: 1
-  });
-  tl.to(".in5", 0.2, {
-    autoAlpha: 1
-  });
+ 
 
-  tl.from("#hands", .6, {
-    scaleX: 0,
-    scaleY: 0,
-    ease: Back.easeInOut,
-    easeParams: [2],
-    transformOrigin: "40% 40%",
-    opacity: 0
-  });
-
-  tl.to(".message", .5, {
-    autoAlpha: 0,
-    delay: 1
-  });
-
+//oc: AF Frame 2 BEGIN
   tl.staggerFrom(getIN.words, 0.2, {
     left: -300
   }, 0.07)
@@ -324,7 +334,9 @@ asDynamic.accidentForgivenessInit = function() {
     autoAlpha: 0,
     delay: 2
   });
+  //oc: AF Frame 2 END
 
+  //oc: 
   tl.to("#bkgReveal", 0.7, {
     left: 400,
     top: -200,
