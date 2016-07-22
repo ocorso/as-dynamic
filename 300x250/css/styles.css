@@ -1,6 +1,12 @@
+body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, sans-serif; width: 100%; }
+
+
 #bgImg1 { position: absolute; top:0; }
 
 #bgImg2 { position: absolute; top:0; left:-300px; }
+
+#bgImg3 { position: absolute; top:0; left:-300px; }
+
 
 
 .colorIN{ 
@@ -15,7 +21,18 @@
     height: 26px;
     top: 7px;
     right: 5px;
-    background-image:url(../img/AllstateDS.svg);
+    background-image:url(../img/Allstate.svg);
+    background-repeat: no-repeat;
+    z-index: 300;
+}
+
+#Allstate_Home{
+	position: absolute;
+    width: 81px;
+    height: 26px;
+    top: 7px;
+    right: 5px;
+    background-image:url(../img/AllstateHome.svg);
     background-repeat: no-repeat;
     z-index: 300;
 }
@@ -44,82 +61,64 @@
 
 
 /* FRAMES */
-#frame1{
-	position: absolute;
-	font-size:35px;
-	line-height: 34px; 
-	top:58px;
-	left: 16px;
-	width: 275px;
-  	text-align: left;
-  	-webkit-font-smoothing: antialiased;
-	z-index: 100;
-}
 
-#frame2 { 
+#hereIN, #getIN, #frame3, #frame4, #frame5, #frame6, #frame7, #frame8, #landing {
+	font-family: 'ITC Avant Garde Gothic';	
+	font-weight: 900;
+	-webkit-font-smoothing: antialiased; 
+	text-transform: uppercase;	
 	position: absolute;
+	width: 300px;
+}
+#hereIN{
 	font-size:35px;
 	line-height: 32px; 
 	top:58px;
 	left: 16px;
-	width: 300px;
   	text-align: left;
-  	-webkit-font-smoothing: antialiased;
-  	font-weight:700;
+	z-index: 100;
+}
+
+#getIN { 
+	font-size:35px;
+	line-height: 32px; 
+	top:58px;
+	left: 16px;
+  	text-align: left;
 	z-index: 100;
 }
 
 #frame3{
-	position: absolute;
-	width:270px;
 	font-size:35px;
 	line-height: 32px; 
-	left:15px;
-	top:158px;
+	top:58px;
+	left: 16px;
   	text-align: left;
-	z-index: 210;
+	z-index: 100;
 }
-
-#landing_sm { 
-	position: absolute;
-	width:300px;
-	left:15px;
-	top:32px;
-  	text-align: left;
-	z-index: 210;
-	opacity: 0;
-	font-size:16px;
-	line-height: 16px;
-	font-family: 'ITC Avant Garde Gothic';	
-	font-weight: 900;
-	-webkit-font-smoothing: antialiased; 
-}
-
-#landing { 
-	position: absolute;
-	width:300px;
+#frame4{
 	font-size:35px;
-	line-height: 31px;
-	left:15px;
-	top:50px;
+	line-height: 32px; 
+	top:58px;
+	left: 16px;
   	text-align: left;
-	z-index: 210;
-	opacity: 0;
+	z-index: 100;
 }
-
-#location{
-	position: absolute;
-	font-size: 15px;
-	line-height: 16px;
-	font-weight: 500;
-	top:126px;
-	left:300px;
-	z-index: 210;
-	width: 300px;
-	font-family: 'ITC Avant Garde Gothic';	
-	font-weight: 500;
-	-webkit-font-smoothing: antialiased; 
-
+#frame5{
+	font-size:35px;
+	line-height: 32px; 
+	top:58px;
+	left: 16px;
+  	text-align: left;
+	z-index: 100;
+}
+#frame6{
+	font-size:35px;
+	line-height: 32px; 
+	top:58px;
+	left: 16px;
+  	text-align: left;
+	z-index: 100;
 }
 
 .plus{ 
@@ -144,11 +143,19 @@
     position: absolute;
 }
 
-#endFrame_subText {
-	color:#fff;
+#landing { 
+	position: absolute;
+	width:300px;
+	font-size:35px;
+	line-height: 31px;
+	left:15px;
+	top:50px;
+  	text-align: left;
+	z-index: 210;
+	opacity: 0;
 }
 
-#endFrame_subText {
+#landing_subText {
 	position: absolute;
 	color:white;
 	left: 15px;
