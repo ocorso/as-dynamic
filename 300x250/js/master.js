@@ -28,12 +28,16 @@ function enablerInitialized() {
  * 
 */
 asDynamic.init = function () {
-  console.log('asDynamic.init();');
+  console.info('asDynamic.init();');
 
   //oc: handle variations independently.
-  switch ('AF'){//oc: placeholder for now
+  switch ('BSAHLP'){//oc: placeholder for now
     case 'AF': 
       asDynamic.accidentForgivenessInit();
+
+      break;
+    case 'BSAHLP': 
+      asDynamic.bundleSaveInit('ahlp');
 
       break;
 
@@ -131,6 +135,12 @@ asDynamic.accidentForgivenessInit = function(){
 
 
 }//end function
+
+asDynamic.bundleSaveInit = function($option){
+  console.info('asDynamic.bundleSaveInit');
+
+  console.debug('is this working?');
+};//end function bundleSaveInit
 
 // oc: CTA Mouseover handlers
 var div1 = $("div#btn_cta"),
