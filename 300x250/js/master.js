@@ -11,8 +11,9 @@
     Enabler.setProfileId(1085016);
     var devDynamicContent = {};
 
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
+     devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DF";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -100,8 +101,13 @@ function enablerInitialized() {
 asDynamic.init = function() {
   console.info('asDynamic.init();');
 
-  //oc: handle variations independently.
-  switch ('BSAHLP') { //oc: placeholder for now
+  //oc: Step 1: map dynamic values to elements in markup
+  asDynamic.parseDynamicContent();
+
+
+  //oc: Step 2: handle variations independently.
+  //switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode to variation for dev
+  switch ('AF') { //oc: hardcode to variation for dev
     case 'AF':
       asDynamic.accidentForgivenessInit();
 
@@ -184,14 +190,30 @@ asDynamic.init = function() {
       asDynamic.welcomeDiscount();
       break;
     case 'DF':
-      asDynamic.default();
+      asDynamic.defaultInit();
       break;
 
     default:
-      asDynamic.default();
       console.log('run default ad');
+      asDynamic.defaultInit();
   } //end switch
 }; //end asDynamic.init
+
+/**
+  * This function takes the dynamic data served to the create 
+  * and maps it to the corresponding HTMLElement
+  * 
+  */
+asDynamic.parseDynamicContent = function(){
+  console.info('asDynamic.parseDynamicContent()');
+
+  //oc: Usage Example 
+  var Is_Default = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default;
+
+  //oc: More Practical Example
+  var img1 = document.getElementById('bgImg1');
+  img1.src = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url;
+};//end asDynamic.parseDynamicContent() function
 
 
 /**
