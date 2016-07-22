@@ -262,33 +262,29 @@ asDynamic.accidentForgivenessInit = function() {
     frame3,
     landing;
 
-  frame1 = new SplitText('#frame1', {
+  getIN = new SplitText('#getIN', {
     type: "words",
     wordsClass: "word++"
   });
-  frame2 = new SplitText('#frame2', {
+  frame3 = new SplitText('.frame3', {
     type: "words",
     wordsClass: "word++"
   });
-  frame3 = new SplitText('#frame3', {
+  frame4 = new SplitText('.frame4', {
     type: "words",
     wordsClass: "word++"
   });
   landing = new SplitText('#landing', {
     type: "lines"
   });
-  $("#frame1 .word2").attr('class', 'whiteIN');
-  $("#frame2 .word5").attr('class', 'colorIN');
+  $("#getIN .word2").attr('class', 'whiteIN');
+  // $("#frame2 .word5").attr('class', 'colorIN');
 
   CSSPlugin.useSVGTransformAttr = true
 
 
   tl = new TimelineMax();
 
-  tl.to("#flash", 0, {
-    opacity: 0,
-    left: 1000
-  })
 
   tl.to(".in1", 0.2, {
     autoAlpha: 1
@@ -320,11 +316,11 @@ asDynamic.accidentForgivenessInit = function() {
     delay: 1
   });
 
-  tl.staggerFrom(frame1.words, 0.2, {
+  tl.staggerFrom(getIN.words, 0.2, {
     left: -300
   }, 0.07)
 
-  tl.to("#frame1", 0.3, {
+  tl.to("#getIN", 0.3, {
     autoAlpha: 0,
     delay: 2
   });
@@ -335,11 +331,11 @@ asDynamic.accidentForgivenessInit = function() {
     ease: Sine.easeOut
   });
 
-  tl.staggerFrom(frame2.words, 0.2, {
+  tl.staggerFrom(frame3.words, 0.2, {
     left: -300
   }, 0.07)
 
-  tl.to("#frame2", 0.3, {
+  tl.to(".frame3", 0.3, {
     autoAlpha: 0,
     delay: 2
   });
@@ -355,11 +351,11 @@ asDynamic.accidentForgivenessInit = function() {
     delay: -0.5
   });
 
-  tl.staggerFrom(frame3.words, 0.2, {
+  tl.staggerFrom(frame4.words, 0.2, {
     left: -300
   }, 0.07)
 
-  tl.to("#frame3", 0.3, {
+  tl.to(".frame4", 0.3, {
     autoAlpha: 0,
     delay: 2
   });
@@ -378,7 +374,7 @@ asDynamic.accidentForgivenessInit = function() {
     autoAlpha: 1
   });
 
-  tl.to("#endFrame_subText", 1, {
+  tl.to("#landing", 1, {
     autoAlpha: 1
   })
 
