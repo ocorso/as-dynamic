@@ -14,7 +14,7 @@
 
     devDynamicContent._Auto_Strategies_Creative= [{}];
     devDynamicContent._Auto_Strategies_Creative[0]._id = 0;
-    devDynamicContent._Auto_Strategies_Creative[0].Type = "Home";
+    devDynamicContent._Auto_Strategies_Creative[0].Type = "Auto";
     devDynamicContent._Auto_Strategies_Creative[0].Exit_URL = {};
     devDynamicContent._Auto_Strategies_Creative[0].Exit_URL.Url = "https://www.allstate.com/?zip=''";
     devDynamicContent._Auto_Strategies_Creative[0].CTA_Text = "Quote Now";

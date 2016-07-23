@@ -91,6 +91,28 @@ function enablerInitialized() {
   } else {
     asDynamic.init();
   }
+
+    /*******************************************************************************
+         Start of Adometry Tag for DoubleClick Dynamic Creatives: DO NOT REMOVE.
+         Append this entire block to enablerInitHandler(), ONLY AFTER executing
+         Enabler.setDevDynamicContent(devDynamicContent).  Be sure to set 'nid'
+         below according to your Adometry account ID.
+         
+         nid = Adometry account id, pid = DCM placement id, cid = dynamic element ID 
+    ********************************************************************************/
+
+    var nid=3700;
+    var pid=(function(){p=Enabler.getDartPageId();if(!isNaN(p))return p;else return 0})();
+    var cid=(function(){s='';d=dynamicContent;for(x in d){if(x!='_profileid')s+=(d[x][0].elemType+d[x][0].ID);}for(var h=0,i=0;i<s.length;i++)h=h*31+s.charCodeAt(i);return h&0x7FFFFFFF})();
+    var str='https://js.dmtry.com/antenna2.js?0_'+nid+'_'+pid+'_'+cid;
+    console.log(str);
+    var script=document.createElement('script');
+    script.src = str;
+    document.body.appendChild(script);
+
+   /*******************************************************************************
+         End Adometry Tag for DoubleClick Dynamic Creatives: DO NOT REMOVE. 
+   ********************************************************************************/
 } //end function enabler init();
 
 /**
@@ -99,105 +121,50 @@ function enablerInitialized() {
  *
  */
 asDynamic.init = function() {
-  console.info('asDynamic.init();');
+  console.info('asDynamic.init(); Variation Code: '+ dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation);
+
+  //oc: Google Fonts Fix.
+  TweenLite.set("#atAd300x250", { visibility: "visible"});
 
   //oc: Step 1: map dynamic values to elements in markup
   asDynamic.parseDynamicContent();
 
-  //oc: Google Fonts Fix.
-  TweenLite.set("#atAd300x250", {
-    visibility: "visible"
-  });
-
-  //oc: config split text
+  //oc: Step 2: config split text
   asDynamic.splitText();
 
-  CSSPlugin.useSVGTransformAttr = true;
-
-
+  //oc: Step 3: Init TimelineMax
   tl = new TimelineMax();
 
-  //oc: Step 2: handle variations independently.
+  //oc: Step 4: handle variations independently.
   //switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode to variation for dev
   switch ('AF') { //oc: hardcode to variation for dev
-    case 'AF':
-      asDynamic.accidentForgivenessInit();
-
-      break;
-    case 'BSAHLP':
-      asDynamic.bundleSaveInit('ahlp');
-
-      //cw:
-      break;
-    case 'BSAHL':
-      asDynamic.bundleSaveInit('ahl');
-      break;
-    case 'BSALP':
-      asDynamic.bundleSaveInit('alp');
-      break;
-    case 'BSAL':
-      asDynamic.bundleSaveInit('al');
-      break;
-    case 'BSAHMP':
-      asDynamic.bundleSaveInit('ahmp');
-      break;
-    case 'BSAHM':
-      asDynamic.bundleSave('ahm');
-      break;
-    case 'BSACP':
-      asDynamic.bundleSave('acp');
-      break;
-    case 'BSAC':
-      asDynamic.bundleSave('ac');
-      break;
-    case 'CFD':
-      asDynamic.claimFreeDiscount();
-      break;
-    case 'CFDM':
-      asDynamic.claimFreeDiscount('mob');
-      break;
-    case 'CFR':
-      asDynamic.claimFreeRewards();
-      break;
-    case 'CRG':
-      asDynamic.claimRateGuard();
-      break;
-    case 'CRGM':
-      asDynamic.claimRateGuard(mob);
-      break;
-    case 'CSG':
-      asDynamic.claimSatGuard();
-      break;
-    case 'CSGM':
-      asDynamic.claimSatGuard(mob);
-      break;
-    case 'DW':
-      asDynamic.driveWise(opt1);
-      break;
-    case 'DW2P':
-      asDynamic.driveWise(opt2p);
-      break;
-    case 'NR':
-      asDynamic.newRoof();
-      break;
-    case 'TA1':
-      asDynamic.trustedAdvisor(opt1);
-      break;
-    case 'TAM1':
-      asDynamic.trustedAdvisor(mobopt1);
-      break;
-    case 'TAM2':
-      asDynamic.trustedAdvisor(mobopt2);
-      break;
-    case 'WD':
-      asDynamic.welcomeDiscount();
-      break;
-    case 'DF':
-      asDynamic.defaultInit();
-      break;
-
+    case 'AF': asDynamic.accidentForgivenessInit(); break;
+    case 'BSAHLP': asDynamic.bundleSaveInit('ahlp'); break;
+    case 'BSAHL': asDynamic.bundleSaveInit('ahl'); break;
+    case 'BSHLI': asDynamic.bundleSaveInit('hli'); break;
+    case 'BSALP': asDynamic.bundleSaveInit('alp'); break;
+    case 'BSAL': asDynamic.bundleSaveInit('al'); break;
+    case 'BSAHMP': asDynamic.bundleSaveInit('ahmp'); break;
+    case 'BSAHM': asDynamic.bundleSaveInit('ahm'); break;
+    case 'BSACP': asDynamic.bundleSaveInit('acp'); break;
+    case 'BSAC': asDynamic.bundleSaveInit('ac'); break;
+    case 'CFD': asDynamic.claimFreeDiscountInit(); break;
+    case 'CFDM': asDynamic.claimFreeDiscountInit('mob'); break;
+    case 'CFR': asDynamic.claimFreeRewardsInit(); break;
+    case 'CRG': asDynamic.claimRateGuardInit(); break;
+    case 'CRGM': asDynamic.claimRateGuardInit('mob'); break;
+    case 'CSG': asDynamic.claimSatGuardInit(); break;
+    case 'CSGM': asDynamic.claimSatGuardInit('mob'); break;
+    case 'DW': asDynamic.driveWiseInit('opt1'); break;
+    case 'DW2P': asDynamic.driveWiseInit('opt2p'); break;
+    case 'NR': asDynamic.newRoofInit(); break;
+    case 'TA1': asDynamic.trustedAdvisorInit('opt1'); break;
+    case 'TAM1': asDynamic.trustedAdvisorInit('mobopt1'); break;
+    case 'TAM2': asDynamic.trustedAdvisorInit('mobopt2'); break;
+    case 'WD': asDynamic.welcomeDiscountInit(); break;
+    case 'DF': asDynamic.defaultInit(); break;
     default:
-      console.log('run default ad');
+      console.log('Run default ad');
       asDynamic.defaultInit();
   } //end switch
 }; //end asDynamic.init
@@ -209,9 +176,6 @@ asDynamic.init = function() {
   */
 asDynamic.parseDynamicContent = function(){
   console.info('asDynamic.parseDynamicContent()');
-
-  //oc: Usage Example 
-  var Is_Default = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default;
 
   //oc: Set bg color
   var bg = document.getElementById('bkgReveal');
@@ -225,8 +189,15 @@ asDynamic.parseDynamicContent = function(){
   var img3 = document.getElementById('img3');
   img3.src = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Url;
 
+  //oc: TODO Set market name
+
+  //oc: TODO Set legal text
+
 };//end asDynamic.parseDynamicContent() function
 
+/**
+  * This function splits the text so each word can by styled/animated
+  */
 asDynamic.splitText = function(){
 
   getIN = new SplitText('#getIN', {
@@ -251,7 +222,7 @@ asDynamic.splitText = function(){
  * This function takes the timeline as a parameter and 
  * puts the Hands animation on it.
  */
-asDynamic.addHandsFrameToTimeline = function(tl){
+asDynamic.addHandsFrameToTimeline = function(){
 
  tl.to(".in1", 0.2, {
     autoAlpha: 1
@@ -284,46 +255,9 @@ asDynamic.addHandsFrameToTimeline = function(tl){
   });
 };//end function
 
-/**
-  * This function handles the Accident Forgiveness variations
-  * @param - ad variation option
-  * Global syles:
-      - Background: #8b86ca
-      - CTA:    “GET IN”
-  * Keyframes :
-      1 : Logo Lockup
-      2 :
-        Top-aligned paragraph -
-        Font size: 36 px
-        Copy: “GET IN ON THIS, [MARKET NAME]”
-      3 : Photo w/ ⅓ - top White Copy
-        Copy : “FORGIVENESS”
-      4 : Photo w/ ⅓ - bottom white copy
-        Copy : “EVEN IF IT’S YOUR FAULT”
-      5 : End Frame
-        OPTION ONE:
-          Top-aligned large copy - 36 px
-          Larger copy: “ACCIDENT FORGIVENESS”
-          Smaller copy - 18px
-            “Connect with a [Market Name] Allstate Agent”
-        OPTION TWO:
-          Top-aligned large copy - 36 px
-          Larger opy: “ACCIDENT FORGIVENESS”
-          Smaller copy - 18px
-
-*/
-asDynamic.accidentForgivenessInit = function() {
-  console.log('accidentForgivenessInit');
-
-
-
-      asDynamic.addHandsFrameToTimeline(tl);
-     // asDynamic.addGetIN(tl);
-
-
+asDynamic.addGetINFrameToTimeline = function(){
  
-
-//oc: AF Frame 2 BEGIN
+  //oc: GetIn Frame BEGIN
   tl.staggerFrom(getIN.words, 0.2, {
     left: -300
   }, 0.07)
@@ -332,8 +266,14 @@ asDynamic.accidentForgivenessInit = function() {
     autoAlpha: 0,
     delay: 2
   });
-  //oc: AF Frame 2 END
+  //oc: GetIn Frame 2 END
+};
 
+/**
+  * This function scripts the Image wipe/reveal transitions
+  */
+asDynamic.addImageFramesToTimeline = function($variation, numImages){
+  
   //oc: 
   tl.to("#bkgReveal", 0.7, {
     left: 400,
@@ -375,7 +315,12 @@ asDynamic.accidentForgivenessInit = function() {
     top: -200,
     ease: Sine.easeOut
   });
+};//end asDynamic.addImageFramesToTimeline function
 
+/**
+  * This function adds the landing frame's animation sequence to the timeline.
+  */
+asDynamic.addLandingToTimeline = function($variation){
   tl.to(".fade", 0.3, {
     autoAlpha: 1
   });
@@ -386,7 +331,7 @@ asDynamic.accidentForgivenessInit = function() {
 
   tl.to("#landing", 1, {
     autoAlpha: 1
-  })
+  });
 
   tl.to("#btn_cta", 0.3, {
     right: -9,
@@ -401,8 +346,67 @@ asDynamic.accidentForgivenessInit = function() {
     ease: Linear.easeNone
   });
 
+};
 
-} //end function
+/**
+  * This function handles the Accident Forgiveness variations
+  * @param - ad variation option
+  * Global syles:
+      - Background: #8b86ca
+      - CTA:    “GET IN”
+  * Keyframes :
+      1 : Logo Lockup
+      2 :
+        Top-aligned paragraph -
+        Font size: 36 px
+        Copy: “GET IN ON THIS, [MARKET NAME]”
+      3 : Photo w/ ⅓ - top White Copy
+        Copy : “FORGIVENESS”
+      4 : Photo w/ ⅓ - bottom white copy
+        Copy : “EVEN IF IT’S YOUR FAULT”
+      5 : End Frame
+        OPTION ONE:
+          Top-aligned large copy - 36 px
+          Larger copy: “ACCIDENT FORGIVENESS”
+          Smaller copy - 18px
+            “Connect with a [Market Name] Allstate Agent”
+        OPTION TWO:
+          Top-aligned large copy - 36 px
+          Larger opy: “ACCIDENT FORGIVENESS”
+          Smaller copy - 18px
+
+*/
+asDynamic.accidentForgivenessInit = function() {
+  console.info('accidentForgivenessInit');
+
+  $('#af, #getIN').css('display', 'block');
+  asDynamic.addHandsFrameToTimeline(tl);
+  asDynamic.addGetINFrameToTimeline(tl);
+  asDynamic.addImageFramesToTimeline(tl);
+  asDynamic.addLandingToTimeline(tl);
+ 
+
+} //end accidentForgivenessInit() function
+
+
+asDynamic.bundleSaveInit = function($option) {
+  console.info('asDynamic.bundleSaveInit()');
+
+  //show bundleSave elements
+  $('#bsahl, #getIN').css('display', 'block');
+
+  console.debug('is this working?');
+}; //end function bundleSaveInit
+
+/**
+  * This function scripts the New Roof variation
+  */
+asDynamic.newRoofInit = function(){
+  console.info('asDynamic.newRoofInit()');
+
+  //oc: Smooth house animation in new roof
+  CSSPlugin.useSVGTransformAttr = true;
+}//end function newRoofInint
 
 // oc: CTA Mouseover handlers
 var div1 = $("div#btn_cta"),
@@ -423,10 +427,11 @@ div1.mouseleave(function() {
   tn1.reverse(currentTime);
 });
 
-asDynamic.bundleSaveInit = function($option) {
-  console.info('asDynamic.bundleSaveInit');
-
-  console.debug('is this working?');
-}; //end function bundleSaveInit
-
+/**
+  * This function handles the Background and CTA clicks
+  * And overrides the system's exit to navigate to a dynamic exit url
+  */
+function onExitClick(event){
+  console.info('onExitClick()');
+};
 

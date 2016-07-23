@@ -4,16 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Allstate Local Home / Auto | 300x250</title>
 
-<!-- oc: Google Fonts link tag
-   
-        Font Family: ITC Avant Garde Gothic 
-        Font weight: 900,900i
-
-        Font Family: Allstate Sans
-        Font weight: 400,500
-       
-        Font Family: ITC Avant Garde Gothic Condensed
--->
+    <!-- oc: This Ad is Powered by Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allstate+Sans:400,500|ITC+Avant+Garde+Gothic:700,700i&key=7gw5RZn4zm8X2MRJ" media="all">
 
     <link rel="stylesheet" href="css/styles.css">
@@ -21,17 +12,11 @@
     <link rel="stylesheet" href="css/2016-toolkit.min.css">
     <link rel="stylesheet" href="css/2016-legal-panel.min.css">
 
-    <style type="text/css">
-            #atAd300x250 {
-              visibility:hidden;
-            }
-        </style>
-
-    </head>
-    <body>
+  </head>
+  <body>
     <div id="loader"><img src="img/loader.gif" /></div>
 
-    <div id="atAd300x250" class="bgPurple">
+    <div id="atAd300x250">
         
       <!-- START LEGAL -->
       <div id="aAd_header">
@@ -53,17 +38,17 @@
       <div id="Allstate">&nbsp;</div>
       <!-- END LOGO -->
       
-      <!-- <a onclick="ExitApi.exit()" id="clickArea"></a> -->
+      <a onclick="onExitClick();" id="clickArea"></a>
 
       <div id="border300x250">&nbsp;</div>
 
       <!-- START: It's Good To Be IN -->
       <div id="toBeIn" class="message">
-          <div class="in1">It<span class="apostrophe">'</span>s</div>
-          <div class="in2">good</div> 
-          <div class="in3">To</div>
-          <div class="in4">be</div> 
-          <div class="in5"><span class="txtWhite">in</span></div>
+        <div class="in1">It<span class="apostrophe">'</span>s</div>
+        <div class="in2">good</div> 
+        <div class="in3">To</div>
+        <div class="in4">be</div> 
+        <div class="in5"><span class="txtWhite">in</span></div>
       </div>
       <div id="hands" class="message"><img src="img/NEWhands.svg" style="width:66px; height:52px;"></div>
       <!-- END: It's Good To Be IN -->
@@ -74,47 +59,52 @@
       <div id="bgImg3"><img id="img3" /></div>
       <!-- END: Image Sequence -->
 
-      <!-- START: Get IN on this -->
-      <div id="getIN" class="txtBlue">Get In<br>on this,<br><span class="market-name">[Market Name]</span></div>
-      <!-- <div id="hereIN">here in <span class="market-name">[market name]</span></div> -->
-      <!-- END: Get IN on this -->
+      <!-- START: Get/Here IN on this -->
+      <div id="getIN" class="txtBlue hide">Get In<br>on this,<br><span class="market-name">[Market Name]</span></div>
+      <div id="hereIN" class="hide">here in <span class="market-name">[market name]</span></div>
+      <!-- END: Get/Here IN on this -->
 
-      <div id="AF"> 
-          <div class="frame3 txtWhite shadow">forgiveness</div>
-          <div class="frame4 txtWhite shadow">EVEN IF IT'S<br>YOUR FAULT</div>
+      <div id="af" class="hide"> 
+        <div class="frame3 txtWhite shadow">forgiveness</div>
+        <div class="frame4 txtWhite shadow">EVEN IF IT'S<br>YOUR FAULT</div>
       </div>
       
+      <div id="bsahl" class="hide">
+        <div class="frame2 txtWhite shadow">auto <br> bundle & save</div>
+        <div class="frame3 txtWhite shadow">+home</div>
+        <div class="frame4 txtWhite shadow">+life</div>
+      </div>
+
       <!-- START: Solid Color Background -->
       <div id="bkgReveal"></div>
       <!-- END: Solid Color Background -->
 
-      <!-- START: Product Lockup --> 
-      <div id="landing">               
-          <div class="landing-name txtBlue fade1"><br>accident<br>forgiveness</div>
-          <!-- <div class="landing-percent txtBlue fade1"><br>Up to XX%</div> -->
-          <div class="landing-subText txtBlue fade1">Connect with <span class="market-name">[a Market Name]</span> Allstate Agent</div>
+      <!-- START: Landing Frames--> 
+      <div id="landing" class="hide">               
+        <div class="af landing-name txtBlue fade1"><br>accident<br>forgiveness</div>
+        <div class="bsahl landing-name txtBlue fade1"><br>Bundle & Save</div>
+        <div class="landing-subText txtBlue fade1">Connect with <span class="market-name">[a Market Name]</span> Allstate Agent</div>
       </div>
-      <!-- END: Product Lockup -->
-       
+      <!-- END: Landing Frames --> 
           
+
       <!-- START CTA BUTTON -->
       <div id="btn_cta">
-          <a href="javascript:window.open(window.clickTag)">
-          <span id="ctaCopy">get in</span>
-          <div id="arrow">
-              <svg viewBox="0 0 50 50" width="30" height="17" preserveAspectRatio="xMinYMin"><polygon class="logoPink" points="0,0 40,25 0,50"/></svg>
-          </div>
-          </a>
+        <a onclick="onExitClick();">
+        <span id="ctaCopy">get in</span>
+        <div id="arrow">
+            <svg viewBox="0 0 50 50" width="30" height="17" preserveAspectRatio="xMinYMin"><polygon class="logoPink" points="0,0 40,25 0,50"/></svg>
+        </div>
+        </a>
       </div>
       <!-- END CTA BUTTON --> 
       
-      </div>
-      
-  </div>
+    </div>
+    <!-- end atAd300x250 -->
+
 <!-- ******************************** -->
 <!--       Master Shell END         -->
 <!-- ******************************** -->
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
