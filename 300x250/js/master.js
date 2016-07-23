@@ -68,9 +68,33 @@
  * Note: be sure to use ExitOverride to create your exit URL dynamically; follow the instructions on our Help center: https://support.google.com/richmedia/answer/2664807
 */
 
-var asDynamic = {};
-
-
+var asApp = {};
+asApp.variations = {};
+asApp.variations.AF = 'AF';//Accident Forgiveness
+asApp.variations.BSAHLP = 'BSAHLP';//Bundle and Save Auto, Home, Life with Percentages
+asApp.variations.BSAHL = 'BSAHL';
+asApp.variations.BSHLI = 'BSHLI';
+asApp.variations.BSALP = 'BSALP';
+asApp.variations.BSAL = 'BSAL';
+asApp.variations.BSAHMP = 'BSAHMP';
+asApp.variations.BSAHM = 'BSAHM';
+asApp.variations.BSACP = 'BSACP';
+asApp.variations.BSAC = 'BSAC';
+asApp.variations.CFD = 'CFD';
+asApp.variations.CFDM = 'CFDM';
+asApp.variations.CFR = 'CFR';
+asApp.variations.CRG = 'CRG';
+asApp.variations.CRGM = 'CRGM';
+asApp.variations.CSG = 'CSG';
+asApp.variations.CSGM = 'CSGM';
+asApp.variations.DW = 'DW';
+asApp.variations.DW2P = 'DW2P';
+asApp.variations.NR = 'NR';
+asApp.variations.TA1 = 'TA1';
+asApp.variations.TAM1 = 'TAM1';
+asApp.variations.TAM2 = 'TAM2';
+asApp.variations.WD = 'WD';
+asApp.variations.DF 
 if (!Enabler.isInitialized()) {
   Enabler.addEventListener(
     studio.events.StudioEvent.INIT,
@@ -87,9 +111,9 @@ function enablerInitialized() {
   if (!Enabler.isVisible()) {
     Enabler.addEventListener(
       studio.events.StudioEvent.VISIBLE,
-      asDynamic.init);
+      asApp.init);
   } else {
-    asDynamic.init();
+    asApp.init();
   }
 
     /*******************************************************************************
@@ -120,17 +144,17 @@ function enablerInitialized() {
  * Uses dynamic content to determine which variation to display
  *
  */
-asDynamic.init = function() {
-  console.info('asDynamic.init(); Variation Code: '+ dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation);
+asApp.init = function() {
+  console.info('asApp.init(); Variation Code: '+ dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation);
 
   //oc: Google Fonts Fix.
   TweenLite.set("#atAd300x250", { visibility: "visible"});
 
   //oc: Step 1: map dynamic values to elements in markup
-  asDynamic.parseDynamicContent();
+  asApp.parseDynamicContent();
 
   //oc: Step 2: config split text
-  asDynamic.splitText();
+  asApp.splitText();
 
   //oc: Step 3: Init TimelineMax
   tl = new TimelineMax();
@@ -138,44 +162,44 @@ asDynamic.init = function() {
   //oc: Step 4: handle variations independently.
   //switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode to variation for dev
   switch ('AF') { //oc: hardcode to variation for dev
-    case 'AF': asDynamic.accidentForgivenessInit(); break;
-    case 'BSAHLP': asDynamic.bundleSaveInit('ahlp'); break;
-    case 'BSAHL': asDynamic.bundleSaveInit('ahl'); break;
-    case 'BSHLI': asDynamic.bundleSaveInit('hli'); break;
-    case 'BSALP': asDynamic.bundleSaveInit('alp'); break;
-    case 'BSAL': asDynamic.bundleSaveInit('al'); break;
-    case 'BSAHMP': asDynamic.bundleSaveInit('ahmp'); break;
-    case 'BSAHM': asDynamic.bundleSaveInit('ahm'); break;
-    case 'BSACP': asDynamic.bundleSaveInit('acp'); break;
-    case 'BSAC': asDynamic.bundleSaveInit('ac'); break;
-    case 'CFD': asDynamic.claimFreeDiscountInit(); break;
-    case 'CFDM': asDynamic.claimFreeDiscountInit('mob'); break;
-    case 'CFR': asDynamic.claimFreeRewardsInit(); break;
-    case 'CRG': asDynamic.claimRateGuardInit(); break;
-    case 'CRGM': asDynamic.claimRateGuardInit('mob'); break;
-    case 'CSG': asDynamic.claimSatGuardInit(); break;
-    case 'CSGM': asDynamic.claimSatGuardInit('mob'); break;
-    case 'DW': asDynamic.driveWiseInit('opt1'); break;
-    case 'DW2P': asDynamic.driveWiseInit('opt2p'); break;
-    case 'NR': asDynamic.newRoofInit(); break;
-    case 'TA1': asDynamic.trustedAdvisorInit('opt1'); break;
-    case 'TAM1': asDynamic.trustedAdvisorInit('mobopt1'); break;
-    case 'TAM2': asDynamic.trustedAdvisorInit('mobopt2'); break;
-    case 'WD': asDynamic.welcomeDiscountInit(); break;
-    case 'DF': asDynamic.defaultInit(); break;
+    case asApp.variations.AF : asApp.accidentForgivenessInit(); break;
+    case asApp.variations.BSAHLP : asApp.bundleSaveInit('ahlp'); break;
+    case asApp.variations.BSAHL : asApp.bundleSaveInit('ahl'); break;
+    case asApp.variations.BSHLI : asApp.bundleSaveInit('hli'); break;
+    case asApp.variations.BSALP : asApp.bundleSaveInit('alp'); break;
+    case asApp.variations.BSAL : asApp.bundleSaveInit('al'); break;
+    case asApp.variations.BSAHMP : asApp.bundleSaveInit('ahmp'); break;
+    case asApp.variations.BSAHM : asApp.bundleSaveInit('ahm'); break;
+    case asApp.variations.BSACP : asApp.bundleSaveInit('acp'); break;
+    case asApp.variations.BSAC : asApp.bundleSaveInit('ac'); break;
+    case asApp.variations.CFD : asApp.claimFreeDiscountInit(); break;
+    case asApp.variations.CFDM : asApp.claimFreeDiscountInit('mob'); break;
+    case asApp.variations.CFR : asApp.claimFreeRewardsInit(); break;
+    case asApp.variations.CRG : asApp.claimRateGuardInit(); break;
+    case asApp.variations.CRGM : asApp.claimRateGuardInit('mob'); break;
+    case asApp.variations.CSG : asApp.claimSatGuardInit(); break;
+    case asApp.variations.CSGM : asApp.claimSatGuardInit('mob'); break;
+    case asApp.variations.DW : asApp.driveWiseInit('opt1'); break;
+    case asApp.variations.DW2P : asApp.driveWiseInit('opt2p'); break;
+    case asApp.variations.NR : asApp.newRoofInit(); break;
+    case asApp.variations.TA1 : asApp.trustedAdvisorInit('opt1'); break;
+    case asApp.variations.TAM1 : asApp.trustedAdvisorInit('mobopt1'); break;
+    case asApp.variations.TAM2 : asApp.trustedAdvisorInit('mobopt2'); break;
+    case asApp.variations.WD : asApp.welcomeDiscountInit(); break;
+    case asApp.variations.DF : asApp.defaultInit(); break;
     default:
       console.log('Run default ad');
-      asDynamic.defaultInit();
+      asApp.defaultInit();
   } //end switch
-}; //end asDynamic.init
+}; //end asApp.init
 
 /**
   * This function takes the dynamic data served to the create 
   * and maps it to the corresponding HTMLElement
   * 
   */
-asDynamic.parseDynamicContent = function(){
-  console.info('asDynamic.parseDynamicContent()');
+asApp.parseDynamicContent = function(){
+  console.info('asApp.parseDynamicContent()');
 
   //oc: Set bg color
   var bg = document.getElementById('bkgReveal');
@@ -193,12 +217,12 @@ asDynamic.parseDynamicContent = function(){
 
   //oc: TODO Set legal text
 
-};//end asDynamic.parseDynamicContent() function
+};//end asApp.parseDynamicContent() function
 
 /**
   * This function splits the text so each word can by styled/animated
   */
-asDynamic.splitText = function(){
+asApp.splitText = function(){
 
   getIN = new SplitText('#getIN', {
     type: "words",
@@ -222,7 +246,7 @@ asDynamic.splitText = function(){
  * This function takes the timeline as a parameter and 
  * puts the Hands animation on it.
  */
-asDynamic.addHandsFrameToTimeline = function(){
+asApp.addHandsFrameToTimeline = function(){
 
  tl.to(".in1", 0.2, {
     autoAlpha: 1
@@ -255,7 +279,7 @@ asDynamic.addHandsFrameToTimeline = function(){
   });
 };//end function
 
-asDynamic.addGetINFrameToTimeline = function(){
+asApp.addGetINFrameToTimeline = function(){
  
   //oc: GetIn Frame BEGIN
   tl.staggerFrom(getIN.words, 0.2, {
@@ -271,8 +295,10 @@ asDynamic.addGetINFrameToTimeline = function(){
 
 /**
   * This function scripts the Image wipe/reveal transitions
+  * @param {string} $variation - abbreviation code for which creative is shown
+  * @param {int} $numImages - number of images in the creative 
   */
-asDynamic.addImageFramesToTimeline = function($variation, numImages){
+asApp.addImageFramesToTimeline = function($variation, numImages){
   
   //oc: 
   tl.to("#bkgReveal", 0.7, {
@@ -295,6 +321,7 @@ asDynamic.addImageFramesToTimeline = function($variation, numImages){
     ease: Sine.easeOut
   });
 
+  //oc: Consider using if($numImages > 1 here)
   tl.to("#bgImg2", 0.5, {
     left: 0,
     ease: Sine.easeOut,
@@ -310,17 +337,25 @@ asDynamic.addImageFramesToTimeline = function($variation, numImages){
     delay: 2
   });
 
+  //oc: Consider using if($numImages > 2 here)
+  // tl.to("#bgImg3", 0.5, {
+  //   left: 0,
+  //   ease: Sine.easeOut,
+  //   delay: -0.5
+  // });
+
   tl.to("#bkgReveal", 0.7, {
     left: -100,
     top: -200,
     ease: Sine.easeOut
   });
-};//end asDynamic.addImageFramesToTimeline function
+};//end asApp.addImageFramesToTimeline function
 
 /**
   * This function adds the landing frame's animation sequence to the timeline.
+  * @param {string} $variation - abbreviation code for which creative is shown
   */
-asDynamic.addLandingToTimeline = function($variation){
+asApp.addLandingToTimeline = function($variation){
   tl.to(".fade", 0.3, {
     autoAlpha: 1
   });
@@ -376,21 +411,21 @@ asDynamic.addLandingToTimeline = function($variation){
           Smaller copy - 18px
 
 */
-asDynamic.accidentForgivenessInit = function() {
+asApp.accidentForgivenessInit = function() {
   console.info('accidentForgivenessInit');
 
   $('#af, #getIN').css('display', 'block');
-  asDynamic.addHandsFrameToTimeline(tl);
-  asDynamic.addGetINFrameToTimeline(tl);
-  asDynamic.addImageFramesToTimeline(tl);
-  asDynamic.addLandingToTimeline(tl);
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
  
 
 } //end accidentForgivenessInit() function
 
 
-asDynamic.bundleSaveInit = function($option) {
-  console.info('asDynamic.bundleSaveInit()');
+asApp.bundleSaveInit = function($option) {
+  console.info('asApp.bundleSaveInit()');
 
   //show bundleSave elements
   $('#bsahl, #getIN').css('display', 'block');
@@ -401,8 +436,8 @@ asDynamic.bundleSaveInit = function($option) {
 /**
   * This function scripts the New Roof variation
   */
-asDynamic.newRoofInit = function(){
-  console.info('asDynamic.newRoofInit()');
+asApp.newRoofInit = function(){
+  console.info('asApp.newRoofInit()');
 
   //oc: Smooth house animation in new roof
   CSSPlugin.useSVGTransformAttr = true;
@@ -432,6 +467,6 @@ div1.mouseleave(function() {
   * And overrides the system's exit to navigate to a dynamic exit url
   */
 function onExitClick(event){
-  console.info('onExitClick()');
+  console.info('onExitClick()');  
 };
 
