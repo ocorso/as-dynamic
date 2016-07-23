@@ -408,7 +408,7 @@ asDynamic.accidentForgivenessInit = function() {
 var div1 = $("div#btn_cta"),
   tn1 = TweenMax.to(div1, .3, {
     right: 0,
-    repeat: -1,
+    repeat: 10,
     yoyo: true,
     ease: Linear.easeNone,
     paused: true
