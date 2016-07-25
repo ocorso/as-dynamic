@@ -161,7 +161,7 @@ asApp.init = function() {
 
   //oc: Step 4: handle variations independently.
   //switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode to variation for dev
-  switch ('AF') { //oc: hardcode to variation for dev
+  switch ('BSAHL') { //oc: hardcode to variation for dev
     case asApp.variations.AF : asApp.accidentForgivenessInit(); break;
     case asApp.variations.BSAHLP : asApp.bundleSaveInit('ahlp'); break;
     case asApp.variations.BSAHL : asApp.bundleSaveInit('ahl'); break;
@@ -233,6 +233,10 @@ asApp.splitText = function(){
     wordsClass: "word++"
   });
   frame4 = new SplitText('.frame4', {
+    type: "words",
+    wordsClass: "word++"
+  });
+  frame5 = new SplitText('.frame5', {
     type: "words",
     wordsClass: "word++"
   });
@@ -351,6 +355,65 @@ asApp.addImageFramesToTimeline = function($variation, numImages){
   });
 };//end asApp.addImageFramesToTimeline function
 
+asApp.addBSFramesToTimeline = function($variation, numImages){
+  
+  //sb : 
+  $("#frame3 .word1").attr('class', 'colorIN'); 
+  $("#frame4").attr('class', 'colorIN');
+  $("#frame5").attr('class', 'colorIN');
+
+  tl.to("#bkgReveal", 0.7, {
+    left: 400,
+    top: -200,
+    ease: Sine.easeOut
+  });
+
+  tl.staggerFrom(frame3.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  tl.to("#bgImg1", 0.5, {
+    left: 300,
+    ease: Sine.easeOut
+  });
+
+  tl.to("#bgImg2", 0.5, {
+    left: 0,
+    ease: Sine.easeOut,
+    delay: -0.5
+  });
+
+  tl.staggerFrom(frame4.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  tl.to("#bgImg2", 0.5, {
+    left: 300,
+    ease: Sine.easeOut
+  });
+
+  tl.to("#bgImg3", 0.5, {
+    left: 0,
+    ease: Sine.easeOut,
+    delay: -0.5
+  });
+
+  tl.staggerFrom(frame5.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  tl.to(".BShide", 0.3, {
+    autoAlpha: 0,
+    delay: 2
+  });
+
+  tl.to("#bkgReveal", 0.7, {
+    left: -100,
+    top: -200,
+    ease: Sine.easeOut
+  });
+};//end asApp.add3ImageFramesToTimeline function
+
 /**
   * This function adds the landing frame's animation sequence to the timeline.
   * @param {string} $variation - abbreviation code for which creative is shown
@@ -428,9 +491,14 @@ asApp.bundleSaveInit = function($option) {
   console.info('asApp.bundleSaveInit()');
 
   //show bundleSave elements
-  $('#bsahl, #getIN').css('display', 'block');
+  $('#BSAHL, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addBSFramesToTimeline();
+  asApp.addLandingToTimeline();
+ 
 
-  console.debug('is this working?');
+  console.debug('BS is this working?');
 }; //end function bundleSaveInit
 
 /**
