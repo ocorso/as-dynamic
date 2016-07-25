@@ -13,7 +13,7 @@
 
     devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DF";//oc: hardcode to variation for dev
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFG";//oc: hardcode to variation for dev
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -167,13 +167,13 @@ asApp.init = function() {
     case asApp.type.AF : asApp.accidentForgivenessInit(); break;
     case asApp.type.BSAHLP : asApp.bundleSaveInitAHLP(); break;
     case asApp.type.BSAHL : asApp.bundleSaveInitAHL(); break;
-    case asApp.type.BSHLI : asApp.bundleSaveInit(); break;
-    case asApp.type.BSALP : asApp.bundleSaveInit(); break;
-    case asApp.type.BSAL : asApp.bundleSaveInit(); break;
-    case asApp.type.BSAHMP : asApp.bundleSaveInit(); break;
-    case asApp.type.BSAHM : asApp.bundleSaveInit(); break;
-    case asApp.type.BSACP : asApp.bundleSaveInit(); break;
-    case asApp.type.BSAC : asApp.bundleSaveInit(); break;
+    case asApp.type.BSHLI : asApp.bundleSaveInitHLI(); break;
+    case asApp.type.BSALP : asApp.bundleSaveInitALP(); break;
+    case asApp.type.BSAL : asApp.bundleSaveInitAL(); break;
+    case asApp.type.BSAHMP : asApp.bundleSaveInitAHMP(); break;
+    case asApp.type.BSAHM : asApp.bundleSaveInitAHM(); break;
+    case asApp.type.BSACP : asApp.bundleSaveInitACP(); break;
+    case asApp.type.BSAC : asApp.bundleSaveInitAC(); break;
     case asApp.type.CFD : asApp.claimFreeDiscountInit(); break;
     case asApp.type.CFDM : asApp.claimFreeDiscountInit('mob'); break;
     case asApp.type.CFR : asApp.claimFreeRewardsInit(); break;
@@ -570,7 +570,7 @@ asApp.accidentForgivenessInit = function() {
 
 //show Auto Home Life
 asApp.bundleSaveInitAHL = function() {
-  console.info('asApp.bundleSaveInit():'+$option);
+  console.info('asApp.bundleSaveInitAHL():'+$option);
 
   //show bundleSave elements
   $('#BSAHL, #getIN').css('display', 'block');
@@ -585,7 +585,7 @@ asApp.bundleSaveInitAHL = function() {
 
 //show Auto Home Life %
 asApp.bundleSaveInitAHLP = function() {
-  console.info('asApp.bundleSaveInit()');
+  console.info('asApp.bundleSaveInitAHLP()');
 
   //show bundleSave elements
   $('#BSAHLP, #getIN').css('display', 'block');
@@ -603,7 +603,7 @@ asApp.bundleSaveInitAHLP = function() {
 //show Auto Life 
 asApp.bundleSaveInitAL = function() {
 
-  console.info('asApp.bundleSaveInit()');
+  console.info('asApp.bundleSaveInitAL()');
 
   //show bundleSave elements
   $('#BSAL, #getIN').css('display', 'block');
@@ -611,40 +611,45 @@ asApp.bundleSaveInitAL = function() {
   asApp.addGetINFrameToTimeline();
   asApp.addBS2FramesToTimeline();
   asApp.addLandingToTimeline();
- 
 
   console.debug('Auto Life');
 }; //end function bundleSaveInit
 
+//show Auto Home Moto % 
+asApp.bundleSaveInitAHMP = function() {
 //show Auto Home Moto $option) {
-  console.info('asApp.bundleSaveInit()');
+  console.info('asApp.bundleSaveInitAHMP()');
 
   //show bundleSave elements
-
   $('#BSAHMP, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addBS3FramesToTimeline($option);
   asApp.addLandingToTimeline();
- 
 
   console.debug('Auto home moto %');
+
+};
+
+
+//show Auto Home Life  
+asApp.bundleSaveInitAHL = function() {
+//show Auto Home Moto $option) {
 
   $('#BSAHL, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addBSFramesToTimeline();
   asApp.addLandingToTimeline();
- 
 
-  console.debug('BS is this working?');
+  console.debug('Auto Home Life ');
 
 }; //end function bundleSaveInit
 
 //show Auto Condo 
-asApp.bundleSaveInit = function(pp) {
+asApp.bundleSaveInitAC = function(pp) {
 
-  console.info('asApp.bundleSaveInit()');
+  console.info('asApp.bundleSaveInitAC()');
 
   //show bundleSave elements
   $('#BSAC, #getIN').css('display', 'block');
@@ -652,7 +657,6 @@ asApp.bundleSaveInit = function(pp) {
   asApp.addGetINFrameToTimeline();
   asApp.addBS2FramesToTimeline();
   asApp.addLandingToTimeline();
- 
 
   console.debug('Auto Condo');
 }; //end function bundleSaveInit
