@@ -692,7 +692,7 @@ asApp.driveWiseInit = function() {
   $('#DW, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
-  asApp.addBS3FramesToTimeline();
+  asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
 
   console.log('DW');
@@ -716,17 +716,7 @@ asApp.newRoofInit = function(){
   /**
   * This function scripts the Drivewise variations
   */
-asApp.driveWiseInit = function(){
 
-  $('#DW, #getIN').css('display', 'block');
-  asApp.addHandsFrameToTimeline();
-  asApp.addGetINFrameToTimeline();
-  
-  if(asApp.type == 'DW'){
-    asApp.addImageFramesToTimeline(2)
-  }//end if
-
-}//end function
 
 // oc: CTA Mouseover handlers
 var div1 = $("div#btn_cta"),
