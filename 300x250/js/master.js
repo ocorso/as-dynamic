@@ -151,9 +151,6 @@ asApp.init = function() {
 
   //oc: store the ad variation type for easy retrieval
   asApp.variation = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation;
-  
-  //oc: Google Fonts Fix.
-  TweenLite.set("#atAd300x250", { visibility: "visible"});
 
   //oc: Step 1: map dynamic values to elements in markup
   asApp.parseDynamicContent();
@@ -161,8 +158,8 @@ asApp.init = function() {
   //oc: Step 2: config split text
   asApp.splitText();
 
-  //oc: Step 3: Init TimelineMax
-  tl = new TimelineMax();
+  //oc: Step 3: Init TimelineLite, defaults to paused.
+  tl = new TimelineLite({paused:'true'});
 
   //oc: Step 4: handle variations independently.
   switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode variation for dev line 16
@@ -195,6 +192,17 @@ asApp.init = function() {
       console.log('Run default ad');
       asApp.defaultInit();
   } //end switch
+
+  
+  //oc: Google Fonts Fix.
+  TweenLite.set("#atAd300x250", { visibility: "visible"});
+
+  //oc: hide the loader
+  $('#loader').hide();
+
+  //oc: kick off our timeline!
+  tl.play();
+  
 }; //end asApp.init
 
 /**
