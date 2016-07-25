@@ -196,17 +196,21 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	opacity: 0;
 }
 
+<<<<<<< HEAD
 #subText {
 	display: block;
 	margin-top: 5px; 
 }
 
+=======
+>>>>>>> origin/master
 .BS{
 	font-size:28px;
 	line-height: 30px; 
 	top:34px;
 }
 
+<<<<<<< HEAD
 .BSP{
 	font-size:26px;
 	line-height: 28px; 
@@ -219,6 +223,8 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	top:154px;
 }
 
+=======
+>>>>>>> origin/master
 
 /* CTA */
 /* Quote Now */

@@ -161,7 +161,11 @@ asApp.init = function() {
 
   //oc: Step 4: handle variations independently.
   //switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode to variation for dev
+<<<<<<< HEAD
   switch ('CFD') { //oc: hardcode to variation for dev
+=======
+  switch ('BSAHL') { //oc: hardcode to variation for dev
+>>>>>>> origin/master
     case asApp.variations.AF : asApp.accidentForgivenessInit(); break;
     case asApp.variations.BSAHLP : asApp.bundleSaveInit('ahlp'); break;
     case asApp.variations.BSAHL : asApp.bundleSaveInit('ahl'); break;
@@ -369,10 +373,19 @@ asApp.addImageFramesToTimeline = function($variation, numImages){
   });
 };//end asApp.addImageFramesToTimeline function
 
+<<<<<<< HEAD
 asApp.addBS3FramesToTimeline = function($variation, numImages){
   
   //sb : 
   $(".frame3 .word1").attr('class', 'txtOrange'); 
+=======
+asApp.addBSFramesToTimeline = function($variation, numImages){
+  
+  //sb : 
+  $("#frame3 .word1").attr('class', 'colorIN'); 
+  $("#frame4").attr('class', 'colorIN');
+  $("#frame5").attr('class', 'colorIN');
+>>>>>>> origin/master
 
   tl.to("#bkgReveal", 0.7, {
     left: 400,
@@ -381,6 +394,7 @@ asApp.addBS3FramesToTimeline = function($variation, numImages){
   });
 
   tl.staggerFrom(frame3.words, 0.2, {
+<<<<<<< HEAD
     left: -300,
   }, 0.07)
 
@@ -390,6 +404,14 @@ asApp.addBS3FramesToTimeline = function($variation, numImages){
     left: 300,
     ease: Sine.easeOut,
     delay:1
+=======
+    left: -300
+  }, 0.07)
+
+  tl.to("#bgImg1", 0.5, {
+    left: 300,
+    ease: Sine.easeOut
+>>>>>>> origin/master
   });
 
   tl.to("#bgImg2", 0.5, {
@@ -404,8 +426,12 @@ asApp.addBS3FramesToTimeline = function($variation, numImages){
 
   tl.to("#bgImg2", 0.5, {
     left: 300,
+<<<<<<< HEAD
     ease: Sine.easeOut,
     delay:1
+=======
+    ease: Sine.easeOut
+>>>>>>> origin/master
   });
 
   tl.to("#bgImg3", 0.5, {
@@ -420,6 +446,7 @@ asApp.addBS3FramesToTimeline = function($variation, numImages){
 
   tl.to(".BShide", 0.3, {
     autoAlpha: 0,
+<<<<<<< HEAD
     delay: 1
   });
 
@@ -466,6 +493,9 @@ asApp.addBS2FramesToTimeline = function($variation, numImages){
   tl.to(".BShide", 0.3, {
     autoAlpha: 0,
     delay: 1
+=======
+    delay: 2
+>>>>>>> origin/master
   });
 
   tl.to("#bkgReveal", 0.7, {
@@ -599,6 +629,7 @@ asApp.bundleSaveInit = function($option) {
   console.info('asApp.bundleSaveInit()');
 
   //show bundleSave elements
+<<<<<<< HEAD
   $('#BSAHMP, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
@@ -607,6 +638,16 @@ asApp.bundleSaveInit = function($option) {
  
 
   console.debug('Auto home moto %');
+=======
+  $('#BSAHL, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addBSFramesToTimeline();
+  asApp.addLandingToTimeline();
+ 
+
+  console.debug('BS is this working?');
+>>>>>>> origin/master
 }; //end function bundleSaveInit
 
 //show Auto Condo 
