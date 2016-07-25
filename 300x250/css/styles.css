@@ -219,6 +219,23 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	top:154px;
 }
 
+.CFD{
+	font-size:22px;
+	line-height: 20px; 
+	top:154px;
+}
+
+.CRG{
+	font-size:26px;
+	line-height: 24px; 
+	top:115px;
+	width: 300px;
+	left:-15px;
+	text-align: center;
+}
+
+
+
 /* CTA */
 /* Quote Now */
 /*#btn_cta { font-weight: 700; position: absolute; width: 165px; height:25px; top: 195px; right:-165px; background: #001C71; text-transform: uppercase; padding: 3px 10px 4px 15px; font-size: 20px; font-weight:900; text-align: left; overflow: hidden; z-index: 350; cursor: pointer; opacity: 0 }

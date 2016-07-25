@@ -666,8 +666,8 @@ asApp.claimFreeDiscountInit = function() {
   console.info('claimFreeDiscountInit');
 
   $('#CFD, #hereIN').css('display', 'block');
-  asApp.addHandsFrameToTimeline();
   asApp.addHereINFrameToTimeline();
+  asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
  
