@@ -13,7 +13,7 @@
 
     devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DF";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DF";//oc: hardcode to variation for dev
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -69,32 +69,32 @@
 */
 
 var asApp = {};
-asApp.variations = {};
-asApp.variations.AF = 'AF';//Accident Forgiveness
-asApp.variations.BSAHLP = 'BSAHLP';//Bundle and Save Auto, Home, Life with Percentages
-asApp.variations.BSAHL = 'BSAHL';
-asApp.variations.BSHLI = 'BSHLI';
-asApp.variations.BSALP = 'BSALP';
-asApp.variations.BSAL = 'BSAL';
-asApp.variations.BSAHMP = 'BSAHMP';
-asApp.variations.BSAHM = 'BSAHM';
-asApp.variations.BSACP = 'BSACP';
-asApp.variations.BSAC = 'BSAC';
-asApp.variations.CFD = 'CFD';
-asApp.variations.CFDM = 'CFDM';
-asApp.variations.CFR = 'CFR';
-asApp.variations.CRG = 'CRG';
-asApp.variations.CRGM = 'CRGM';
-asApp.variations.CSG = 'CSG';
-asApp.variations.CSGM = 'CSGM';
-asApp.variations.DW = 'DW';
-asApp.variations.DW2P = 'DW2P';
-asApp.variations.NR = 'NR';
-asApp.variations.TA1 = 'TA1';
-asApp.variations.TAM1 = 'TAM1';
-asApp.variations.TAM2 = 'TAM2';
-asApp.variations.WD = 'WD';
-asApp.variations.DF 
+asApp.type = {};
+asApp.type.AF = 'AF';//Accident Forgiveness
+asApp.type.BSAHLP = 'BSAHLP';//Bundle and Save Auto, Home, Life with Percentages
+asApp.type.BSAHL = 'BSAHL';
+asApp.type.BSHLI = 'BSHLI';
+asApp.type.BSALP = 'BSALP';
+asApp.type.BSAL = 'BSAL';
+asApp.type.BSAHMP = 'BSAHMP';
+asApp.type.BSAHM = 'BSAHM';
+asApp.type.BSACP = 'BSACP';
+asApp.type.BSAC = 'BSAC';
+asApp.type.CFD = 'CFD';
+asApp.type.CFDM = 'CFDM';
+asApp.type.CFR = 'CFR';
+asApp.type.CRG = 'CRG';
+asApp.type.CRGM = 'CRGM';
+asApp.type.CSG = 'CSG';
+asApp.type.CSGM = 'CSGM';
+asApp.type.DW = 'DW';
+asApp.type.DW2P = 'DW2P';
+asApp.type.NR = 'NR';
+asApp.type.TA1 = 'TA1';
+asApp.type.TAM1 = 'TAM1';
+asApp.type.TAM2 = 'TAM2';
+asApp.type.WD = 'WD';
+asApp.type.DF 
 if (!Enabler.isInitialized()) {
   Enabler.addEventListener(
     studio.events.StudioEvent.INIT,
@@ -148,7 +148,7 @@ asApp.init = function() {
   console.info('asApp.init(); Variation Code: '+ dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation);
 
   //oc: store the ad variation type for easy retrieval
-  asApp.type = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation;
+  asApp.variation = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation;
   
   //oc: Google Fonts Fix.
   TweenLite.set("#atAd300x250", { visibility: "visible"});
@@ -163,33 +163,32 @@ asApp.init = function() {
   tl = new TimelineMax();
 
   //oc: Step 4: handle variations independently.
-  //switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode to variation for dev
-  switch ('BSAL') { //oc: hardcode to variation for dev
-    case asApp.variations.AF : asApp.accidentForgivenessInit(); break;
-    case asApp.variations.BSAHLP : asApp.bundleSaveInitAHLP(); break;
-    case asApp.variations.BSAHL : asApp.bundleSaveInitAHL(); break;
-    case asApp.variations.BSHLI : asApp.bundleSaveInit(); break;
-    case asApp.variations.BSALP : asApp.bundleSaveInit(); break;
-    case asApp.variations.BSAL : asApp.bundleSaveInit(); break;
-    case asApp.variations.BSAHMP : asApp.bundleSaveInit(); break;
-    case asApp.variations.BSAHM : asApp.bundleSaveInit(); break;
-    case asApp.variations.BSACP : asApp.bundleSaveInit(); break;
-    case asApp.variations.BSAC : asApp.bundleSaveInit(); break;
-    case asApp.variations.CFD : asApp.claimFreeDiscountInit(); break;
-    case asApp.variations.CFDM : asApp.claimFreeDiscountInit('mob'); break;
-    case asApp.variations.CFR : asApp.claimFreeRewardsInit(); break;
-    case asApp.variations.CRG : asApp.claimRateGuardInit(); break;
-    case asApp.variations.CRGM : asApp.claimRateGuardInit('mob'); break;
-    case asApp.variations.CSG : asApp.claimSatGuardInit(); break;
-    case asApp.variations.CSGM : asApp.claimSatGuardInit('mob'); break;
-    case asApp.variations.DW : asApp.driveWiseInit(); break;
-    case asApp.variations.DW2P : asApp.driveWiseInit(); break;
-    case asApp.variations.NR : asApp.newRoofInit(); break;
-    case asApp.variations.TA1 : asApp.trustedAdvisorInit('opt1'); break;
-    case asApp.variations.TAM1 : asApp.trustedAdvisorInit('mobopt1'); break;
-    case asApp.variations.TAM2 : asApp.trustedAdvisorInit('mobopt2'); break;
-    case asApp.variations.WD : asApp.welcomeDiscountInit(); break;
-    case asApp.variations.DF : asApp.defaultInit(); break;
+  switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode variation for dev line 16
+    case asApp.type.AF : asApp.accidentForgivenessInit(); break;
+    case asApp.type.BSAHLP : asApp.bundleSaveInitAHLP(); break;
+    case asApp.type.BSAHL : asApp.bundleSaveInitAHL(); break;
+    case asApp.type.BSHLI : asApp.bundleSaveInit(); break;
+    case asApp.type.BSALP : asApp.bundleSaveInit(); break;
+    case asApp.type.BSAL : asApp.bundleSaveInit(); break;
+    case asApp.type.BSAHMP : asApp.bundleSaveInit(); break;
+    case asApp.type.BSAHM : asApp.bundleSaveInit(); break;
+    case asApp.type.BSACP : asApp.bundleSaveInit(); break;
+    case asApp.type.BSAC : asApp.bundleSaveInit(); break;
+    case asApp.type.CFD : asApp.claimFreeDiscountInit(); break;
+    case asApp.type.CFDM : asApp.claimFreeDiscountInit('mob'); break;
+    case asApp.type.CFR : asApp.claimFreeRewardsInit(); break;
+    case asApp.type.CRG : asApp.claimRateGuardInit(); break;
+    case asApp.type.CRGM : asApp.claimRateGuardInit('mob'); break;
+    case asApp.type.CSG : asApp.claimSatGuardInit(); break;
+    case asApp.type.CSGM : asApp.claimSatGuardInit('mob'); break;
+    case asApp.type.DW : asApp.driveWiseInit(); break;
+    case asApp.type.DW2P : asApp.driveWiseInit(); break;
+    case asApp.type.NR : asApp.newRoofInit(); break;
+    case asApp.type.TA1 : asApp.trustedAdvisorInit('opt1'); break;
+    case asApp.type.TAM1 : asApp.trustedAdvisorInit('mobopt1'); break;
+    case asApp.type.TAM2 : asApp.trustedAdvisorInit('mobopt2'); break;
+    case asApp.type.WD : asApp.welcomeDiscountInit(); break;
+    case asApp.type.DF : asApp.defaultInit(); break;
     default:
       console.log('Run default ad');
       asApp.defaultInit();
@@ -602,7 +601,7 @@ asApp.bundleSaveInitAHLP = function() {
 
 
 //show Auto Life 
-asApp.bundleSaveInitAL = function(pp) {
+asApp.bundleSaveInitAL = function() {
 
   console.info('asApp.bundleSaveInit()');
 
@@ -617,8 +616,7 @@ asApp.bundleSaveInitAL = function(pp) {
   console.debug('Auto Life');
 }; //end function bundleSaveInit
 
-//show Auto Home Moto 
-asApp.bundleSaveInit = function($option) {
+//show Auto Home Moto $option) {
   console.info('asApp.bundleSaveInit()');
 
   //show bundleSave elements
