@@ -616,6 +616,8 @@ asApp.bundleSaveInitAL = function() {
   console.debug('Auto Life');
 }; //end function bundleSaveInit
 
+//show Auto Moto
+asApp.bundleSaveInitAHMP = function() {
 //show Auto Home Moto $option) {
   console.info('asApp.bundleSaveInit()');
 
