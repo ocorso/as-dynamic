@@ -167,7 +167,6 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	top:50px;
   	text-align: left;
 	z-index: 210;
-	opacity: 0;
 }
 .landing-percent { 
 	width:300px;
@@ -189,12 +188,35 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 .landing-subText {
 	font-family: 'Allstate Sans';
 	text-transform: capitalize;
-	font-size: 17px; 
-	line-height: 17px;
+	font-size: 14px; 
+	line-height: 15px;
 	z-index: 300;
 	font-style: normal;
 	-webkit-font-smoothing: antialiased;
 	opacity: 0;
+}
+
+#subText {
+	display: block;
+	margin-top: 5px; 
+}
+
+.BS{
+	font-size:28px;
+	line-height: 30px; 
+	top:34px;
+}
+
+.BSP{
+	font-size:26px;
+	line-height: 28px; 
+	top:34px;
+}
+
+.CSG{
+	font-size:32px;
+	line-height: 30px; 
+	top:154px;
 }
 
 

@@ -161,7 +161,7 @@ asApp.init = function() {
 
   //oc: Step 4: handle variations independently.
   //switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode to variation for dev
-  switch ('AF') { //oc: hardcode to variation for dev
+  switch ('CFD') { //oc: hardcode to variation for dev
     case asApp.variations.AF : asApp.accidentForgivenessInit(); break;
     case asApp.variations.BSAHLP : asApp.bundleSaveInit('ahlp'); break;
     case asApp.variations.BSAHL : asApp.bundleSaveInit('ahl'); break;
@@ -236,6 +236,10 @@ asApp.splitText = function(){
     type: "words",
     wordsClass: "word++"
   });
+  frame5 = new SplitText('.frame5', {
+    type: "words",
+    wordsClass: "word++"
+  });
 
   $("#getIN .word2").attr('class', 'whiteIN');
   // $("#frame2 .word5").attr('class', 'colorIN');
@@ -287,6 +291,20 @@ asApp.addGetINFrameToTimeline = function(){
   }, 0.07)
 
   tl.to("#getIN", 0.3, {
+    autoAlpha: 0,
+    delay: 2
+  });
+  //oc: GetIn Frame 2 END
+};
+
+asApp.addHereINFrameToTimeline = function(){
+ 
+  //oc: GetIn Frame BEGIN
+  tl.staggerFrom(hereIN.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  tl.to("#hereIN", 0.3, {
     autoAlpha: 0,
     delay: 2
   });
@@ -350,6 +368,112 @@ asApp.addImageFramesToTimeline = function($variation, numImages){
     ease: Sine.easeOut
   });
 };//end asApp.addImageFramesToTimeline function
+
+asApp.addBS3FramesToTimeline = function($variation, numImages){
+  
+  //sb : 
+  $(".frame3 .word1").attr('class', 'txtOrange'); 
+
+  tl.to("#bkgReveal", 0.7, {
+    left: 400,
+    top: -200,
+    ease: Sine.easeOut
+  });
+
+  tl.staggerFrom(frame3.words, 0.2, {
+    left: -300,
+  }, 0.07)
+
+  // tl.to("#frame3", 0.2, {autoAlpha: 1, delay:-02});
+
+  tl.to("#bgImg1", 0.5, {
+    left: 300,
+    ease: Sine.easeOut,
+    delay:1
+  });
+
+  tl.to("#bgImg2", 0.5, {
+    left: 0,
+    ease: Sine.easeOut,
+    delay: -0.5
+  });
+
+  tl.staggerFrom(frame4.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  tl.to("#bgImg2", 0.5, {
+    left: 300,
+    ease: Sine.easeOut,
+    delay:1
+  });
+
+  tl.to("#bgImg3", 0.5, {
+    left: 0,
+    ease: Sine.easeOut,
+    delay: -0.5
+  });
+
+  tl.staggerFrom(frame5.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  tl.to(".BShide", 0.3, {
+    autoAlpha: 0,
+    delay: 1
+  });
+
+  tl.to("#bkgReveal", 0.7, {
+    left: -100,
+    top: -200,
+    ease: Sine.easeOut
+  });
+};//end asApp.add3ImageFramesToTimeline function
+
+
+asApp.addBS2FramesToTimeline = function($variation, numImages){
+  
+  //sb : 
+  $(".frame3 .word1").attr('class', 'txtOrange'); 
+
+  tl.to("#bkgReveal", 0.7, {
+    left: 400,
+    top: -200,
+    ease: Sine.easeOut
+  });
+
+  tl.staggerFrom(frame3.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  tl.staggerFrom(frame4.words, 0.2, {
+    left: -300,
+    delay:1
+  }, 0.07)
+
+  tl.to("#bgImg1", 0.5, {
+    left: 300,
+    ease: Sine.easeOut,
+    delay: 1.5
+  });
+
+  tl.to("#bgImg2", 0.5, {
+    left: 0,
+    ease: Sine.easeOut,
+    delay: -2
+  });
+
+  tl.to(".BShide", 0.3, {
+    autoAlpha: 0,
+    delay: 1
+  });
+
+  tl.to("#bkgReveal", 0.7, {
+    left: -100,
+    top: -200,
+    ease: Sine.easeOut
+  });
+};//end asApp.add3ImageFramesToTimeline function
 
 /**
   * This function adds the landing frame's animation sequence to the timeline.
@@ -423,15 +547,97 @@ asApp.accidentForgivenessInit = function() {
 
 } //end accidentForgivenessInit() function
 
-
+//show Auto Home Life
 asApp.bundleSaveInit = function($option) {
   console.info('asApp.bundleSaveInit()');
 
   //show bundleSave elements
-  $('#bsahl, #getIN').css('display', 'block');
+  $('#BSAHL, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addBS3FramesToTimeline();
+  asApp.addLandingToTimeline();
+ 
 
-  console.debug('is this working?');
+  console.debug('Auto Home Life');
 }; //end function bundleSaveInit
+
+//show Auto Home Life %
+asApp.bundleSaveInit = function($option) {
+  console.info('asApp.bundleSaveInit()');
+
+  //show bundleSave elements
+  $('#BSAHLP, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addBS3FramesToTimeline();
+  asApp.addLandingToTimeline();
+ 
+
+  console.debug('Auto Home Life %');
+}; //end function bundleSaveInit
+
+
+//show Auto Life 
+asApp.bundleSaveInit = function(pp) {
+
+  console.info('asApp.bundleSaveInit()');
+
+  //show bundleSave elements
+  $('#BSAL, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addBS2FramesToTimeline();
+  asApp.addLandingToTimeline();
+ 
+
+  console.debug('Auto Life');
+}; //end function bundleSaveInit
+
+//show Auto Home Moto 
+asApp.bundleSaveInit = function($option) {
+  console.info('asApp.bundleSaveInit()');
+
+  //show bundleSave elements
+  $('#BSAHMP, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addBS3FramesToTimeline();
+  asApp.addLandingToTimeline();
+ 
+
+  console.debug('Auto home moto %');
+}; //end function bundleSaveInit
+
+//show Auto Condo 
+asApp.bundleSaveInit = function(pp) {
+
+  console.info('asApp.bundleSaveInit()');
+
+  //show bundleSave elements
+  $('#BSAC, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addBS2FramesToTimeline();
+  asApp.addLandingToTimeline();
+ 
+
+  console.debug('Auto Condo');
+}; //end function bundleSaveInit
+
+//show CFD
+asApp.claimFreeDiscountInit = function() {
+  console.info('claimFreeDiscountInit');
+
+  $('#CFD, #hereIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addHereINFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+ 
+} //end CFD
+
+
 
 /**
   * This function scripts the New Roof variation
