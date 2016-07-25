@@ -147,6 +147,9 @@ function enablerInitialized() {
 asApp.init = function() {
   console.info('asApp.init(); Variation Code: '+ dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation);
 
+  //oc: store the ad variation type for easy retrieval
+  asApp.type = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation;
+  
   //oc: Google Fonts Fix.
   TweenLite.set("#atAd300x250", { visibility: "visible"});
 
@@ -161,21 +164,17 @@ asApp.init = function() {
 
   //oc: Step 4: handle variations independently.
   //switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode to variation for dev
-<<<<<<< HEAD
-  switch ('CFD') { //oc: hardcode to variation for dev
-=======
-  switch ('BSAHL') { //oc: hardcode to variation for dev
->>>>>>> origin/master
+  switch ('BSAL') { //oc: hardcode to variation for dev
     case asApp.variations.AF : asApp.accidentForgivenessInit(); break;
-    case asApp.variations.BSAHLP : asApp.bundleSaveInit('ahlp'); break;
-    case asApp.variations.BSAHL : asApp.bundleSaveInit('ahl'); break;
-    case asApp.variations.BSHLI : asApp.bundleSaveInit('hli'); break;
-    case asApp.variations.BSALP : asApp.bundleSaveInit('alp'); break;
-    case asApp.variations.BSAL : asApp.bundleSaveInit('al'); break;
-    case asApp.variations.BSAHMP : asApp.bundleSaveInit('ahmp'); break;
-    case asApp.variations.BSAHM : asApp.bundleSaveInit('ahm'); break;
-    case asApp.variations.BSACP : asApp.bundleSaveInit('acp'); break;
-    case asApp.variations.BSAC : asApp.bundleSaveInit('ac'); break;
+    case asApp.variations.BSAHLP : asApp.bundleSaveInitAHLP(); break;
+    case asApp.variations.BSAHL : asApp.bundleSaveInitAHL(); break;
+    case asApp.variations.BSHLI : asApp.bundleSaveInit(); break;
+    case asApp.variations.BSALP : asApp.bundleSaveInit(); break;
+    case asApp.variations.BSAL : asApp.bundleSaveInit(); break;
+    case asApp.variations.BSAHMP : asApp.bundleSaveInit(); break;
+    case asApp.variations.BSAHM : asApp.bundleSaveInit(); break;
+    case asApp.variations.BSACP : asApp.bundleSaveInit(); break;
+    case asApp.variations.BSAC : asApp.bundleSaveInit(); break;
     case asApp.variations.CFD : asApp.claimFreeDiscountInit(); break;
     case asApp.variations.CFDM : asApp.claimFreeDiscountInit('mob'); break;
     case asApp.variations.CFR : asApp.claimFreeRewardsInit(); break;
@@ -183,8 +182,8 @@ asApp.init = function() {
     case asApp.variations.CRGM : asApp.claimRateGuardInit('mob'); break;
     case asApp.variations.CSG : asApp.claimSatGuardInit(); break;
     case asApp.variations.CSGM : asApp.claimSatGuardInit('mob'); break;
-    case asApp.variations.DW : asApp.driveWiseInit('opt1'); break;
-    case asApp.variations.DW2P : asApp.driveWiseInit('opt2p'); break;
+    case asApp.variations.DW : asApp.driveWiseInit(); break;
+    case asApp.variations.DW2P : asApp.driveWiseInit(); break;
     case asApp.variations.NR : asApp.newRoofInit(); break;
     case asApp.variations.TA1 : asApp.trustedAdvisorInit('opt1'); break;
     case asApp.variations.TAM1 : asApp.trustedAdvisorInit('mobopt1'); break;
@@ -303,7 +302,7 @@ asApp.addGetINFrameToTimeline = function(){
 
 asApp.addHereINFrameToTimeline = function(){
  
-  //oc: GetIn Frame BEGIN
+  //oc: HereIn Frame BEGIN
   tl.staggerFrom(hereIN.words, 0.2, {
     left: -300
   }, 0.07)
@@ -312,27 +311,30 @@ asApp.addHereINFrameToTimeline = function(){
     autoAlpha: 0,
     delay: 2
   });
-  //oc: GetIn Frame 2 END
+  //oc: HereIn Frame 2 END
 };
 
 /**
   * This function scripts the Image wipe/reveal transitions
-  * @param {string} $variation - abbreviation code for which creative is shown
   * @param {int} $numImages - number of images in the creative 
   */
-asApp.addImageFramesToTimeline = function($variation, numImages){
+asApp.addImageFramesToTimeline = function($numImages){
   
-  //oc: 
+  //oc: background reveal
   tl.to("#bkgReveal", 0.7, {
     left: 400,
     top: -200,
     ease: Sine.easeOut
   });
 
+  //oc: show first line of text
   tl.staggerFrom(frame3.words, 0.2, {
     left: -300
   }, 0.07)
 
+
+
+  //oc: fade 
   tl.to(".frame3", 0.3, {
     autoAlpha: 0,
     delay: 2
@@ -343,28 +345,41 @@ asApp.addImageFramesToTimeline = function($variation, numImages){
     ease: Sine.easeOut
   });
 
-  //oc: Consider using if($numImages > 1 here)
-  tl.to("#bgImg2", 0.5, {
-    left: 0,
-    ease: Sine.easeOut,
-    delay: -0.5
-  });
+  //handle 2 or more images
+  if($numImage >= 2){
+    tl.to("#bgImg2", 0.5, {
+      left: 0,
+      ease: Sine.easeOut,
+      delay: -0.5
+    });
 
-  tl.staggerFrom(frame4.words, 0.2, {
-    left: -300
-  }, 0.07)
+    tl.staggerFrom(frame4.words, 0.2, {
+      left: -300
+    }, 0.07)
 
-  tl.to(".frame4", 0.3, {
-    autoAlpha: 0,
-    delay: 2
-  });
+    tl.to(".frame4", 0.3, {
+      autoAlpha: 0,
+      delay: 2
+    });
+    
+    //oc: Handle 3 images
+    if($numImages == 3){
+      tl.to("#bgImg3", 0.5, {
+        left: 0,
+        ease: Sine.easeOut,
+        delay: -0.5
+      });
+      tl.staggerFrom(frame5.words, 0.2, {
+        left: -300
+      }, 0.07)
 
-  //oc: Consider using if($numImages > 2 here)
-  // tl.to("#bgImg3", 0.5, {
-  //   left: 0,
-  //   ease: Sine.easeOut,
-  //   delay: -0.5
-  // });
+      tl.to(".frame5", 0.3, {
+        autoAlpha: 0,
+        delay: 2
+      });
+    }//end if 3 images
+      
+  }//end if 2 images
 
   tl.to("#bkgReveal", 0.7, {
     left: -100,
@@ -373,19 +388,11 @@ asApp.addImageFramesToTimeline = function($variation, numImages){
   });
 };//end asApp.addImageFramesToTimeline function
 
-<<<<<<< HEAD
+
 asApp.addBS3FramesToTimeline = function($variation, numImages){
   
   //sb : 
   $(".frame3 .word1").attr('class', 'txtOrange'); 
-=======
-asApp.addBSFramesToTimeline = function($variation, numImages){
-  
-  //sb : 
-  $("#frame3 .word1").attr('class', 'colorIN'); 
-  $("#frame4").attr('class', 'colorIN');
-  $("#frame5").attr('class', 'colorIN');
->>>>>>> origin/master
 
   tl.to("#bkgReveal", 0.7, {
     left: 400,
@@ -394,7 +401,6 @@ asApp.addBSFramesToTimeline = function($variation, numImages){
   });
 
   tl.staggerFrom(frame3.words, 0.2, {
-<<<<<<< HEAD
     left: -300,
   }, 0.07)
 
@@ -403,16 +409,9 @@ asApp.addBSFramesToTimeline = function($variation, numImages){
   tl.to("#bgImg1", 0.5, {
     left: 300,
     ease: Sine.easeOut,
-    delay:1
-=======
+    delay:1,
     left: -300
   }, 0.07)
-
-  tl.to("#bgImg1", 0.5, {
-    left: 300,
-    ease: Sine.easeOut
->>>>>>> origin/master
-  });
 
   tl.to("#bgImg2", 0.5, {
     left: 0,
@@ -426,12 +425,8 @@ asApp.addBSFramesToTimeline = function($variation, numImages){
 
   tl.to("#bgImg2", 0.5, {
     left: 300,
-<<<<<<< HEAD
     ease: Sine.easeOut,
     delay:1
-=======
-    ease: Sine.easeOut
->>>>>>> origin/master
   });
 
   tl.to("#bgImg3", 0.5, {
@@ -446,7 +441,6 @@ asApp.addBSFramesToTimeline = function($variation, numImages){
 
   tl.to(".BShide", 0.3, {
     autoAlpha: 0,
-<<<<<<< HEAD
     delay: 1
   });
 
@@ -458,9 +452,10 @@ asApp.addBSFramesToTimeline = function($variation, numImages){
 };//end asApp.add3ImageFramesToTimeline function
 
 
-asApp.addBS2FramesToTimeline = function($variation, numImages){
+asApp.addBS2FramesToTimeline = function($variation){
   
-  //sb : 
+  //sb : oc: selection
+  var selector = $variation +  ".frame3";
   $(".frame3 .word1").attr('class', 'txtOrange'); 
 
   tl.to("#bkgReveal", 0.7, {
@@ -493,9 +488,6 @@ asApp.addBS2FramesToTimeline = function($variation, numImages){
   tl.to(".BShide", 0.3, {
     autoAlpha: 0,
     delay: 1
-=======
-    delay: 2
->>>>>>> origin/master
   });
 
   tl.to("#bkgReveal", 0.7, {
@@ -578,8 +570,8 @@ asApp.accidentForgivenessInit = function() {
 } //end accidentForgivenessInit() function
 
 //show Auto Home Life
-asApp.bundleSaveInit = function($option) {
-  console.info('asApp.bundleSaveInit()');
+asApp.bundleSaveInitAHL = function() {
+  console.info('asApp.bundleSaveInit():'+$option);
 
   //show bundleSave elements
   $('#BSAHL, #getIN').css('display', 'block');
@@ -593,13 +585,14 @@ asApp.bundleSaveInit = function($option) {
 }; //end function bundleSaveInit
 
 //show Auto Home Life %
-asApp.bundleSaveInit = function($option) {
+asApp.bundleSaveInitAHLP = function() {
   console.info('asApp.bundleSaveInit()');
 
   //show bundleSave elements
   $('#BSAHLP, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
+
   asApp.addBS3FramesToTimeline();
   asApp.addLandingToTimeline();
  
@@ -609,7 +602,7 @@ asApp.bundleSaveInit = function($option) {
 
 
 //show Auto Life 
-asApp.bundleSaveInit = function(pp) {
+asApp.bundleSaveInitAL = function(pp) {
 
   console.info('asApp.bundleSaveInit()');
 
@@ -629,16 +622,16 @@ asApp.bundleSaveInit = function($option) {
   console.info('asApp.bundleSaveInit()');
 
   //show bundleSave elements
-<<<<<<< HEAD
+
   $('#BSAHMP, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
-  asApp.addBS3FramesToTimeline();
+  asApp.addBS3FramesToTimeline($option);
   asApp.addLandingToTimeline();
  
 
   console.debug('Auto home moto %');
-=======
+
   $('#BSAHL, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
@@ -647,7 +640,7 @@ asApp.bundleSaveInit = function($option) {
  
 
   console.debug('BS is this working?');
->>>>>>> origin/master
+
 }; //end function bundleSaveInit
 
 //show Auto Condo 
@@ -683,12 +676,29 @@ asApp.claimFreeDiscountInit = function() {
 /**
   * This function scripts the New Roof variation
   */
+
 asApp.newRoofInit = function(){
   console.info('asApp.newRoofInit()');
 
   //oc: Smooth house animation in new roof
   CSSPlugin.useSVGTransformAttr = true;
 }//end function newRoofInint
+
+
+  /**
+  * This function scripts the Drivewise variations
+  */
+asApp.driveWiseInit = function(){
+
+  $('#DW, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  
+  if(asApp.type == 'DW'){
+    asApp.addImageFramesToTimeline(2)
+  }//end if
+
+}//end function
 
 // oc: CTA Mouseover handlers
 var div1 = $("div#btn_cta"),
