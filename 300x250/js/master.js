@@ -13,7 +13,7 @@
 
     devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSAHL";//oc: hardcode to variation for dev
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW";//oc: hardcode to variation for dev
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -439,13 +439,12 @@ asApp.addBS2FramesToTimeline = function($variation){
 
   tl.staggerFrom(frame4.words, 0.2, {
     left: -300,
-    delay:1
   }, 0.07)
 
   tl.to("#bgImg2", 0.5, {
     left: 0,
     ease: Sine.easeOut,
-    delay: 1
+    delay: -1
   });
 
   tl.to(".BShide", 0.3, {
@@ -602,7 +601,7 @@ asApp.bundleSaveInitAHMP = function() {
   $('#BSAHMP, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
-  asApp.addBS3FramesToTimeline($option);
+  asApp.addBS3FramesToTimeline();
   asApp.addLandingToTimeline();
 
   console.debug('Auto home moto %');
@@ -624,19 +623,19 @@ asApp.bundleSaveInitAHL = function() {
 
 }; //end function bundleSaveInit
 
-//show Auto Condo 
-asApp.bundleSaveInitAC = function(pp) {
+//show Auto Condo percent
+asApp.bundleSaveInitACP = function(pp) {
 
-  console.info('asApp.bundleSaveInitAC()');
+  console.info('asApp.bundleSaveInitACP()');
 
   //show bundleSave elements
-  $('#BSAC, #getIN').css('display', 'block');
+  $('#BSACP, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addBS2FramesToTimeline();
   asApp.addLandingToTimeline();
 
-  console.debug('Auto Condo');
+  console.debug('Auto Condo percent');
 }; //end function bundleSaveInit
 
 //show Home + Life 
@@ -677,6 +676,20 @@ asApp.claimFreeRewardsInit = function() {
   asApp.addLandingToTimeline();
  
 } //end CFR
+
+//show DW
+asApp.driveWiseInit = function() {
+  console.info('driveWiseInit');
+
+  $('#DW, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addBS3FramesToTimeline();
+  asApp.addLandingToTimeline();
+
+  console.log('DW');
+ 
+} //end DW
 
 
 
