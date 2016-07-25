@@ -13,7 +13,7 @@
 
     devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFD";//oc: hardcode to variation for dev
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSAHL";//oc: hardcode to variation for dev
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -232,6 +232,10 @@ asApp.splitText = function(){
     type: "words",
     wordsClass: "word++"
   });
+  hereIN = new SplitText('#hereIN', {
+    type: "words",
+    wordsClass: "word++"
+  });
   frame3 = new SplitText('.frame3', {
     type: "words",
     wordsClass: "word++"
@@ -246,6 +250,7 @@ asApp.splitText = function(){
   });
 
   $("#getIN .word2").attr('class', 'whiteIN');
+  $("#hereIN .word2").attr('class', 'whiteIN');
   // $("#frame2 .word5").attr('class', 'colorIN');
 
 };
@@ -319,7 +324,7 @@ asApp.addHereINFrameToTimeline = function(){
   * This function scripts the Image wipe/reveal transitions
   * @param {int} $numImages - number of images in the creative 
   */
-asApp.addImageFramesToTimeline = function($numImages){
+asApp.addImageFramesToTimeline = function($variation){
   
   //oc: background reveal
   tl.to("#bkgReveal", 0.7, {
@@ -333,54 +338,32 @@ asApp.addImageFramesToTimeline = function($numImages){
     left: -300
   }, 0.07)
 
-
-
   //oc: fade 
   tl.to(".frame3", 0.3, {
+    autoAlpha: 0, 
+    delay:2
+  });
+
+  tl.to("#bgImg2", 0.5, {
+    left: 0,
+    ease: Sine.easeOut,
+    delay: 1
+  });
+
+  tl.staggerFrom(frame4.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  tl.to(".frame4", 0.3, {
+    autoAlpha: 0,
+    delay:2
+  });
+
+  tl.to(".frame5", 0.3, {
     autoAlpha: 0,
     delay: 2
   });
 
-  tl.to("#bgImg1", 0.5, {
-    left: 300,
-    ease: Sine.easeOut
-  });
-
-  //handle 2 or more images
-  if($numImages >= 2){
-    tl.to("#bgImg2", 0.5, {
-      left: 0,
-      ease: Sine.easeOut,
-      delay: -0.5
-    });
-
-    tl.staggerFrom(frame4.words, 0.2, {
-      left: -300
-    }, 0.07)
-
-    tl.to(".frame4", 0.3, {
-      autoAlpha: 0,
-      delay: 2
-    });
-    
-    //oc: Handle 3 images
-    if($numImages == 3){
-      tl.to("#bgImg3", 0.5, {
-        left: 0,
-        ease: Sine.easeOut,
-        delay: -0.5
-      });
-      tl.staggerFrom(frame5.words, 0.2, {
-        left: -300
-      }, 0.07)
-
-      tl.to(".frame5", 0.3, {
-        autoAlpha: 0,
-        delay: 2
-      });
-    }//end if 3 images
-      
-  }//end if 2 images
 
   tl.to("#bkgReveal", 0.7, {
     left: -100,
@@ -390,7 +373,7 @@ asApp.addImageFramesToTimeline = function($numImages){
 };//end asApp.addImageFramesToTimeline function
 
 
-asApp.addBS3FramesToTimeline = function($variation, numImages){
+asApp.addBS3FramesToTimeline = function($variation){
   
   //sb : 
   $(".frame3 .word1").attr('class', 'txtOrange'); 
@@ -405,35 +388,20 @@ asApp.addBS3FramesToTimeline = function($variation, numImages){
     left: -300,
   }, 0.07)
 
-  // tl.to("#frame3", 0.2, {autoAlpha: 1, delay:-02});
-
-  tl.to("#bgImg1", 0.5, {
-    left: 300,
-    ease: Sine.easeOut,
-    delay:1,
-    left: -300
-  }, 0.07)
-
   tl.to("#bgImg2", 0.5, {
     left: 0,
     ease: Sine.easeOut,
-    delay: -0.5
+    delay: 1
   });
 
   tl.staggerFrom(frame4.words, 0.2, {
     left: -300
   }, 0.07)
 
-  tl.to("#bgImg2", 0.5, {
-    left: 300,
-    ease: Sine.easeOut,
-    delay:1
-  });
-
   tl.to("#bgImg3", 0.5, {
     left: 0,
     ease: Sine.easeOut,
-    delay: -0.5
+    delay: 1
   });
 
   tl.staggerFrom(frame5.words, 0.2, {
@@ -474,16 +442,10 @@ asApp.addBS2FramesToTimeline = function($variation){
     delay:1
   }, 0.07)
 
-  tl.to("#bgImg1", 0.5, {
-    left: 300,
-    ease: Sine.easeOut,
-    delay: 1.5
-  });
-
   tl.to("#bgImg2", 0.5, {
     left: 0,
     ease: Sine.easeOut,
-    delay: -2
+    delay: 1
   });
 
   tl.to(".BShide", 0.3, {
@@ -558,6 +520,20 @@ asApp.addLandingToTimeline = function($variation){
           Smaller copy - 18px
 
 */
+
+//show CFR
+asApp.defaultInit = function() {
+  console.info('defaultInit');
+
+  $('#AF, #getIN').css('display', 'block');
+  asApp.addHereINFrameToTimeline();
+  asApp.addHandsFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+ 
+} //end CFR
+
+
 asApp.accidentForgivenessInit = function() {
   console.info('accidentForgivenessInit');
 
@@ -641,7 +617,7 @@ asApp.bundleSaveInitAHL = function() {
   $('#BSAHL, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
-  asApp.addBSFramesToTimeline();
+  asApp.addBS3FramesToTimeline();
   asApp.addLandingToTimeline();
 
   console.debug('Auto Home Life ');
@@ -663,6 +639,21 @@ asApp.bundleSaveInitAC = function(pp) {
   console.debug('Auto Condo');
 }; //end function bundleSaveInit
 
+//show Home + Life 
+asApp.bundleSaveInitHLI = function(pp) {
+
+  console.info('asApp.bundleSaveInitHLI()');
+
+  //show bundleSave elements
+  $('#BSHLI, #hereIN').css('display', 'block');
+  asApp.addHereINFrameToTimeline();
+  asApp.addHandsFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+
+  console.debug('home+life');
+}; //end function Home + Life
+
 //show CFD
 asApp.claimFreeDiscountInit = function() {
   console.info('claimFreeDiscountInit');
@@ -674,6 +665,18 @@ asApp.claimFreeDiscountInit = function() {
   asApp.addLandingToTimeline();
  
 } //end CFD
+
+//show CFR
+asApp.claimFreeRewardsInit = function() {
+  console.info('claimFreeRewardsInit');
+
+  $('#CFR, #hereIN').css('display', 'block');
+  asApp.addHereINFrameToTimeline();
+  asApp.addHandsFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+ 
+} //end CFR
 
 
 
