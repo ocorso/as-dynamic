@@ -94,7 +94,9 @@ asApp.type.TA1 = 'TA1';
 asApp.type.TAM1 = 'TAM1';
 asApp.type.TAM2 = 'TAM2';
 asApp.type.WD = 'WD';
-asApp.type.DF 
+asApp.type.DF = 'DF';
+
+
 if (!Enabler.isInitialized()) {
   Enabler.addEventListener(
     studio.events.StudioEvent.INIT,
