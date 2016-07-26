@@ -71,7 +71,7 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	font-weight: 700;
 	-webkit-font-smoothing: antialiased; 
 	text-transform: uppercase;	
-	position: absolute;
+	/*position: absolute;*/
 	width: 300px;
 }
 #hereIN{
@@ -189,6 +189,15 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	opacity: 0;
 }
 
+.landing-name-side { 
+	font-size:26px;
+	line-height: 24px;
+	left:133px;
+  	text-align: left;
+	z-index: 210;
+	opacity: 0;
+}
+
 .landing-subText {
 	font-family: 'Allstate Sans';
 	text-transform: capitalize;
@@ -197,6 +206,15 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	z-index: 300;
 	font-style: normal;
 	-webkit-font-smoothing: antialiased;
+	opacity: 0;
+}
+
+.landing-percent-large{
+	text-transform: uppercase;
+	font-family: 'ITC Avant Garde Gothic';	
+	font-weight: 700;
+	font-size:55px;
+	left:13px;
 	opacity: 0;
 }
 
@@ -251,6 +269,20 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	top:140px;
 	font-size: 31px;
 	line-height: 28px;
+}
+
+.WD{
+	top:57px;
+	left:15px;
+	font-size: 38px;
+	line-height: 32px;
+}
+#Col1 {
+	display: inline-block;
+}
+
+#Col2 {
+	display: inline-block;
 }
 
 

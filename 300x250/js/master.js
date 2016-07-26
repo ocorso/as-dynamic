@@ -14,7 +14,7 @@
 
     devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW2P";//oc: hardcode to variation for dev
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DF";//oc: hardcode to variation for dev
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -307,7 +307,7 @@ asApp.splitText = function() {
     wordsClass: "word++",
   });
 
-  if (asApp.variation == 'DW','DW2P') {
+  if ((asApp.variation == 'DW') || (asApp.variation == 'DW2P')) {
 
       frame3 = new SplitText('.frame3', {
         type: "lines,words,chars",
@@ -441,7 +441,7 @@ asApp.addImageFramesToTimeline = function($variation) {
     delay: 2
   });
 
-  if (asApp.variation == 'DW','DW2P') {
+  if ((asApp.variation == 'DW') || (asApp.variation == 'DW2P')) {
     console.log('only DW')
     $(".frame3 .word2").attr('class', 'txtLtBlue');
     
@@ -564,6 +564,32 @@ asApp.addBS2FramesToTimeline = function($variation) {
     ease: Sine.easeOut
   });
 }; //end asApp.add3ImageFramesToTimeline function
+
+asApp.addWDTimeline = function($variation) {
+  tl.to("#bkgReveal", 0.7, {
+    left: 400,
+    top: -200,
+    ease: Sine.easeOut
+  });
+
+  tl.to("#bkgReveal", 0.7, {
+      left: -100,
+      top: -200,
+      ease: Sine.easeOut,
+      delay:1
+    });
+
+  tl.staggerFrom(frame3.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  //oc: fade
+  tl.to(".frame3", 0.3, {
+    autoAlpha: 0,
+    delay: 2
+  });
+
+};
 
 /**
  * This function adds the landing frame's animation sequence to the timeline.
@@ -827,6 +853,20 @@ asApp.driveWiseInit2P = function() {
 
 } //end DW
 
+//show Auto Condo percent
+asApp.welcomeDiscountInit = function(pp) {
+
+  console.info('asApp.welcomeDiscountInit()');
+
+  //show bundleSave elements
+  $('#WD, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addWDTimeline();
+  asApp.addLandingToTimeline();
+
+  console.debug('welcome Discount');
+}; //end function bundleSaveInit
 
 
 /**
