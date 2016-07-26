@@ -147,10 +147,10 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	bottom: 6px;
 }
 
-#onlyAllstate {
-	position: absolute;
-	top:148px;
+#onlyAllstate, #onlyAllstate2{
+	position: relative;
 	left:300px;
+	top: -5px;
 	z-index: 210;
 }
 
@@ -158,10 +158,8 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	font-family: 'Allstate Sans';
 	font-size: 20px; 
 	line-height: 20px;
-	margin-left:-13px;
   left: 0px;
   bottom: 15px;
-  position: absolute;
 }
 
 #landing { 
@@ -243,6 +241,17 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	font-size:20px;
 	line-height: 18px; 
 	top:85px;
+}
+
+.DW{
+	top:106px;
+	width:210px;
+}
+
+.DW2P{
+	top:140px;
+	font-size: 31px;
+	line-height: 28px;
 }
 
 

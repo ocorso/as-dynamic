@@ -8,6 +8,7 @@
 */
 
 // Dynamic Content variables and sample values
+<<<<<<< Updated upstream
 Enabler.setProfileId(1085016);
 var devDynamicContent = {};
 
@@ -59,6 +60,59 @@ devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600 = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600.Type = "file";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
 Enabler.setDevDynamicContent(devDynamicContent);
+=======
+    Enabler.setProfileId(1085016);
+    var devDynamicContent = {};
+
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW2P";//oc: hardcode to variation for dev
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "N\/A";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600 = {};
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600.Type = "file";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+    Enabler.setDevDynamicContent(devDynamicContent);
+>>>>>>> Stashed changes
 
 /**
  * You may access the variables in the following manner
@@ -178,6 +232,7 @@ asApp.init = function() {
 
   //oc: Step 4: handle variations independently.
   switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode variation for dev line 16
+<<<<<<< Updated upstream
     case asApp.type.AF:
       asApp.accidentForgivenessInit();
       break;
@@ -253,6 +308,33 @@ asApp.init = function() {
     case asApp.type.DF:
       asApp.defaultInit();
       break;
+=======
+    case asApp.type.AF : asApp.accidentForgivenessInit(); break;
+    case asApp.type.BSAHLP : asApp.bundleSaveInitAHLP(); break;
+    case asApp.type.BSAHL : asApp.bundleSaveInitAHL(); break;
+    case asApp.type.BSHLI : asApp.bundleSaveInitHLI(); break;
+    case asApp.type.BSALP : asApp.bundleSaveInitALP(); break;
+    case asApp.type.BSAL : asApp.bundleSaveInitAL(); break;
+    case asApp.type.BSAHMP : asApp.bundleSaveInitAHMP(); break;
+    case asApp.type.BSAHM : asApp.bundleSaveInitAHM(); break;
+    case asApp.type.BSACP : asApp.bundleSaveInitACP(); break;
+    case asApp.type.BSAC : asApp.bundleSaveInitAC(); break;
+    case asApp.type.CFD : asApp.claimFreeDiscountInit(); break;
+    case asApp.type.CFDM : asApp.claimFreeDiscountInit('mob'); break;
+    case asApp.type.CFR : asApp.claimFreeRewardsInit(); break;
+    case asApp.type.CRG : asApp.claimRateGuardInit(); break;
+    case asApp.type.CRGM : asApp.claimRateGuardInit('mob'); break;
+    case asApp.type.CSG : asApp.claimSatGuardInit(); break;
+    case asApp.type.CSGM : asApp.claimSatGuardInit('mob'); break;
+    case asApp.type.DW : asApp.driveWiseInit(); break;
+    case asApp.type.DW2P : asApp.driveWiseInit2P(); break;
+    case asApp.type.NR : asApp.newRoofInit(); break;
+    case asApp.type.TA1 : asApp.trustedAdvisorInit('opt1'); break;
+    case asApp.type.TAM1 : asApp.trustedAdvisorInit('mobopt1'); break;
+    case asApp.type.TAM2 : asApp.trustedAdvisorInit('mobopt2'); break;
+    case asApp.type.WD : asApp.welcomeDiscountInit(); break;
+    case asApp.type.DF : asApp.defaultInit(); break;
+>>>>>>> Stashed changes
     default:
       console.log('Run default ad');
       asApp.defaultInit();
@@ -341,18 +423,43 @@ asApp.splitText = function() {
     type: "words",
     wordsClass: "word++"
   });
+
   frame3 = new SplitText('.frame3', {
-    type: "words",
-    wordsClass: "word++"
+    type: "lines,words,chars",
+    wordsClass: "word++",
   });
   frame4 = new SplitText('.frame4', {
-    type: "words",
-    wordsClass: "word++"
+    type: "lines,words,chars",
+    wordsClass: "word++",
   });
   frame5 = new SplitText('.frame5', {
-    type: "words",
-    wordsClass: "word++"
+    type: "lines,words,chars",
+    wordsClass: "word++",
   });
+
+  if (asApp.variation == 'DW','DW2P') {
+
+      frame3 = new SplitText('.frame3', {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+      frame4 = new SplitText('.frame4', {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+      frame5 = new SplitText('.frame5', {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+      frame6 = new SplitText('.frame6', {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+  }
 
   $("#getIN .word2").attr('class', 'whiteIN');
   $("#hereIN .word2").attr('class', 'whiteIN');
@@ -439,6 +546,7 @@ asApp.addImageFramesToTimeline = function($variation) {
   });
 
   //oc: show first line of text
+
   tl.staggerFrom(frame3.words, 0.2, {
     left: -300
   }, 0.07)
@@ -451,8 +559,7 @@ asApp.addImageFramesToTimeline = function($variation) {
 
   tl.to("#bgImg2", 0.5, {
     left: 0,
-    ease: Sine.easeOut,
-    delay: 1
+    ease: Sine.easeOut
   });
 
   tl.staggerFrom(frame4.words, 0.2, {
@@ -464,11 +571,35 @@ asApp.addImageFramesToTimeline = function($variation) {
     delay: 2
   });
 
-  tl.to(".frame5", 0.3, {
-    autoAlpha: 0,
-    delay: 2
-  });
+  if (asApp.variation == 'DW','DW2P') {
+    console.log('only DW')
+    $(".frame3 .word2").attr('class', 'txtLtBlue');
+    
+      tl.staggerFrom(frame5.words, 0.2, {
+        left: -300
+      }, 0.07)
 
+      tl.to(".frame5", 0.3, {
+        autoAlpha: 0,
+        delay:2
+      });
+
+  }
+  if (asApp.variation == 'DW2P') {
+    console.log('only DW')
+    $(".frame3 .word2").attr('class', 'txtLtBlue');
+    
+
+      tl.staggerFrom(frame6.words, 0.2, {
+        left: -300
+      }, 0.07)
+
+      tl.to(".frame6", 0.3, {
+        autoAlpha: 0,
+        delay:2
+      });
+
+  }
 
   tl.to("#bkgReveal", 0.7, {
     left: -100,
@@ -581,6 +712,19 @@ asApp.addLandingToTimeline = function($variation) {
     autoAlpha: 1
   });
 
+  if (asApp.variation == 'DW') {
+    tl.to("#onlyAllstate", 0.5, {
+      left: 0
+    });
+    console.log("version1")
+  }
+  if (asApp.variation == 'DW2P') {
+    tl.to("#onlyAllstate2", 0.5, {
+      left: 0
+    });
+    console.log("version2")
+  }
+
   tl.to("#btn_cta", 0.3, {
     right: -9,
     autoAlpha: 1,
@@ -641,7 +785,7 @@ asApp.defaultInit = function() {
 asApp.accidentForgivenessInit = function() {
   console.info('accidentForgivenessInit');
 
-  $('#af, #getIN').css('display', 'block');
+  $('#AF, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addImageFramesToTimeline();
@@ -785,10 +929,27 @@ asApp.claimFreeRewardsInit = function() {
 //show DW
 asApp.driveWiseInit = function() {
   console.info('driveWiseInit');
+  $(".frame4 .word5 .chars27,.frame4 .word5 .chars28").attr('class', 'txtLtBlue');
+  $(".frame5 .word4 .chars20, .frame5 .word4 .chars21").attr('class', 'txtLtBlue');
 
-  $('#DW, #getIN').css('display', 'block');
+  $('#DW').css('display', 'block');
   asApp.addHandsFrameToTimeline();
-  asApp.addGetINFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+
+  console.log('DW');
+ 
+} //end DW
+
+//show DW
+asApp.driveWiseInit2P = function() {
+  console.info('driveWiseInit2P');
+  $(".frame4 .word3 .chars13,.frame4 .word3 .chars14").attr('class', 'txtLtBlue');
+  $(".frame5 .word4 .chars20, .frame5 .word4 .chars21").attr('class', 'txtLtBlue');
+  $(".frame6 .word2 .chars9, .frame6 .word2 .chars10").attr('class', 'txtLtBlue');
+
+  $('#DW2P').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
 
