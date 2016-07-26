@@ -20,7 +20,7 @@
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "N\/A";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "";
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "sample market name";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
