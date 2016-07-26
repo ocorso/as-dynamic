@@ -19,7 +19,7 @@ devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "N\/A";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Sample Market Name";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Aon Sample Market Name";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
@@ -296,14 +296,25 @@ asApp.parseDynamicContent = function() {
   //cw: Set market name. Adding vowel check next.
 
   var marketName = document.getElementsByClassName('market-name');
+  var marketNameText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
+  var firstCharMarketName = marketNameText.charAt(0);
+
+  if ((firstCharMarketName == 'A') || (firstCharMarketName == 'E') || (firstCharMarketName == 'I') || (firstCharMarketName == 'O')) {
+    marketNameText = 'An ' + marketNameText;
+  } else {
+    marketNameText = 'A ' + marketNameText;
+  }
+  ;
 
   for (var i = 0; i < marketName.length; i++) {
     if (marketName[i].innerText) {
-      marketName[i].innerText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
+      marketName[i].innerText = marketNameText;
     } else if (marketName[i].textContent) {
-      marketName[i].textContent = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
+      marketName[i].textContent = marketNameText;
     }
+    ;
   }
+  ;
 
   //oc: TODO Set legal text
 
