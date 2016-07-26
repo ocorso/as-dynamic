@@ -8,57 +8,57 @@
 */
 
 // Dynamic Content variables and sample values
-    Enabler.setProfileId(1085016);
-    var devDynamicContent = {};
+Enabler.setProfileId(1085016);
+var devDynamicContent = {};
 
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW";//oc: hardcode to variation for dev
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "N\/A";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600 = {};
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600.Type = "file";
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
-    Enabler.setDevDynamicContent(devDynamicContent);
+devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "N\/A";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Sample Market Name";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600 = {};
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600.Type = "file";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+Enabler.setDevDynamicContent(devDynamicContent);
 
 /**
  * You may access the variables in the following manner
@@ -66,12 +66,12 @@
  * var Is_Default = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default;
  * Note: be sure to use "dynamicContent", not "devDynamicContent"
  * Note: be sure to use ExitOverride to create your exit URL dynamically; follow the instructions on our Help center: https://support.google.com/richmedia/answer/2664807
-*/
+ */
 
 var asApp = {};
 asApp.type = {};
-asApp.type.AF = 'AF';//Accident Forgiveness
-asApp.type.BSAHLP = 'BSAHLP';//Bundle and Save Auto, Home, Life with Percentages
+asApp.type.AF = 'AF'; //Accident Forgiveness
+asApp.type.BSAHLP = 'BSAHLP'; //Bundle and Save Auto, Home, Life with Percentages
 asApp.type.BSAHL = 'BSAHL';
 asApp.type.BSHLI = 'BSHLI';
 asApp.type.BSALP = 'BSALP';
@@ -118,27 +118,40 @@ function enablerInitialized() {
     asApp.init();
   }
 
-    /*******************************************************************************
-         Start of Adometry Tag for DoubleClick Dynamic Creatives: DO NOT REMOVE.
-         Append this entire block to enablerInitHandler(), ONLY AFTER executing
-         Enabler.setDevDynamicContent(devDynamicContent).  Be sure to set 'nid'
-         below according to your Adometry account ID.
-         
-         nid = Adometry account id, pid = DCM placement id, cid = dynamic element ID 
-    ********************************************************************************/
+  /*******************************************************************************
+       Start of Adometry Tag for DoubleClick Dynamic Creatives: DO NOT REMOVE.
+       Append this entire block to enablerInitHandler(), ONLY AFTER executing
+       Enabler.setDevDynamicContent(devDynamicContent).  Be sure to set 'nid'
+       below according to your Adometry account ID.
 
-    var nid=3700;
-    var pid=(function(){p=Enabler.getDartPageId();if(!isNaN(p))return p;else return 0})();
-    var cid=(function(){s='';d=dynamicContent;for(x in d){if(x!='_profileid')s+=(d[x][0].elemType+d[x][0].ID);}for(var h=0,i=0;i<s.length;i++)h=h*31+s.charCodeAt(i);return h&0x7FFFFFFF})();
-    var str='https://js.dmtry.com/antenna2.js?0_'+nid+'_'+pid+'_'+cid;
-    console.log(str);
-    var script=document.createElement('script');
-    script.src = str;
-    document.body.appendChild(script);
+       nid = Adometry account id, pid = DCM placement id, cid = dynamic element ID
+  ********************************************************************************/
 
-   /*******************************************************************************
-         End Adometry Tag for DoubleClick Dynamic Creatives: DO NOT REMOVE. 
-   ********************************************************************************/
+  var nid = 3700;
+  var pid = (function() {
+    p = Enabler.getDartPageId();
+    if (!isNaN(p)) return p;
+    else return 0
+  })();
+  var cid = (function() {
+    s = '';
+    d = dynamicContent;
+    for (x in d) {
+      if (x != '_profileid')
+        s += (d[x][0].elemType + d[x][0].ID);
+    }
+    for (var h = 0, i = 0; i < s.length; i++) h = h * 31 + s.charCodeAt(i);
+    return h & 0x7FFFFFFF
+  })();
+  var str = 'https://js.dmtry.com/antenna2.js?0_' + nid + '_' + pid + '_' + cid;
+  console.log(str);
+  var script = document.createElement('script');
+  script.src = str;
+  document.body.appendChild(script);
+
+/*******************************************************************************
+      End Adometry Tag for DoubleClick Dynamic Creatives: DO NOT REMOVE.
+********************************************************************************/
 } //end function enabler init();
 
 /**
@@ -147,7 +160,7 @@ function enablerInitialized() {
  *
  */
 asApp.init = function() {
-  console.info('asApp.init(); Variation Code: '+ dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation);
+  console.info('asApp.init(); Variation Code: ' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation);
 
   //oc: store the ad variation type for easy retrieval
   asApp.variation = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation;
@@ -159,58 +172,112 @@ asApp.init = function() {
   asApp.splitText();
 
   //oc: Step 3: Init TimelineLite, defaults to paused.
-  tl = new TimelineLite({paused:'true'});
+  tl = new TimelineLite({
+    paused: 'true'
+  });
 
   //oc: Step 4: handle variations independently.
   switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode variation for dev line 16
-    case asApp.type.AF : asApp.accidentForgivenessInit(); break;
-    case asApp.type.BSAHLP : asApp.bundleSaveInitAHLP(); break;
-    case asApp.type.BSAHL : asApp.bundleSaveInitAHL(); break;
-    case asApp.type.BSHLI : asApp.bundleSaveInitHLI(); break;
-    case asApp.type.BSALP : asApp.bundleSaveInitALP(); break;
-    case asApp.type.BSAL : asApp.bundleSaveInitAL(); break;
-    case asApp.type.BSAHMP : asApp.bundleSaveInitAHMP(); break;
-    case asApp.type.BSAHM : asApp.bundleSaveInitAHM(); break;
-    case asApp.type.BSACP : asApp.bundleSaveInitACP(); break;
-    case asApp.type.BSAC : asApp.bundleSaveInitAC(); break;
-    case asApp.type.CFD : asApp.claimFreeDiscountInit(); break;
-    case asApp.type.CFDM : asApp.claimFreeDiscountInit('mob'); break;
-    case asApp.type.CFR : asApp.claimFreeRewardsInit(); break;
-    case asApp.type.CRG : asApp.claimRateGuardInit(); break;
-    case asApp.type.CRGM : asApp.claimRateGuardInit('mob'); break;
-    case asApp.type.CSG : asApp.claimSatGuardInit(); break;
-    case asApp.type.CSGM : asApp.claimSatGuardInit('mob'); break;
-    case asApp.type.DW : asApp.driveWiseInit(); break;
-    case asApp.type.DW2P : asApp.driveWiseInit(); break;
-    case asApp.type.NR : asApp.newRoofInit(); break;
-    case asApp.type.TA1 : asApp.trustedAdvisorInit('opt1'); break;
-    case asApp.type.TAM1 : asApp.trustedAdvisorInit('mobopt1'); break;
-    case asApp.type.TAM2 : asApp.trustedAdvisorInit('mobopt2'); break;
-    case asApp.type.WD : asApp.welcomeDiscountInit(); break;
-    case asApp.type.DF : asApp.defaultInit(); break;
+    case asApp.type.AF:
+      asApp.accidentForgivenessInit();
+      break;
+    case asApp.type.BSAHLP:
+      asApp.bundleSaveInitAHLP();
+      break;
+    case asApp.type.BSAHL:
+      asApp.bundleSaveInitAHL();
+      break;
+    case asApp.type.BSHLI:
+      asApp.bundleSaveInitHLI();
+      break;
+    case asApp.type.BSALP:
+      asApp.bundleSaveInitALP();
+      break;
+    case asApp.type.BSAL:
+      asApp.bundleSaveInitAL();
+      break;
+    case asApp.type.BSAHMP:
+      asApp.bundleSaveInitAHMP();
+      break;
+    case asApp.type.BSAHM:
+      asApp.bundleSaveInitAHM();
+      break;
+    case asApp.type.BSACP:
+      asApp.bundleSaveInitACP();
+      break;
+    case asApp.type.BSAC:
+      asApp.bundleSaveInitAC();
+      break;
+    case asApp.type.CFD:
+      asApp.claimFreeDiscountInit();
+      break;
+    case asApp.type.CFDM:
+      asApp.claimFreeDiscountInit('mob');
+      break;
+    case asApp.type.CFR:
+      asApp.claimFreeRewardsInit();
+      break;
+    case asApp.type.CRG:
+      asApp.claimRateGuardInit();
+      break;
+    case asApp.type.CRGM:
+      asApp.claimRateGuardInit('mob');
+      break;
+    case asApp.type.CSG:
+      asApp.claimSatGuardInit();
+      break;
+    case asApp.type.CSGM:
+      asApp.claimSatGuardInit('mob');
+      break;
+    case asApp.type.DW:
+      asApp.driveWiseInit();
+      break;
+    case asApp.type.DW2P:
+      asApp.driveWiseInit();
+      break;
+    case asApp.type.NR:
+      asApp.newRoofInit();
+      break;
+    case asApp.type.TA1:
+      asApp.trustedAdvisorInit('opt1');
+      break;
+    case asApp.type.TAM1:
+      asApp.trustedAdvisorInit('mobopt1');
+      break;
+    case asApp.type.TAM2:
+      asApp.trustedAdvisorInit('mobopt2');
+      break;
+    case asApp.type.WD:
+      asApp.welcomeDiscountInit();
+      break;
+    case asApp.type.DF:
+      asApp.defaultInit();
+      break;
     default:
       console.log('Run default ad');
       asApp.defaultInit();
   } //end switch
 
-  
+
   //oc: Google Fonts Fix.
-  TweenLite.set("#atAd300x250", { visibility: "visible"});
+  TweenLite.set("#atAd300x250", {
+    visibility: "visible"
+  });
 
   //oc: hide the loader
   $('#loader').hide();
 
   //oc: kick off our timeline!
   tl.play();
-  
+
 }; //end asApp.init
 
 /**
-  * This function takes the dynamic data served to the create 
-  * and maps it to the corresponding HTMLElement
-  * 
-  */
-asApp.parseDynamicContent = function(){
+ * This function takes the dynamic data served to the create
+ * and maps it to the corresponding HTMLElement
+ *
+ */
+asApp.parseDynamicContent = function() {
   console.info('asApp.parseDynamicContent()');
 
   //oc: Set bg color
@@ -225,16 +292,27 @@ asApp.parseDynamicContent = function(){
   var img3 = document.getElementById('img3');
   img3.src = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Url;
 
-  //oc: TODO Set market name
+
+  //cw: Set market name. Adding vowel check next.
+
+  var marketName = document.getElementsByClassName('market-name');
+
+  for (var i = 0; i < marketName.length; i++) {
+    if (marketName[i].innerText) {
+      marketName[i].innerText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
+    } else if (marketName[i].textContent) {
+      marketName[i].textContent = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
+    }
+  }
 
   //oc: TODO Set legal text
 
-};//end asApp.parseDynamicContent() function
+}; //end asApp.parseDynamicContent() function
 
 /**
-  * This function splits the text so each word can by styled/animated
-  */
-asApp.splitText = function(){
+ * This function splits the text so each word can by styled/animated
+ */
+asApp.splitText = function() {
 
   getIN = new SplitText('#getIN', {
     type: "words",
@@ -264,12 +342,12 @@ asApp.splitText = function(){
 };
 
 /**
- * This function takes the timeline as a parameter and 
+ * This function takes the timeline as a parameter and
  * puts the Hands animation on it.
  */
-asApp.addHandsFrameToTimeline = function(){
+asApp.addHandsFrameToTimeline = function() {
 
- tl.to(".in1", 0.2, {
+  tl.to(".in1", 0.2, {
     autoAlpha: 1
   });
   tl.to(".in2", 0.2, {
@@ -298,10 +376,10 @@ asApp.addHandsFrameToTimeline = function(){
     autoAlpha: 0,
     delay: 1
   });
-};//end function
+}; //end function
 
-asApp.addGetINFrameToTimeline = function(){
- 
+asApp.addGetINFrameToTimeline = function() {
+
   //oc: GetIn Frame BEGIN
   tl.staggerFrom(getIN.words, 0.2, {
     left: -300
@@ -311,11 +389,11 @@ asApp.addGetINFrameToTimeline = function(){
     autoAlpha: 0,
     delay: 2
   });
-  //oc: GetIn Frame 2 END
+//oc: GetIn Frame 2 END
 };
 
-asApp.addHereINFrameToTimeline = function(){
- 
+asApp.addHereINFrameToTimeline = function() {
+
   //oc: HereIn Frame BEGIN
   tl.staggerFrom(hereIN.words, 0.2, {
     left: -300
@@ -325,15 +403,15 @@ asApp.addHereINFrameToTimeline = function(){
     autoAlpha: 0,
     delay: 2
   });
-  //oc: HereIn Frame 2 END
+//oc: HereIn Frame 2 END
 };
 
 /**
-  * This function scripts the Image wipe/reveal transitions
-  * @param {int} $numImages - number of images in the creative 
-  */
-asApp.addImageFramesToTimeline = function($variation){
-  
+ * This function scripts the Image wipe/reveal transitions
+ * @param {int} $numImages - number of images in the creative
+ */
+asApp.addImageFramesToTimeline = function($variation) {
+
   //oc: background reveal
   tl.to("#bkgReveal", 0.7, {
     left: 400,
@@ -346,10 +424,10 @@ asApp.addImageFramesToTimeline = function($variation){
     left: -300
   }, 0.07)
 
-  //oc: fade 
+  //oc: fade
   tl.to(".frame3", 0.3, {
-    autoAlpha: 0, 
-    delay:2
+    autoAlpha: 0,
+    delay: 2
   });
 
   tl.to("#bgImg2", 0.5, {
@@ -364,7 +442,7 @@ asApp.addImageFramesToTimeline = function($variation){
 
   tl.to(".frame4", 0.3, {
     autoAlpha: 0,
-    delay:2
+    delay: 2
   });
 
   tl.to(".frame5", 0.3, {
@@ -378,13 +456,13 @@ asApp.addImageFramesToTimeline = function($variation){
     top: -200,
     ease: Sine.easeOut
   });
-};//end asApp.addImageFramesToTimeline function
+}; //end asApp.addImageFramesToTimeline function
 
 
-asApp.addBS3FramesToTimeline = function($variation){
-  
-  //sb : 
-  $(".frame3 .word1").attr('class', 'txtOrange'); 
+asApp.addBS3FramesToTimeline = function($variation) {
+
+  //sb :
+  $(".frame3 .word1").attr('class', 'txtOrange');
 
   tl.to("#bkgReveal", 0.7, {
     left: 400,
@@ -426,14 +504,14 @@ asApp.addBS3FramesToTimeline = function($variation){
     top: -200,
     ease: Sine.easeOut
   });
-};//end asApp.add3ImageFramesToTimeline function
+}; //end asApp.add3ImageFramesToTimeline function
 
 
-asApp.addBS2FramesToTimeline = function($variation){
-  
+asApp.addBS2FramesToTimeline = function($variation) {
+
   //sb : oc: selection
-  var selector = $variation +  ".frame3";
-  $(".frame3 .word1").attr('class', 'txtOrange'); 
+  var selector = $variation + ".frame3";
+  $(".frame3 .word1").attr('class', 'txtOrange');
 
   tl.to("#bkgReveal", 0.7, {
     left: 400,
@@ -465,13 +543,13 @@ asApp.addBS2FramesToTimeline = function($variation){
     top: -200,
     ease: Sine.easeOut
   });
-};//end asApp.add3ImageFramesToTimeline function
+}; //end asApp.add3ImageFramesToTimeline function
 
 /**
-  * This function adds the landing frame's animation sequence to the timeline.
-  * @param {string} $variation - abbreviation code for which creative is shown
-  */
-asApp.addLandingToTimeline = function($variation){
+ * This function adds the landing frame's animation sequence to the timeline.
+ * @param {string} $variation - abbreviation code for which creative is shown
+ */
+asApp.addLandingToTimeline = function($variation) {
   tl.to(".fade", 0.3, {
     autoAlpha: 1
   });
@@ -492,7 +570,7 @@ asApp.addLandingToTimeline = function($variation){
 
   tl.to("#btn_cta", 0.3, {
     right: -20,
-    repeat:2,
+    repeat: 2,
     yoyo: true,
     ease: Linear.easeNone
   });
@@ -537,7 +615,7 @@ asApp.defaultInit = function() {
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
- 
+
 } //end CFR
 
 
@@ -549,13 +627,13 @@ asApp.accidentForgivenessInit = function() {
   asApp.addGetINFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
- 
+
 
 } //end accidentForgivenessInit() function
 
 //show Auto Home Life
 asApp.bundleSaveInitAHL = function() {
-  console.info('asApp.bundleSaveInitAHL():'+$option);
+  console.info('asApp.bundleSaveInitAHL():' + $option);
 
   //show bundleSave elements
   $('#BSAHL, #getIN').css('display', 'block');
@@ -563,7 +641,7 @@ asApp.bundleSaveInitAHL = function() {
   asApp.addGetINFrameToTimeline();
   asApp.addBS3FramesToTimeline();
   asApp.addLandingToTimeline();
- 
+
 
   console.debug('Auto Home Life');
 }; //end function bundleSaveInit
@@ -579,13 +657,13 @@ asApp.bundleSaveInitAHLP = function() {
 
   asApp.addBS3FramesToTimeline();
   asApp.addLandingToTimeline();
- 
+
 
   console.debug('Auto Home Life %');
 }; //end function bundleSaveInit
 
 
-//show Auto Life 
+//show Auto Life
 asApp.bundleSaveInitAL = function() {
 
   console.info('asApp.bundleSaveInitAL()');
@@ -602,7 +680,7 @@ asApp.bundleSaveInitAL = function() {
 
 
 asApp.bundleSaveInitAHMP = function() {
-//show Auto Home Moto $option) {
+  //show Auto Home Moto $option) {
   console.info('asApp.bundleSaveInitAHMP()');
 
   //show bundleSave elements
@@ -617,9 +695,9 @@ asApp.bundleSaveInitAHMP = function() {
 };
 
 
-//show Auto Home Life  
+//show Auto Home Life
 asApp.bundleSaveInitAHL = function() {
-//show Auto Home Moto $option) {
+  //show Auto Home Moto $option) {
 
   $('#BSAHL, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
@@ -646,7 +724,7 @@ asApp.bundleSaveInitACP = function(pp) {
   console.debug('Auto Condo percent');
 }; //end function bundleSaveInit
 
-//show Home + Life 
+//show Home + Life
 asApp.bundleSaveInitHLI = function(pp) {
 
   console.info('asApp.bundleSaveInitHLI()');
@@ -670,7 +748,7 @@ asApp.claimFreeDiscountInit = function() {
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
- 
+
 } //end CFD
 
 //show CFR
@@ -682,7 +760,7 @@ asApp.claimFreeRewardsInit = function() {
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
- 
+
 } //end CFR
 
 //show DW
@@ -696,26 +774,26 @@ asApp.driveWiseInit = function() {
   asApp.addLandingToTimeline();
 
   console.log('DW');
- 
+
 } //end DW
 
 
 
 /**
-  * This function scripts the New Roof variation
-  */
+ * This function scripts the New Roof variation
+ */
 
-asApp.newRoofInit = function(){
+asApp.newRoofInit = function() {
   console.info('asApp.newRoofInit()');
 
   //oc: Smooth house animation in new roof
   CSSPlugin.useSVGTransformAttr = true;
-}//end function newRoofInint
+} //end function newRoofInint
 
 
-  /**
-  * This function scripts the Drivewise variations
-  */
+/**
+ * This function scripts the Drivewise variations
+ */
 
 
 // oc: CTA Mouseover handlers
@@ -738,11 +816,11 @@ div1.mouseleave(function() {
 });
 
 /**
-  * This function handles the Background and CTA clicks
-  * And overrides the system's exit to navigate to a dynamic exit url
-  */
-function onExitClick(event){
-  console.info('onExitClick()');  
+ * This function handles the Background and CTA clicks
+ * And overrides the system's exit to navigate to a dynamic exit url
+ */
+function onExitClick(event) {
+  console.info('onExitClick()');
   Enabler.exitOverride('CTA Exit', dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url)
-};
-
+}
+;
