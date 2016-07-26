@@ -293,7 +293,7 @@ asApp.parseDynamicContent = function() {
   img3.src = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Url;
 
 
-  //cw: Set market name. Adding vowel check next.
+  //cw: Set market name. NEED TO CHECK TO SEE IF EACH INSTANCE NEEDS A/AN
 
   var marketName = document.getElementsByClassName('market-name');
   var marketNameText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
@@ -316,7 +316,15 @@ asApp.parseDynamicContent = function() {
   }
   ;
 
-  //oc: TODO Set legal text
+  //cw: Set legal copy
+  var legalCopy = document.getElementById('aAd_legalTxt');
+  var legalCopyText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy;
+  if (legalCopy.innerText) {
+    legalCopy.innerText = legalCopyText;
+  } else if (legalCopy.textContent) {
+    legalCopy.textContent = legalCopyText;
+  }
+  ;
 
 }; //end asApp.parseDynamicContent() function
 
