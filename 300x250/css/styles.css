@@ -71,7 +71,7 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	font-weight: 700;
 	-webkit-font-smoothing: antialiased; 
 	text-transform: uppercase;	
-	/*position: absolute;*/
+	position: absolute;
 	width: 300px;
 }
 #hereIN{
@@ -221,6 +221,10 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 #subText {
 	display: block;
 	margin-top: 5px; 
+}
+
+.AF{
+	top:158px;
 }
 
 .BS{
