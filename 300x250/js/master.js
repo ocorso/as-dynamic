@@ -14,7 +14,7 @@ var devDynamicContent = {};
 
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DF"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "NR"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -539,6 +539,33 @@ asApp.addImageFramesToTimeline = function($variation) {
   });
 }; //end asApp.addImageFramesToTimeline function
 
+asApp.addNRImageFramesToTimeline = function($variation) {
+
+  tl.staggerFrom(frame3.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  //oc: fade
+  tl.to(".frame3", 0.3, {
+    autoAlpha: 0,
+    delay: 2
+  });
+
+  tl.to("#bgImg2", 0.5, {
+    left: 0,
+    ease: Sine.easeOut
+  });
+
+  tl.staggerFrom(frame4.words, 0.2, {
+    left: -300
+  }, 0.07)
+
+  tl.to(".frame4", 0.3, {
+    autoAlpha: 0,
+    delay: 2
+  });
+}; //end 
+
 
 asApp.addBS3FramesToTimeline = function($variation) {
 
@@ -941,7 +968,7 @@ asApp.newRoofInit = function() {
   $('#NR, #hereIN').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
-  asApp.addImageFramesToTimeline();
+  asApp.addNRImageFramesToTimeline();
   asApp.addLandingToTimeline();
 
   console.debug('new roof');
