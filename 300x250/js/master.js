@@ -14,7 +14,7 @@
 
     devDynamicContent.aslocalfeed_Allstate_Local_Feed= [{}];
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "AF";//oc: hardcode to variation for dev
+    devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DF";//oc: hardcode to variation for dev
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
     devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -668,7 +668,7 @@ asApp.addLandingToTimeline = function($variation) {
 //show CFR
 asApp.defaultInit = function() {
   console.info('defaultInit');
-
+  $(".frame4 .word8").attr('class', 'reg2'); 
   $('#DF, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
@@ -876,9 +876,15 @@ asApp.welcomeDiscountInit = function(pp) {
 asApp.newRoofInit = function() {
   console.info('asApp.newRoofInit()');
 
-  //oc: Smooth house animation in new roof
-  CSSPlugin.useSVGTransformAttr = true;
-} //end function newRoofInint
+ //show bundleSave elements
+  $('#NR, #hereIN').css('display', 'block');
+  asApp.addHereINFrameToTimeline();
+  asApp.addHandsFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+
+  console.debug('new roof');
+}; //end function bundleSaveInit
 
 
 /**
