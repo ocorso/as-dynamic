@@ -14,7 +14,7 @@ var devDynamicContent = {};
 
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFD"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW2P"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -377,7 +377,7 @@ asApp.splitText = function() {
     wordsClass: "word++"
   });
 
-  if ((asApp.variation == 'DW') || (asApp.variation == 'DW2P')) {
+  if ((asApp.variation == 'DW') || (asApp.variation == 'DW2P') || (asApp.variation == 'CFD')  || (asApp.variation == 'CRG')) {
 
     frame3 = new SplitText('.frame3', {
       type: "lines,words,chars",
@@ -839,6 +839,18 @@ asApp.defaultInit = function() {
 } //end CFR
 
 
+asApp.claimSatGuardInit = function() {
+  console.info('claimSatGuardInit');
+
+  $('#CSG, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+
+
+} //end accidentForgivenessInit() function
+
 asApp.accidentForgivenessInit = function() {
   console.info('accidentForgivenessInit');
 
@@ -946,8 +958,8 @@ asApp.bundleSaveInitACP = function(pp) {
 
 //show Home + Life
 asApp.bundleSaveInitHLI = function(pp) {
-
   console.info('asApp.bundleSaveInitHLI()');
+  $(".frame4 .word5").attr('class', 'txtOrange');
 
   //show bundleSave elements
   $('#BSHLI, #hereIN').css('display', 'block');
@@ -962,6 +974,8 @@ asApp.bundleSaveInitHLI = function(pp) {
 //show CFD
 asApp.claimFreeDiscountInit = function() {
   console.info('claimFreeDiscountInit');
+  $(".frame3 .word6 .chars25, .frame3 .word6 .chars26").attr('class', 'txtOrange');
+  $(".frame4 .word6 .chars20, .frame4 .word6 .chars21").attr('class', 'txtOrange');
 
   $('#CFD, #hereIN').css('display', 'block');
   asApp.addHereINFrameToTimeline();
@@ -976,6 +990,20 @@ asApp.claimFreeRewardsInit = function() {
   console.info('claimFreeRewardsInit');
 
   $('#CFR, #hereIN').css('display', 'block');
+  asApp.addHereINFrameToTimeline();
+  asApp.addHandsFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+
+} //end CFR
+
+//show CFR
+asApp.claimRateGuardInit = function() {
+  console.info('claimRateGuardInit');
+  $(".frame3 .word5 .chars28, .frame3 .word5 .chars29").attr('class', 'txtWhite');
+  $(".frame4 .word6 .chars25, .frame4 .word6 .chars26").attr('class', 'txtWhite');
+
+  $('#CRG, #hereIN').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
