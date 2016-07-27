@@ -274,7 +274,7 @@ asApp.init = function() {
 
 }; //end asApp.init
 
-/**
+/**a
  * This function takes the dynamic data served to the create
  * and maps it to the corresponding HTMLElement
  *
@@ -283,8 +283,10 @@ asApp.parseDynamicContent = function() {
   console.info('asApp.parseDynamicContent()');
 
   //oc: Set bg color
+  var ad300x250bg = document.getElementById('atAd300x250');
   var bg = document.getElementById('bkgReveal');
   bg.style.backgroundColor = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color;
+  ad300x250bg.style.backgroundColor = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color;
 
   //oc: Map Images
   var img1 = document.getElementById('img1');
@@ -295,7 +297,7 @@ asApp.parseDynamicContent = function() {
   img3.src = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_300x250.Url;
 
 
-  //cw: Set market name. NEED TO CHECK TO SEE IF EACH INSTANCE NEEDS A/AN
+  //cw: Set market name.
 
   var marketName = document.getElementsByClassName('market-name');
   var marketNameAOrAn = document.getElementsByClassName('market-name-a-An');
@@ -541,6 +543,12 @@ asApp.addImageFramesToTimeline = function($variation) {
 
 asApp.addNRImageFramesToTimeline = function($variation) {
 
+  tl.to("#bkgReveal", 0.7, {
+    left: 400,
+    top: -200,
+    ease: Sine.easeOut
+  });
+
   tl.staggerFrom(frame3.words, 0.2, {
     left: -300
   }, 0.07)
@@ -564,7 +572,7 @@ asApp.addNRImageFramesToTimeline = function($variation) {
     autoAlpha: 0,
     delay: 2
   });
-}; //end 
+}; //end
 
 
 asApp.addBS3FramesToTimeline = function($variation) {
