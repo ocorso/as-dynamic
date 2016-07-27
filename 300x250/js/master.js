@@ -559,9 +559,15 @@ asApp.addNRImageFramesToTimeline = function($variation) {
     delay: 2
   });
 
+  tl.to("#bgImg1", 0.5, {
+    left: 300,
+    ease: Sine.easeOut
+  });
+
   tl.to("#bgImg2", 0.5, {
     left: 0,
-    ease: Sine.easeOut
+    ease: Sine.easeOut,
+    delay:-0.5
   });
 
   tl.staggerFrom(frame4.words, 0.2, {
@@ -571,6 +577,12 @@ asApp.addNRImageFramesToTimeline = function($variation) {
   tl.to(".frame4", 0.3, {
     autoAlpha: 0,
     delay: 2
+  });
+
+  tl.to("#bkgReveal", 0.7, {
+    left: -100,
+    top: -200,
+    ease: Sine.easeOut
   });
 }; //end
 
