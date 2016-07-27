@@ -229,6 +229,12 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	display: block;
 	margin-top: 5px; 
 }
+.TA{
+	font-size:34px;
+	line-height: 30px; 
+	top:107px;
+	left:13px;
+}
 
 .DF{
 	font-size:23px;
