@@ -579,11 +579,12 @@ asApp.addNRImageFramesToTimeline = function($variation) {
     delay: 2
   });
 
-  tl.to("#bkgReveal", 0.7, {
-    left: -100,
-    top: -200,
-    ease: Sine.easeOut
+  tl.to("#bgImg2", 0.5, {
+    autoAlpha: 0,
+    delay:-0.5
   });
+
+  
 }; //end
 
 
