@@ -20,7 +20,7 @@ devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "N\/A";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "sample market name";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
@@ -304,12 +304,16 @@ asApp.parseDynamicContent = function() {
   var marketNameText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
   var firstCharMarketName = marketNameText.charAt(0);
 
-  if ((firstCharMarketName == 'A') || (firstCharMarketName == 'E') || (firstCharMarketName == 'I') || (firstCharMarketName == 'O')) {
-    marketNameAOrAnText = 'An ' + marketNameText;
+  if (marketNameText !== "") {
+    if ((firstCharMarketName == 'A') || (firstCharMarketName == 'E') || (firstCharMarketName == 'I') || (firstCharMarketName == 'O')) {
+      marketNameAOrAnText = 'An ' + marketNameText;
+    } else {
+      marketNameAOrAnText = 'A ' + marketNameText;
+    }
+    ;
   } else {
-    marketNameAOrAnText = 'A ' + marketNameText;
+    marketNameAOrAnText = 'An ';
   }
-  ;
 
   for (var i = 0; i < marketName.length; i++) {
     if (marketName[i].innerText) {
@@ -330,7 +334,7 @@ asApp.parseDynamicContent = function() {
     ;
   }
   ;
-
+  ;
   //cw: Set legal copy
   var legalCopy = document.getElementById('aAd_legalTxt');
   var legalCopyText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy;
@@ -567,7 +571,7 @@ asApp.addNRImageFramesToTimeline = function($variation) {
   tl.to("#bgImg2", 0.5, {
     left: 0,
     ease: Sine.easeOut,
-    delay:-0.5
+    delay: -0.5
   });
 
   tl.staggerFrom(frame4.words, 0.2, {
@@ -581,10 +585,10 @@ asApp.addNRImageFramesToTimeline = function($variation) {
 
   tl.to("#bgImg2", 0.5, {
     autoAlpha: 0,
-    delay:-0.5
+    delay: -0.5
   });
 
-  
+
 }; //end
 
 asApp.addTAImageFramesToTimeline = function($variation) {
@@ -629,7 +633,7 @@ asApp.addTAImageFramesToTimeline = function($variation) {
     ease: Sine.easeOut
   });
 
- 
+
 }; //end asApp.addImageFramesToTimeline function
 
 
