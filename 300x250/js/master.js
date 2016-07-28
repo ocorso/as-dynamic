@@ -14,12 +14,12 @@ var devDynamicContent = {};
 
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFD"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSAHMP"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "N\/A";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "33%";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
@@ -337,7 +337,22 @@ asApp.parseDynamicContent = function() {
     ;
   }
   ;
+
+  //cw: set Percentages
+  var percentages = document.getElementsByClassName('savings-percentage');
+  var percentagesText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage;
+  for (var i = 0; i < percentages.length; i++) {
+    if (percentages[i].innerText) {
+      percentages[i].innerText = percentagesText;
+    } else if (percentages[i].textContent) {
+      percentages[i].textContent = percentagesText;
+    }
+    ;
+  }
   ;
+
+
+
   //cw: Set legal copy
   var legalCopy = document.getElementById('aAd_legalTxt');
   var legalCopyText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy;
