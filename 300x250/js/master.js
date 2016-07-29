@@ -23,7 +23,7 @@ Enabler.setProfileId(1085016);
 var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}],
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0,
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSAHMP",
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSHLI",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = !0,
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {},
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/",
@@ -275,6 +275,12 @@ asApp.splitText = function() {
     delay: 2
   })
 }, asApp.addHereINFrameToTimeline = function() {
+
+  if (asApp.variation == 'BSHLI') {
+    jQuery('#hereIN .word3').css('display', 'none');
+    console.info('STOP THE');
+  }
+  ;
   tl.staggerFrom(hereIN.words, .2, {
     left: -300
   }, .07), tl.to("#hereIN", .3, {
