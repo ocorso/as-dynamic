@@ -23,13 +23,13 @@ Enabler.setProfileId(1085016);
 var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}],
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0,
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSHLI",
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFD",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = !0,
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {},
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "",
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Western New York",
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "New York",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {},
@@ -550,24 +550,51 @@ asApp.bundleSaveInitACP = function(e) {
 
 asApp.bundleSaveInitHLI = function(e) {
   $(".frame4 .word5").attr("class", "txtOrange"),
-  console.info("asApp.bundleSaveInitHLI()"), $("#BSHLI, #hereIN").css("display", "block"), asApp.addHereINFrameToTimeline(), asApp.addHandsFrameToTimeline(), asApp.addImageFramesToTimeline(), asApp.addLandingToTimeline(), console.debug("home+life")
+  console.info("asApp.bundleSaveInitHLI()"),
+  $("#BSHLI, #hereIN").css("display", "block"),
+  asApp.addHereINFrameToTimeline(),
+  asApp.addHandsFrameToTimeline(),
+  asApp.addImageFramesToTimeline(),
+  asApp.addLandingToTimeline(),
+  console.debug("home+life")
 },
 
 asApp.claimFreeDiscountInit = function() {
-  console.info("claimFreeDiscountInit"), $("#CFD, #hereIN").css("display", "block"), asApp.addHereINFrameToTimeline(), asApp.addHandsFrameToTimeline(), asApp.addImageFramesToTimeline(), asApp.addLandingToTimeline()
+  console.info("claimFreeDiscountInit"),
+  jQuery('#hereIN .word3').css('display', 'none');
+  $("#CFD, #hereIN").css("display", "block"),
+  asApp.addHereINFrameToTimeline(),
+  asApp.addHandsFrameToTimeline(),
+  asApp.addImageFramesToTimeline(),
+  asApp.addLandingToTimeline()
 },
 
 asApp.claimFreeRewardsInit = function() {
-  console.info("claimFreeRewardsInit"), $("#CFR, #hereIN").css("display", "block"), asApp.addHereINFrameToTimeline(), asApp.addHandsFrameToTimeline(), asApp.addImageFramesToTimeline(), asApp.addLandingToTimeline()
+  console.info("claimFreeRewardsInit"),
+  $("#CFR, #hereIN").css("display", "block"),
+  asApp.addHereINFrameToTimeline(),
+  asApp.addHandsFrameToTimeline(),
+  asApp.addImageFramesToTimeline(),
+  asApp.addLandingToTimeline()
 },
 
 asApp.claimRateGuardInit = function() {
-  console.info("claimRateGuardInit"), $("#CFR, #hereIN").css("display", "block"), asApp.addHereINFrameToTimeline(), asApp.addHandsFrameToTimeline(), asApp.addImageFramesToTimeline(), asApp.addLandingToTimeline()
+  console.info("claimRateGuardInit"),
+  $("#CFR, #hereIN").css("display", "block"),
+  asApp.addHereINFrameToTimeline(),
+  asApp.addHandsFrameToTimeline(),
+  asApp.addImageFramesToTimeline(),
+  asApp.addLandingToTimeline()
 },
 
 
 asApp.claimSatGuardInit = function() {
-  console.info("claimSatGuardInit"), $("#CSG, #hereIN").css("display", "block"), asApp.addHereINFrameToTimeline(), asApp.addHandsFrameToTimeline(), asApp.addImageFramesToTimeline(), asApp.addLandingToTimeline()
+  console.info("claimSatGuardInit"),
+  $("#CSG, #hereIN").css("display", "block"),
+  asApp.addHereINFrameToTimeline(),
+  asApp.addHandsFrameToTimeline(),
+  asApp.addImageFramesToTimeline(),
+  asApp.addLandingToTimeline()
 },
 
 asApp.driveWiseInit = function() {
