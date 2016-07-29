@@ -29,7 +29,7 @@ devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {},
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "",
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Charleston-Huntington Beach area",
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Charleston-Huntington area",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {},
@@ -609,6 +609,7 @@ asApp.driveWiseInit = function() {
 },
 
 asApp.driveWiseInit2P = function() {
+
   console.info("driveWiseInit2P"), $(".frame4 .word3 .chars13,.frame4 .word3 .chars14").attr("class", "txtLtBlue"),
   $(".frame5 .word4 .chars20, .frame5 .word4 .chars21").attr("class", "txtLtBlue"),
   $(".frame6 .word2 .chars9, .frame6 .word2 .chars10").attr("class", "txtLtBlue"),
