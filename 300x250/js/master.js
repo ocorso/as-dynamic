@@ -205,9 +205,10 @@ asApp.init = function() {
     document.getElementById("the").style.display = "none";
   }
   "" !== d ? "A" == i || "E" == i || "I" == i || "O" == i ? marketNameAOrAnText = "an " + d : marketNameAOrAnText = "a " + d : marketNameAOrAnText = "an ";
-  for (var p = 0; p < n.length; p++) n[p].innerText ? n[p].innerText = d : n[p].textContent && (n[p].textContent = d);
-  for (var p = 0; p < o.length; p++) o[p].innerText ? o[p].innerText = marketNameAOrAnText : o[p].textContent && (o[p].textContent = marketNameAOrAnText);
-  for (var r = document.getElementsByClassName("savings-percentage"), m = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage, p = 0; p < r.length; p++) r[p].innerText ? r[p].innerText = m : r[p].textContent && (r[p].textContent = m);
+  for (var p = 0; p < n.length; p++) n[p].innerHTML = d; //oc: use html text from feed...n[p].innerText ? n[p].innerText = d : n[p].textContent && (n[p].textContent = d);
+  for (var p = 0; p < o.length; p++) o[p].innerHTML = marketNameAOrAnText; //oc: use html text from feed... o[p].innerText ? o[p].innerText = marketNameAOrAnText : o[p].textContent && (o[p].textContent = marketNameAOrAnText);
+  for (var r = document.getElementsByClassName("savings-percentage"), 
+    m = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage, p = 0; p < r.length; p++) r[p].innerText ? r[p].innerText = m : r[p].textContent && (r[p].textContent = m);
   var c = document.getElementById("aAd_legalTxt"),
     A = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy;
   c.innerText ? c.innerText = A : c.textContent && (c.textContent = A)
