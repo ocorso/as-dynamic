@@ -23,7 +23,7 @@ Enabler.setProfileId(1085016);
 var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}],
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0,
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW2P",
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSAHMP",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = !0,
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {},
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/",
@@ -514,18 +514,36 @@ asApp.bundleSaveInitALP = function() {
 },
 
 asApp.bundleSaveInitAHMP = function() {
-  console.info("asApp.bundleSaveInitAHMP()"), $("#BSAHMP, #getIN").css("display", "block"), asApp.addHandsFrameToTimeline(), asApp.addGetINFrameToTimeline(), asApp.addBS3FramesToTimeline(), asApp.addLandingToTimeline(), console.debug("Auto home moto %")
+  console.info("asApp.bundleSaveInitAHMP()"),
+  $("#BSAHMP, #getIN").css("display", "block"),
+  asApp.addHandsFrameToTimeline(),
+  asApp.addGetINFrameToTimeline(),
+  asApp.addBS3FramesToTimeline(),
+  asApp.addLandingToTimeline(),
+  console.debug("Auto home moto %")
 },
 
 asApp.bundleSaveInitAHL = function() {
-  $("#BSAHL, #getIN").css("display", "block"), asApp.addHandsFrameToTimeline(), asApp.addGetINFrameToTimeline(), asApp.addBS3FramesToTimeline(), asApp.addLandingToTimeline(), console.debug("Auto Home Life ")
+  $("#BSAHL, #getIN").css("display", "block"),
+  asApp.addHandsFrameToTimeline(),
+  asApp.addGetINFrameToTimeline(),
+  asApp.addBS3FramesToTimeline(),
+  asApp.addLandingToTimeline(),
+  console.debug("Auto Home Life ")
 },
 
 asApp.bundleSaveInitACP = function(e) {
-  console.info("asApp.bundleSaveInitACP()"), $("#BSACP, #getIN").css("display", "block"), asApp.addHandsFrameToTimeline(), asApp.addGetINFrameToTimeline(), asApp.addBS2FramesToTimeline(), asApp.addLandingToTimeline(), console.debug("Auto Condo percent")
+  console.info("asApp.bundleSaveInitACP()"),
+  $("#BSACP, #getIN").css("display", "block"),
+  asApp.addHandsFrameToTimeline(),
+  asApp.addGetINFrameToTimeline(),
+  asApp.addBS2FramesToTimeline(),
+  asApp.addLandingToTimeline(),
+  console.debug("Auto Condo percent")
 },
 
 asApp.bundleSaveInitHLI = function(e) {
+  $(".frame4 .word5").attr("class", "txtOrange"),
   console.info("asApp.bundleSaveInitHLI()"), $("#BSHLI, #hereIN").css("display", "block"), asApp.addHereINFrameToTimeline(), asApp.addHandsFrameToTimeline(), asApp.addImageFramesToTimeline(), asApp.addLandingToTimeline(), console.debug("home+life")
 },
 

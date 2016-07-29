@@ -12,23 +12,23 @@ a { text-decoration: none; color:#ffffff; }
 }
 
 /* AD SIZES */
-#border300x250 { position: absolute; width: 298px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
-#atAd300x250 { position: absolute; width: 300px; height: 250px; overflow: hidden;} 
+#border300x250 { position: absolute; width: 298px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd300x250 { position: absolute; width: 300px; height: 250px; overflow: hidden;}
 
-#border728x90 { position: absolute; width: 726px; height: 88px; top:0; left:0; border:1px solid #000; z-index: 300} 
-#atAd728x90 { position: absolute; width: 728px; height: 90px; overflow: hidden;} 
+#border728x90 { position: absolute; width: 726px; height: 88px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd728x90 { position: absolute; width: 728px; height: 90px; overflow: hidden;}
 
-#border160x600 { position: absolute; width: 158px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300} 
-#atAd160x600 { position: absolute; width: 160px; height: 600px; overflow: hidden;} 
+#border160x600 { position: absolute; width: 158px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd160x600 { position: absolute; width: 160px; height: 600px; overflow: hidden;}
 
-#border300x600 { position: absolute; width: 298px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300} 
-#atAd300x600 { position: absolute; width: 300px; height: 600px; overflow: hidden;} 
+#border300x600 { position: absolute; width: 298px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd300x600 { position: absolute; width: 300px; height: 600px; overflow: hidden;}
 
-#border970x250 { position: absolute; width: 968px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
-#atAd970x250 { position: absolute; width: 970px; height: 250px; overflow: hidden;  } 
+#border970x250 { position: absolute; width: 968px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd970x250 { position: absolute; width: 970px; height: 250px; overflow: hidden;  }
 
-#border620x250 { position: absolute; width: 618px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
-#atAd620x250 { position: absolute; width: 620px; height: 250px; overflow: hidden;  } 
+#border620x250 { position: absolute; width: 618px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd620x250 { position: absolute; width: 620px; height: 250px; overflow: hidden;  }
 
 
 /* COLORS */
@@ -66,13 +66,13 @@ a { text-decoration: none; color:#ffffff; }
 
 /* COPY */
 #frame1, #frame2, #frame3, #landing, #toBeIn, #ctaCopy {
-	font-family: 'ITC Avant Garde Gothic';	
+	font-family: 'ITC Avant Garde Gothic';
 	font-weight: 700;
-	-webkit-font-smoothing: antialiased; 
+	-webkit-font-smoothing: antialiased;
 	text-transform: uppercase;
 }
 
-.whiteIN{ 
+.whiteIN{
 	color:#FFFFFF;
 }
 
