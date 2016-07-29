@@ -23,13 +23,13 @@ Enabler.setProfileId(1085016);
 var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}],
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0,
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFD",
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW2P",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = !0,
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {},
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "",
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "New York",
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Charleston-Huntington Beach area",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {},
@@ -650,7 +650,6 @@ asApp.trustedAdvisorInit = function() {
   asApp.addLandingToTimeline(),
   console.debug("new roof")
 };
-
 
 var div1 = $("div#btn_cta"),
   tn1 = TweenMax.to(div1, .3, {
