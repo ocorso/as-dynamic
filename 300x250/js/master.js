@@ -23,7 +23,7 @@ Enabler.setProfileId(1085016);
 var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}],
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0,
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "TA1",
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW1",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = !0,
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {},
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/",
@@ -88,7 +88,7 @@ asApp.type.CRG = "CRG",
 asApp.type.CRGM = "CRGM",
 asApp.type.CSG = "CSG",
 asApp.type.CSGM = "CSGM",
-asApp.type.DW = "DW",
+asApp.type.DW = "DW1",
 asApp.type.DW2P = "DW2P",
 asApp.type.NR = "NR",
 asApp.type.TA1 = "TA1",
@@ -228,7 +228,7 @@ asApp.splitText = function() {
   }), frame5 = new SplitText(".frame5", {
     type: "words",
     wordsClass: "word++"
-  }), ("DW" == asApp.variation || "DW2P" == asApp.variation) && (frame3 = new SplitText(".frame3", {
+  }), ("DW1" == asApp.variation || "DW2P" == asApp.variation) && (frame3 = new SplitText(".frame3", {
     type: "lines,words,chars",
     wordsClass: "word++",
     charsClass: "chars++"
@@ -299,7 +299,7 @@ asApp.splitText = function() {
   }, .07), tl.to(".frame4", .3, {
     autoAlpha: 0,
     delay: 2
-  }), ("DW" == asApp.variation || "DW2P" == asApp.variation) && (console.log("only DW"),
+  }), ("DW1" == asApp.variation || "DW2P" == asApp.variation) && (console.log("only DW"),
   $(".frame3 .word2").attr("class", "txtLtBlue"),
   tl.staggerFrom(frame5.words, .2, {
     left: -300
@@ -440,7 +440,7 @@ asApp.splitText = function() {
     autoAlpha: 1
   }), tl.to("#landing", 1, {
     autoAlpha: 1
-  }), "DW" == asApp.variation && (tl.to("#onlyAllstate", .5, {
+  }), "DW1" == asApp.variation && (tl.to("#onlyAllstate", .5, {
     left: 0
   }), console.log("version1")), "DW2P" == asApp.variation && (tl.to("#onlyAllstate2", .5, {
     left: 0
