@@ -23,13 +23,13 @@ Enabler.setProfileId(1085016);
 var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}],
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0,
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW",
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "TA1",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = !0,
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {},
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "",
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Indianapolis Area",
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Western New York",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16",
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {},
@@ -201,6 +201,9 @@ asApp.init = function() {
     o = document.getElementsByClassName("market-name-a-An"),
     d = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name,
     i = d.charAt(0);
+  if (d == "Western New York") {
+    document.getElementById("the").style.display = "none";
+  }
   "" !== d ? "A" == i || "E" == i || "I" == i || "O" == i ? marketNameAOrAnText = "an " + d : marketNameAOrAnText = "a " + d : marketNameAOrAnText = "an ";
   for (var p = 0; p < n.length; p++) n[p].innerText ? n[p].innerText = d : n[p].textContent && (n[p].textContent = d);
   for (var p = 0; p < o.length; p++) o[p].innerText ? o[p].innerText = marketNameAOrAnText : o[p].textContent && (o[p].textContent = marketNameAOrAnText);
@@ -208,7 +211,8 @@ asApp.init = function() {
   var c = document.getElementById("aAd_legalTxt"),
     A = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy;
   c.innerText ? c.innerText = A : c.textContent && (c.textContent = A)
-}, asApp.splitText = function() {
+},
+asApp.splitText = function() {
   getIN = new SplitText("#getIN", {
     type: "words",
     wordsClass: "word++"
@@ -500,7 +504,13 @@ asApp.bundleSaveInitAL = function() {
 },
 
 asApp.bundleSaveInitALP = function() {
-  console.info("asApp.bundleSaveInitALP()"), $("#BSALP, #getIN").css("display", "block"), asApp.addHandsFrameToTimeline(), asApp.addGetINFrameToTimeline(), asApp.addBS3FramesToTimeline(), asApp.addLandingToTimeline(), console.debug("Auto Life %")
+  console.info("asApp.bundleSaveInitALP()"),
+  $("#BSALP, #getIN").css("display", "block"),
+  asApp.addHandsFrameToTimeline(),
+  asApp.addGetINFrameToTimeline(),
+  asApp.addBS3FramesToTimeline(),
+  asApp.addLandingToTimeline(),
+  console.debug("Auto Life %")
 },
 
 asApp.bundleSaveInitAHMP = function() {
@@ -579,7 +589,15 @@ asApp.newRoofInit = function() {
 },
 
 asApp.trustedAdvisorInit = function() {
-  console.info("asApp.trustedAdvisorInit()"), $(".frame3 .word1").attr("class", "txtGreen"), $(".frame4 .word1").attr("class", "txtGreen"), $(".frame5 .word1").attr("class", "txtGreen"), $("#TA1").css("display", "block"), asApp.addHandsFrameToTimeline(), asApp.addTAImageFramesToTimeline(), asApp.addLandingToTimeline(), console.debug("new roof")
+  console.info("asApp.trustedAdvisorInit()"),
+  $(".frame3 .word1").attr("class", "txtGreen"),
+  $(".frame4 .word1").attr("class", "txtGreen"),
+  $(".frame5 .word1").attr("class", "txtGreen"),
+  $("#TA1").css("display", "block"),
+  asApp.addHandsFrameToTimeline(),
+  asApp.addTAImageFramesToTimeline(),
+  asApp.addLandingToTimeline(),
+  console.debug("new roof")
 };
 
 
