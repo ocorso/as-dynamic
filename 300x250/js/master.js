@@ -214,6 +214,7 @@ asApp.init = function() {
   c.innerText ? c.innerText = A : c.textContent && (c.textContent = A)
 },
 asApp.splitText = function() {
+  console.info('asApp.splitText()');
   getIN = new SplitText("#getIN", {
     type: "words",
     wordsClass: "word++"
@@ -245,7 +246,8 @@ asApp.splitText = function() {
     type: "lines,words,chars",
     wordsClass: "word++",
     charsClass: "chars++"
-  })), $("#getIN .word2").attr("class", "whiteIN"), $("#hereIN .word2").attr("class", "whiteIN")
+  })), $("#getIN .word2").attr("class", "whiteIN"), $("#hereIN .word2").attr("class", "whiteIN");
+
 }, asApp.addHandsFrameToTimeline = function() {
   tl.to(".in1", .2, {
     autoAlpha: 1
@@ -360,17 +362,17 @@ asApp.splitText = function() {
     left: -300
   }, .07), tl.to(".frame3", .3, {
     autoAlpha: 0,
-    delay: 1.5
+    delay: .5
   }), tl.staggerFrom(frame4.words, .2, {
     left: -300
   }, .07), tl.to(".frame4", .3, {
     autoAlpha: 0,
-    delay: 1.5
+    delay: .5
   }), tl.staggerFrom(frame5.words, .2, {
     left: -300
   }, .07), tl.to(".frame5", .3, {
     autoAlpha: 0,
-    delay: 1.5
+    delay: .5
   }), tl.to("#bkgReveal", .7, {
     left: -100,
     top: -200,
@@ -550,8 +552,12 @@ asApp.bundleSaveInitACP = function(e) {
 },
 
 asApp.bundleSaveInitHLI = function(e) {
+  console.info("asApp.bundleSaveInitHLI()");
+  if(dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == 'Massachusetts'){
+    console.debug('Massachusetts!');
+    $("#hereIN").css('margin-left','-5px');
+  }
   $(".frame4 .word5").attr("class", "txtOrange"),
-  console.info("asApp.bundleSaveInitHLI()"),
   $("#BSHLI, #hereIN").css("display", "block"),
   asApp.addHereINFrameToTimeline(),
   asApp.addHandsFrameToTimeline(),
@@ -642,7 +648,12 @@ asApp.newRoofInit = function() {
 },
 
 asApp.trustedAdvisorInit = function() {
-  console.info("asApp.trustedAdvisorInit()"),
+  console.info("asApp.trustedAdvisorInit()");
+
+  if(dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == 'Massachusetts'){
+    console.debug('Massachusetts!');
+    $(".frame5").css('margin-left','-5px');
+  }
   $(".frame3 .word1").attr("class", "txtGreen"),
   $(".frame4 .word1").attr("class", "txtGreen"),
   $(".frame5 .word1").attr("class", "txtGreen"),
@@ -650,7 +661,7 @@ asApp.trustedAdvisorInit = function() {
   asApp.addHandsFrameToTimeline(),
   asApp.addTAImageFramesToTimeline(),
   asApp.addLandingToTimeline(),
-  console.debug("new roof")
+  console.debug("trustedAdvisorInit end")
 };
 
 var div1 = $("div#btn_cta"),
