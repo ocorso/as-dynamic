@@ -227,7 +227,11 @@ asApp.splitText = function() {
   }), frame4 = new SplitText(".frame4", {
     type: "words",
     wordsClass: "word++"
-  }), frame5 = new SplitText(".frame5", {
+  });
+
+  //oc: only include the elements in the current variation.
+  var frame5Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + '.frame5';
+  frame5 = new SplitText(frame5Selector, {
     type: "words",
     wordsClass: "word++"
   }), ("DW1" == asApp.variation || "DW2P" == asApp.variation) && (frame3 = new SplitText(".frame3", {
@@ -362,17 +366,17 @@ asApp.splitText = function() {
     left: -300
   }, .07), tl.to(".frame3", .3, {
     autoAlpha: 0,
-    delay: .5
+    delay: 1.5
   }), tl.staggerFrom(frame4.words, .2, {
     left: -300
   }, .07), tl.to(".frame4", .3, {
     autoAlpha: 0,
-    delay: .5
+    delay: 1.5
   }), tl.staggerFrom(frame5.words, .2, {
     left: -300
   }, .07), tl.to(".frame5", .3, {
     autoAlpha: 0,
-    delay: .5
+    delay: 1.5
   }), tl.to("#bkgReveal", .7, {
     left: -100,
     top: -200,
@@ -555,7 +559,7 @@ asApp.bundleSaveInitHLI = function(e) {
   console.info("asApp.bundleSaveInitHLI()");
   if(dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == 'Massachusetts'){
     console.debug('Massachusetts!');
-    $("#hereIN").css('margin-left','-5px');
+    $("#hereIN").css('margin-left','-15px');
   }
   $(".frame4 .word5").attr("class", "txtOrange"),
   $("#BSHLI, #hereIN").css("display", "block"),
