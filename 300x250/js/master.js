@@ -231,7 +231,9 @@ asApp.splitText = function() {
 
   //oc: only include the elements in the current variation.
   var frame5Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + '.frame5';
-  frame5 = new SplitText(frame5Selector, {
+  console.log('frame5Selector:'+frame5Selector);
+
+  frame5 = new SplitText('.frame5', {
     type: "words",
     wordsClass: "word++"
   }), ("DW1" == asApp.variation || "DW2P" == asApp.variation) && (frame3 = new SplitText(".frame3", {
