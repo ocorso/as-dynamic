@@ -850,7 +850,7 @@ asApp.accidentForgivenessInit = function() {
 
 //show Auto Home
 asApp.bundleSaveInitAH = function() {
-  console.info('asApp.bundleSaveInitAH():' + $option);
+  console.info('oc: asApp.bundleSaveInitAH():');
 
   //show bundleSave elements
   $('#BSAHL, #getIN').css('display', 'block');
@@ -865,7 +865,7 @@ asApp.bundleSaveInitAH = function() {
 
 //show Auto Home Life
 asApp.bundleSaveInitAHL = function() {
-  console.info('asApp.bundleSaveInitAHL():' + $option);
+  console.info('asApp.bundleSaveInitAHL()');
 
   //show bundleSave elements
   $('#BSAHL, #getIN').css('display', 'block');
