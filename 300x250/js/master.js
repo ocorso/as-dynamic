@@ -352,29 +352,30 @@ asApp.splitText = function() {
   var frame3Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame3';
   var frame4Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame4';
   var frame5Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame5';
-  var frame6Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame6';
   console.log('frame3Selector:'+frame3Selector);
   
   //oc: only split what we have to and in the right way.
   switch(dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation){
-    case asApp.type.DW : 
     case asApp.type.DW2P : 
-      frame3 = new SplitText('.frame3', {
+      var frame6Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame6';
+      frame6 = new SplitText(frame6Selector, {
         type: "lines,words,chars",
         wordsClass: "word++",
         charsClass: "chars++"
       });
-      frame4 = new SplitText('.frame4', {
+    
+    case asApp.type.DW : 
+      frame3 = new SplitText(frame3Selector, {
         type: "lines,words,chars",
         wordsClass: "word++",
         charsClass: "chars++"
       });
-      frame5 = new SplitText('.frame5', {
+      frame4 = new SplitText(frame4Selector, {
         type: "lines,words,chars",
         wordsClass: "word++",
         charsClass: "chars++"
       });
-      frame6 = new SplitText('.frame6', {
+      frame5 = new SplitText(frame5Selector, {
         type: "lines,words,chars",
         wordsClass: "word++",
         charsClass: "chars++"
