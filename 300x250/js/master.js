@@ -13,13 +13,13 @@ var devDynamicContent = {};
 
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "NR"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSAH"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "33%";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Chicago Area";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Cincinnati";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
@@ -33,7 +33,7 @@ devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Type = "file
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250 = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Type = "file";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44339383/TA_image1_300x250.jpg";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250 = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Type = "file";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
@@ -348,60 +348,77 @@ asApp.parseDynamicContent = function() {
  */
 asApp.splitText = function() {
 
-  getIN = new SplitText('#getIN', {
-    type: "words",
-    wordsClass: "word++"
-  });
-  hereIN = new SplitText('#hereIN', {
-    type: "words",
-    wordsClass: "word++"
-  });
+  //oc: only include current variation's divs in the Split Text call.
+  var frame3Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame3';
+  var frame4Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame4';
+  var frame5Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame5';
+  var frame6Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame6';
+  console.log('frame3Selector:'+frame3Selector);
+  
+  //oc: only split what we have to and in the right way.
+  switch(dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation){
+    case asApp.type.DW : 
+    case asApp.type.DW2P : 
+      frame3 = new SplitText('.frame3', {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+      frame4 = new SplitText('.frame4', {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+      frame5 = new SplitText('.frame5', {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+      frame6 = new SplitText('.frame6', {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+      break;
+    case asApp.type.WD : 
+      frame3 = new SplitText(frame3Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+      break;
 
-  frame3 = new SplitText('.frame3', {
-    type: "words",
-    wordsClass: "word++"
-  });
-  frame4 = new SplitText('.frame4', {
-    type: "words",
-    wordsClass: "word++"
-  });
+    case asApp.type.BSAHL : 
+    case asApp.type.BSAHLP :   
+    case asApp.type.BSALP :   
+    case asApp.type.BSAHMP :   
+    case asApp.type.DW :   
+    case asApp.type.TA1 :   
+      frame3 = new SplitText(frame3Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+      frame4 = new SplitText(frame4Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+      frame5 = new SplitText(frame5Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
 
-  //oc: test only including current variation's divs in the Split Text call.
-  var frame5Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + '.frame5';
-  console.log('frame5Selector:'+frame5Selector);
-
-  frame5 = new SplitText('.frame5', {
-    type: "words",
-    wordsClass: "word++"
-  });
-
-  if ((asApp.variation == 'DW1') || (asApp.variation == 'DW2P')) {
-
-    frame3 = new SplitText('.frame3', {
-      type: "lines,words,chars",
-      wordsClass: "word++",
-      charsClass: "chars++"
+      break;
+        
+    default ://oc: most of the time, there are only 4 frames 
+    frame3 = new SplitText(frame3Selector, {
+      type: "words",
+      wordsClass: "word++"
     });
-    frame4 = new SplitText('.frame4', {
-      type: "lines,words,chars",
-      wordsClass: "word++",
-      charsClass: "chars++"
+    frame4 = new SplitText(frame4Selector, {
+      type: "words",
+      wordsClass: "word++"
     });
-    frame5 = new SplitText('.frame5', {
-      type: "lines,words,chars",
-      wordsClass: "word++",
-      charsClass: "chars++"
-    });
-    frame6 = new SplitText('.frame6', {
-      type: "lines,words,chars",
-      wordsClass: "word++",
-      charsClass: "chars++"
-    });
-  }
+  }//end switch
 
-  $("#getIN .word2").attr('class', 'whiteIN');
-  $("#hereIN .word2").attr('class', 'whiteIN');
-  // $("#frame2 .word5").attr('class', 'colorIN');
 
 };
 
@@ -444,6 +461,15 @@ asApp.addHandsFrameToTimeline = function() {
 
 asApp.addGetINFrameToTimeline = function() {
 
+  //oc: add SplitText
+  getIN = new SplitText('#getIN', {
+    type: "words",
+    wordsClass: "word++"
+  });
+
+  //oc: set style
+  $("#getIN .word2").attr('class', 'whiteIN');
+
   //oc: GetIn Frame BEGIN
   tl.staggerFrom(getIN.words, 0.2, {
     left: -300
@@ -457,6 +483,15 @@ asApp.addGetINFrameToTimeline = function() {
 };
 
 asApp.addHereINFrameToTimeline = function() {
+  
+  //oc: Split text
+  hereIN = new SplitText('#hereIN', {
+    type: "words",
+    wordsClass: "word++"
+  });
+
+  //oc: set style
+  $("#hereIN .word2").attr('class', 'whiteIN');
 
   //oc: HereIn Frame BEGIN
   tl.staggerFrom(hereIN.words, 0.2, {
@@ -685,11 +720,10 @@ asApp.addBS3FramesToTimeline = function($variation) {
   });
 }; //end asApp.add3ImageFramesToTimeline function
 
-
+//oc: add variation
 asApp.addBS2FramesToTimeline = function($variation) {
 
-  //sb : oc: selection
-  var selector = $variation + ".frame3";
+  //sb : 
   $(".frame3 .word1").attr('class', 'txtOrange');
 
   tl.to("#bkgReveal", 0.7, {
@@ -722,7 +756,7 @@ asApp.addBS2FramesToTimeline = function($variation) {
     top: -200,
     ease: Sine.easeOut
   });
-}; //end asApp.add3ImageFramesToTimeline function
+}; //end asApp.add2ImageFramesToTimeline function
 
 asApp.addWDTimeline = function($variation) {
   tl.to("#bkgReveal", 0.7, {
@@ -856,7 +890,7 @@ asApp.bundleSaveInitAH = function() {
   $('#BSAH, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
-  asApp.addImageFramesToTimeline();
+  asApp.addBS2FramesToTimeline();
   asApp.addLandingToTimeline();
 
 
@@ -871,7 +905,7 @@ asApp.bundleSaveInitAHP = function() {
   $('#BSAHP, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
-  asApp.addImageFramesToTimeline();
+  asApp.addBS2FramesToTimeline();
   asApp.addLandingToTimeline();
 
 
@@ -1057,12 +1091,12 @@ asApp.driveWiseInit = function() {
   $(".frame4 .word5 .chars27,.frame4 .word5 .chars28").attr('class', 'txtLtBlue');
   $(".frame5 .word4 .chars20, .frame5 .word4 .chars21").attr('class', 'txtLtBlue');
 
-  $('#DW').css('display', 'block');
+  $('#DW1').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
 
-  console.log('DW');
+  console.log('DW1');
 
 } //end DW
 
