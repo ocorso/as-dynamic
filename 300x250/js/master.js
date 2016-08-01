@@ -73,8 +73,8 @@ var asApp = {};
 asApp.type = {};
 asApp.type.AF = 'AF'; //Accident Forgiveness
 asApp.type.BSAHLP = 'BSAHLP'; //Bundle and Save Auto, Home, Life with Percentages
-asApp.type.BSAH = 'BSAH'; //Bundle and Save Auto, Home, NO Percentages
-asApp.type.BSAHP = 'BSAHP'; //Bundle and Save Auto, Home, WITH Percentages
+asApp.type.BSAH = 'BSAH'; //oc: Bundle and Save Auto, Home, NO Percentages
+asApp.type.BSAHP = 'BSAHP'; //oc: Bundle and Save Auto, Home, WITH Percentages
 asApp.type.BSAHL = 'BSAHL';
 asApp.type.BSHLI = 'BSHLI';
 asApp.type.BSALP = 'BSALP';
@@ -848,12 +848,12 @@ asApp.accidentForgivenessInit = function() {
 
 } //end accidentForgivenessInit() function
 
-//show Auto Home
+//oc: show Auto Home
 asApp.bundleSaveInitAH = function() {
   console.info('oc: asApp.bundleSaveInitAH():');
 
   //show bundleSave elements
-  $('#BSAHL, #getIN').css('display', 'block');
+  $('#BSAH, #getIN').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addImageFramesToTimeline();
@@ -861,6 +861,21 @@ asApp.bundleSaveInitAH = function() {
 
 
   console.debug('oc: Auto Home');
+}; //end function bundleSaveInit
+
+//oc: show Auto Home WITH Percentage
+asApp.bundleSaveInitAHP = function() {
+  console.info('oc: asApp.bundleSaveInitAHP():');
+
+  //show bundleSave elements
+  $('#BSAHP, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+
+
+  console.debug('oc: Auto Home with percent');
 }; //end function bundleSaveInit
 
 //show Auto Home Life
