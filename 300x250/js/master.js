@@ -13,13 +13,13 @@ var devDynamicContent = {};
 
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSALP"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "NR"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "33%";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Chicago";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Chicago Area";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
@@ -73,6 +73,8 @@ var asApp = {};
 asApp.type = {};
 asApp.type.AF = 'AF'; //Accident Forgiveness
 asApp.type.BSAHLP = 'BSAHLP'; //Bundle and Save Auto, Home, Life with Percentages
+asApp.type.BSAH = 'BSAH'; //Bundle and Save Auto, Home, NO Percentages
+asApp.type.BSAHP = 'BSAHP'; //Bundle and Save Auto, Home, WITH Percentages
 asApp.type.BSAHL = 'BSAHL';
 asApp.type.BSHLI = 'BSHLI';
 asApp.type.BSALP = 'BSALP';
@@ -183,6 +185,12 @@ asApp.init = function() {
   switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode variation for dev line 16
     case asApp.type.AF:
       asApp.accidentForgivenessInit();
+      break;
+    case asApp.type.BSAH:
+      asApp.bundleSaveInitAH();
+      break;
+    case asApp.type.BSAHP:
+      asApp.bundleSaveInitAHP();
       break;
     case asApp.type.BSAHLP:
       asApp.bundleSaveInitAHLP();
@@ -318,16 +326,14 @@ asApp.parseDynamicContent = function() {
   for (var i = 0; i < marketName.length; i++) {
     marketName[i].innerHTML = marketNameText;
     marketNameAOrAn[i].innerHTML = marketNameAOrAnText;
-  }
-  ;
+  }  ;
 
   //cw: set Percentages
   var percentages = document.getElementsByClassName('savings-percentage');
   var percentagesText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage;
   for (var i = 0; i < percentages.length; i++) {
     percentages[i].innerHTML = percentagesText;
-  }
-  ;
+  };
 
 
 
@@ -553,7 +559,7 @@ asApp.addNRImageFramesToTimeline = function($variation) {
   }, 0.07)
 
   //oc: fade
-  tl.to(".frame3", 0.3, {
+  tl.to("#NR .frame3", 0.3, {
     autoAlpha: 0,
     delay: 2
   });
@@ -841,6 +847,21 @@ asApp.accidentForgivenessInit = function() {
 
 
 } //end accidentForgivenessInit() function
+
+//show Auto Home
+asApp.bundleSaveInitAH = function() {
+  console.info('asApp.bundleSaveInitAH():' + $option);
+
+  //show bundleSave elements
+  $('#BSAHL, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+
+
+  console.debug('oc: Auto Home');
+}; //end function bundleSaveInit
 
 //show Auto Home Life
 asApp.bundleSaveInitAHL = function() {
