@@ -19,7 +19,7 @@ devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "33%";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Cincinnati";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Greater Rochester Area";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
@@ -311,6 +311,11 @@ asApp.parseDynamicContent = function() {
   var marketName = document.getElementsByClassName('market-name');
   var marketNameAOrAn = document.getElementsByClassName('market-name-a-An');
   var marketNameText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
+
+  if (marketNameText = "Greater Rochester Area") {
+    marketNameText = "Greater Rochester<br />Area";
+  }
+
   var firstCharMarketName = marketNameText.charAt(0);
 
   if (marketNameText !== "") {
@@ -1061,7 +1066,6 @@ asApp.bundleSaveInitHLI = function(pp) {
 //show CFD
 asApp.claimFreeDiscountInit = function() {
   console.info('claimFreeDiscountInit');
-
   $('#CFD, #hereIN').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
