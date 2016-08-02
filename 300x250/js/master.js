@@ -13,7 +13,7 @@ var devDynamicContent = {};
 
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSAH"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW2P"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -563,7 +563,9 @@ asApp.addImageFramesToTimeline = function($variation) {
     console.log('only DW')
     $(".frame3 .word2").attr('class', 'txtLtBlue');
 
-
+    //oc: 
+    
+    
     tl.staggerFrom(frame6.words, 0.2, {
       left: -300
     }, 0.07)
@@ -1109,6 +1111,7 @@ asApp.driveWiseInit2P = function() {
   $(".frame6 .word2 .chars9, .frame6 .word2 .chars10").attr('class', 'txtLtBlue');
 
   $('#DW2P').css('display', 'block');
+
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
