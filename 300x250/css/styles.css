@@ -278,14 +278,10 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 
 .CRG{
 	font-size:26px;
-<<<<<<< HEAD
-	line-height: 23px; 
-=======
 	line-height: 24px;
->>>>>>> origin/master
 	top:115px;
-	width: 205px;
-	left:48px;
+	width: 300px;
+	left:-15px;
 	text-align: center;
 }
 .CFR{
@@ -296,8 +292,6 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 
 .DW{
 	top:106px;
-	font-size: 32px;
-	line-height: 30px;
 }
 
 .DW2P{

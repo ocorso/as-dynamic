@@ -13,11 +13,7 @@ var devDynamicContent = {};
 
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-<<<<<<< HEAD
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW2P"; //oc: hardcode to variation for dev
-=======
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSAH"; //oc: hardcode to variation for dev
->>>>>>> origin/master
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -391,9 +387,6 @@ asApp.splitText = function() {
         charsClass: "chars++"
       });
 
-<<<<<<< HEAD
-  if ((asApp.variation == 'DW') || (asApp.variation == 'DW2P') || (asApp.variation == 'CFD')  || (asApp.variation == 'CRG')) {
-=======
     case asApp.type.DW:
       frame3 = new SplitText(frame3Selector, {
         type: "lines,words,chars",
@@ -417,7 +410,6 @@ asApp.splitText = function() {
         wordsClass: "word++"
       });
       break;
->>>>>>> origin/master
 
     case asApp.type.BSAHL:
     case asApp.type.BSAHLP:
@@ -904,18 +896,6 @@ asApp.defaultInit = function() {
 } //end CFR
 
 
-asApp.claimSatGuardInit = function() {
-  console.info('claimSatGuardInit');
-
-  $('#CSG, #getIN').css('display', 'block');
-  asApp.addHandsFrameToTimeline();
-  asApp.addGetINFrameToTimeline();
-  asApp.addImageFramesToTimeline();
-  asApp.addLandingToTimeline();
-
-
-} //end accidentForgivenessInit() function
-
 asApp.accidentForgivenessInit = function() {
   console.info('accidentForgivenessInit');
 
@@ -1070,8 +1050,8 @@ asApp.bundleSaveInitACP = function(pp) {
 
 //show Home + Life
 asApp.bundleSaveInitHLI = function(pp) {
+
   console.info('asApp.bundleSaveInitHLI()');
-  $(".frame4 .word5").attr('class', 'txtOrange');
 
   //show bundleSave elements
   $('#BSHLI, #hereIN').css('display', 'block');
@@ -1086,12 +1066,6 @@ asApp.bundleSaveInitHLI = function(pp) {
 //show CFD
 asApp.claimFreeDiscountInit = function() {
   console.info('claimFreeDiscountInit');
-<<<<<<< HEAD
-  $(".frame3 .word6 .chars25, .frame3 .word6 .chars26").attr('class', 'txtOrange');
-  $(".frame4 .word6 .chars20, .frame4 .word6 .chars21").attr('class', 'txtOrange');
-
-=======
->>>>>>> origin/master
   $('#CFD, #hereIN').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
@@ -1112,17 +1086,9 @@ asApp.claimFreeRewardsInit = function() {
 
 } //end CFR
 
-<<<<<<< HEAD
-//show CFR
-asApp.claimRateGuardInit = function() {
-  console.info('claimRateGuardInit');
-  $(".frame3 .word5 .chars28, .frame3 .word5 .chars29").attr('class', 'txtWhite');
-  $(".frame4 .word6 .chars25, .frame4 .word6 .chars26").attr('class', 'txtWhite');
-=======
 //cw: show CRG
 asApp.claimRateGuardInit = function() {
   console.info('claimRateGuardInit');
->>>>>>> origin/master
 
   $('#CRG, #hereIN').css('display', 'block');
   asApp.addHereINFrameToTimeline();
@@ -1130,9 +1096,6 @@ asApp.claimRateGuardInit = function() {
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
 
-<<<<<<< HEAD
-} //end CFR
-=======
 } //end CRG
 
 //cw: show CSG
@@ -1146,7 +1109,6 @@ asApp.claimSatGuardInit = function() {
   asApp.addLandingToTimeline();
 
 } //end CSG
->>>>>>> origin/master
 
 //show DW
 asApp.driveWiseInit = function() {
