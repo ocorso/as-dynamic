@@ -1090,7 +1090,7 @@ asApp.claimFreeRewardsInit = function() {
 asApp.claimRateGuardInit = function() {
   console.info('claimRateGuardInit');
 
-  $('#CFR, #hereIN').css('display', 'block');
+  $('#CRG, #hereIN').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
