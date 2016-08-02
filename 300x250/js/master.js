@@ -326,15 +326,33 @@ asApp.parseDynamicContent = function() {
   for (var i = 0; i < marketName.length; i++) {
     marketName[i].innerHTML = marketNameText;
     marketNameAOrAn[i].innerHTML = marketNameAOrAnText;
-  }  ;
+  }
+  ;
 
   //cw: set Percentages
   var percentages = document.getElementsByClassName('savings-percentage');
   var percentagesText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage;
   for (var i = 0; i < percentages.length; i++) {
     percentages[i].innerHTML = percentagesText;
-  };
+  }
+  ;
 
+  //cw: from old min.js
+  var n = document.getElementsByClassName("market-name"),
+    o = document.getElementsByClassName("market-name-a-An"),
+    d = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name,
+    i = d.charAt(0);
+  if (d == "Western New York") {
+    document.getElementById("the").style.display = "none";
+  }
+  "" !== d ? "A" == i || "E" == i || "I" == i || "O" == i ? marketNameAOrAnText = "an " + d : marketNameAOrAnText = "a " + d : marketNameAOrAnText = "an ";
+  for (var p = 0; p < n.length; p++) n[p].innerHTML = d; //oc: use html text from feed...n[p].innerText ? n[p].innerText = d : n[p].textContent && (n[p].textContent = d);
+  for (var p = 0; p < o.length; p++) o[p].innerHTML = marketNameAOrAnText; //oc: use html text from feed... o[p].innerText ? o[p].innerText = marketNameAOrAnText : o[p].textContent && (o[p].textContent = marketNameAOrAnText);
+  for (var r = document.getElementsByClassName("savings-percentage"),
+      m = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage, p = 0; p < r.length; p++) r[p].innerText ? r[p].innerText = m : r[p].textContent && (r[p].textContent = m);
+  var c = document.getElementById("aAd_legalTxt"),
+    A = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy;
+  c.innerText ? c.innerText = A : c.textContent && (c.textContent = A);
 
 
   //cw: Set legal copy
@@ -352,19 +370,19 @@ asApp.splitText = function() {
   var frame3Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame3';
   var frame4Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame4';
   var frame5Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame5';
-  console.log('frame3Selector:'+frame3Selector);
-  
+  console.log('frame3Selector:' + frame3Selector);
+
   //oc: only split what we have to and in the right way.
-  switch(dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation){
-    case asApp.type.DW2P : 
+  switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) {
+    case asApp.type.DW2P:
       var frame6Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame6';
       frame6 = new SplitText(frame6Selector, {
         type: "lines,words,chars",
         wordsClass: "word++",
         charsClass: "chars++"
       });
-    
-    case asApp.type.DW : 
+
+    case asApp.type.DW:
       frame3 = new SplitText(frame3Selector, {
         type: "lines,words,chars",
         wordsClass: "word++",
@@ -381,19 +399,19 @@ asApp.splitText = function() {
         charsClass: "chars++"
       });
       break;
-    case asApp.type.WD : 
+    case asApp.type.WD:
       frame3 = new SplitText(frame3Selector, {
         type: "words",
         wordsClass: "word++"
       });
       break;
 
-    case asApp.type.BSAHL : 
-    case asApp.type.BSAHLP :   
-    case asApp.type.BSALP :   
-    case asApp.type.BSAHMP :   
-    case asApp.type.DW :   
-    case asApp.type.TA1 :   
+    case asApp.type.BSAHL:
+    case asApp.type.BSAHLP:
+    case asApp.type.BSALP:
+    case asApp.type.BSAHMP:
+    case asApp.type.DW:
+    case asApp.type.TA1:
       frame3 = new SplitText(frame3Selector, {
         type: "words",
         wordsClass: "word++"
@@ -408,17 +426,17 @@ asApp.splitText = function() {
       });
 
       break;
-        
-    default ://oc: most of the time, there are only 4 frames 
-    frame3 = new SplitText(frame3Selector, {
-      type: "words",
-      wordsClass: "word++"
-    });
-    frame4 = new SplitText(frame4Selector, {
-      type: "words",
-      wordsClass: "word++"
-    });
-  }//end switch
+
+    default: //oc: most of the time, there are only 4 frames
+      frame3 = new SplitText(frame3Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+      frame4 = new SplitText(frame4Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+  } //end switch
 
 
 };
@@ -484,7 +502,7 @@ asApp.addGetINFrameToTimeline = function() {
 };
 
 asApp.addHereINFrameToTimeline = function() {
-  
+
   //oc: Split text
   hereIN = new SplitText('#hereIN', {
     type: "words",
@@ -726,7 +744,7 @@ asApp.addBS3FramesToTimeline = function($variation) {
 //oc: add variation
 asApp.addBS2FramesToTimeline = function($variation) {
 
-  //sb : 
+  //sb :
   $(".frame3 .word1").attr('class', 'txtOrange');
 
   tl.to("#bkgReveal", 0.7, {
