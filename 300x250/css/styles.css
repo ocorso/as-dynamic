@@ -336,7 +336,7 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 #arrow { position: absolute; top:0; left:100px; padding-top:1px;}
 
 
-.frame3 {
+.frame3, .frame4 {
 	width:280px;
 	margin:0;
 	padding:0;
