@@ -3,7 +3,6 @@
  *
  * The following code initializes the following dynamic variables for
  * development testing and live serving of Fields associated to the above profile
-
  *   DynamicContent Start: HTML5 invocation code.
 */
 
@@ -14,13 +13,17 @@ var devDynamicContent = {};
 
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
+<<<<<<< HEAD
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW2P"; //oc: hardcode to variation for dev
+=======
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSAH"; //oc: hardcode to variation for dev
+>>>>>>> origin/master
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "N\/A";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "33%";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Greater Rochester Area";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
@@ -34,7 +37,7 @@ devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Type = "file
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image3_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250 = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Type = "file";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44339383/TA_image1_300x250.jpg";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250 = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Type = "file";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image2_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/44448670/37231879_20160721142255788_DF_image1_300x250.jpg";
@@ -74,6 +77,8 @@ var asApp = {};
 asApp.type = {};
 asApp.type.AF = 'AF'; //Accident Forgiveness
 asApp.type.BSAHLP = 'BSAHLP'; //Bundle and Save Auto, Home, Life with Percentages
+asApp.type.BSAH = 'BSAH'; //oc: Bundle and Save Auto, Home, NO Percentages
+asApp.type.BSAHP = 'BSAHP'; //oc: Bundle and Save Auto, Home, WITH Percentages
 asApp.type.BSAHL = 'BSAHL';
 asApp.type.BSHLI = 'BSHLI';
 asApp.type.BSALP = 'BSALP';
@@ -89,7 +94,7 @@ asApp.type.CRG = 'CRG';
 asApp.type.CRGM = 'CRGM';
 asApp.type.CSG = 'CSG';
 asApp.type.CSGM = 'CSGM';
-asApp.type.DW = 'DW';
+asApp.type.DW = 'DW1';
 asApp.type.DW2P = 'DW2P';
 asApp.type.NR = 'NR';
 asApp.type.TA1 = 'TA1';
@@ -125,7 +130,6 @@ function enablerInitialized() {
        Append this entire block to enablerInitHandler(), ONLY AFTER executing
        Enabler.setDevDynamicContent(devDynamicContent).  Be sure to set 'nid'
        below according to your Adometry account ID.
-
        nid = Adometry account id, pid = DCM placement id, cid = dynamic element ID
   ********************************************************************************/
 
@@ -185,6 +189,12 @@ asApp.init = function() {
   switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) { //oc: hardcode variation for dev line 16
     case asApp.type.AF:
       asApp.accidentForgivenessInit();
+      break;
+    case asApp.type.BSAH:
+      asApp.bundleSaveInitAH();
+      break;
+    case asApp.type.BSAHP:
+      asApp.bundleSaveInitAHP();
       break;
     case asApp.type.BSAHLP:
       asApp.bundleSaveInitAHLP();
@@ -305,6 +315,11 @@ asApp.parseDynamicContent = function() {
   var marketName = document.getElementsByClassName('market-name');
   var marketNameAOrAn = document.getElementsByClassName('market-name-a-An');
   var marketNameText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
+
+  if (marketNameText = "Greater Rochester Area") {
+    marketNameText = "Greater Rochester<br />Area";
+  }
+
   var firstCharMarketName = marketNameText.charAt(0);
 
   if (marketNameText !== "") {
@@ -314,40 +329,45 @@ asApp.parseDynamicContent = function() {
       marketNameAOrAnText = 'A ' + marketNameText;
     }
     ;
-  } else {
-    marketNameAOrAnText = 'An ';
   }
+  ;
 
   for (var i = 0; i < marketName.length; i++) {
-    if (marketName[i].innerText) {
-      marketName[i].innerText = marketNameText;
-    } else if (marketName[i].textContent) {
-      marketName[i].textContent = marketNameText;
-    }
-    ;
+    marketName[i].innerHTML = marketNameText;
+    marketNameAOrAn[i].innerHTML = marketNameAOrAnText;
   }
   ;
 
-  for (var i = 0; i < marketNameAOrAn.length; i++) {
-    if (marketNameAOrAn[i].innerText) {
-      marketNameAOrAn[i].innerText = marketNameAOrAnText;
-    } else if (marketNameAOrAn[i].textContent) {
-      marketNameAOrAn[i].textContent = marketNameAOrAnText;
-    }
-    ;
+  //cw: set Percentages
+  var percentages = document.getElementsByClassName('savings-percentage');
+  var percentagesText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage;
+  for (var i = 0; i < percentages.length; i++) {
+    percentages[i].innerHTML = percentagesText;
   }
   ;
-  ;
+
+  //cw: from old min.js
+  var n = document.getElementsByClassName("market-name"),
+    o = document.getElementsByClassName("market-name-a-An"),
+    d = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name,
+    i = d.charAt(0);
+  if (d == "Western New York") {
+    document.getElementById("the").style.display = "none";
+  }
+  "" !== d ? "A" == i || "E" == i || "I" == i || "O" == i ? marketNameAOrAnText = "an " + d : marketNameAOrAnText = "a " + d : marketNameAOrAnText = "an ";
+  for (var p = 0; p < n.length; p++) n[p].innerHTML = d; //oc: use html text from feed...n[p].innerText ? n[p].innerText = d : n[p].textContent && (n[p].textContent = d);
+  for (var p = 0; p < o.length; p++) o[p].innerHTML = marketNameAOrAnText; //oc: use html text from feed... o[p].innerText ? o[p].innerText = marketNameAOrAnText : o[p].textContent && (o[p].textContent = marketNameAOrAnText);
+  for (var r = document.getElementsByClassName("savings-percentage"),
+      m = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage, p = 0; p < r.length; p++) r[p].innerText ? r[p].innerText = m : r[p].textContent && (r[p].textContent = m);
+  var c = document.getElementById("aAd_legalTxt"),
+    A = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy;
+  c.innerText ? c.innerText = A : c.textContent && (c.textContent = A);
+
+
   //cw: Set legal copy
   var legalCopy = document.getElementById('aAd_legalTxt');
   var legalCopyText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy;
-  if (legalCopy.innerText) {
-    legalCopy.innerText = legalCopyText;
-  } else if (legalCopy.textContent) {
-    legalCopy.textContent = legalCopyText;
-  }
-  ;
-
+  legalCopy.innerHTML = legalCopyText;
 }; //end asApp.parseDynamicContent() function
 
 /**
@@ -355,55 +375,82 @@ asApp.parseDynamicContent = function() {
  */
 asApp.splitText = function() {
 
-  getIN = new SplitText('#getIN', {
-    type: "words",
-    wordsClass: "word++"
-  });
-  hereIN = new SplitText('#hereIN', {
-    type: "words",
-    wordsClass: "word++"
-  });
+  //oc: only include current variation's divs in the Split Text call.
+  var frame3Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame3';
+  var frame4Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame4';
+  var frame5Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame5';
+  console.log('frame3Selector:' + frame3Selector);
 
-  frame3 = new SplitText('.frame3', {
-    type: "words",
-    wordsClass: "word++"
-  });
-  frame4 = new SplitText('.frame4', {
-    type: "words",
-    wordsClass: "word++"
-  });
-  frame5 = new SplitText('.frame5', {
-    type: "words",
-    wordsClass: "word++"
-  });
+  //oc: only split what we have to and in the right way.
+  switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) {
+    case asApp.type.DW2P:
+      var frame6Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame6';
+      frame6 = new SplitText(frame6Selector, {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
 
+<<<<<<< HEAD
   if ((asApp.variation == 'DW') || (asApp.variation == 'DW2P') || (asApp.variation == 'CFD')  || (asApp.variation == 'CRG')) {
+=======
+    case asApp.type.DW:
+      frame3 = new SplitText(frame3Selector, {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+      frame4 = new SplitText(frame4Selector, {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+      frame5 = new SplitText(frame5Selector, {
+        type: "lines,words,chars",
+        wordsClass: "word++",
+        charsClass: "chars++"
+      });
+      break;
+    case asApp.type.WD:
+      frame3 = new SplitText(frame3Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+      break;
+>>>>>>> origin/master
 
-    frame3 = new SplitText('.frame3', {
-      type: "lines,words,chars",
-      wordsClass: "word++",
-      charsClass: "chars++"
-    });
-    frame4 = new SplitText('.frame4', {
-      type: "lines,words,chars",
-      wordsClass: "word++",
-      charsClass: "chars++"
-    });
-    frame5 = new SplitText('.frame5', {
-      type: "lines,words,chars",
-      wordsClass: "word++",
-      charsClass: "chars++"
-    });
-    frame6 = new SplitText('.frame6', {
-      type: "lines,words,chars",
-      wordsClass: "word++",
-      charsClass: "chars++"
-    });
-  }
+    case asApp.type.BSAHL:
+    case asApp.type.BSAHLP:
+    case asApp.type.BSALP:
+    case asApp.type.BSAHMP:
+    case asApp.type.DW:
+    case asApp.type.TA1:
+      frame3 = new SplitText(frame3Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+      frame4 = new SplitText(frame4Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+      frame5 = new SplitText(frame5Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
 
-  $("#getIN .word2").attr('class', 'whiteIN');
-  $("#hereIN .word2").attr('class', 'whiteIN');
-  // $("#frame2 .word5").attr('class', 'colorIN');
+      break;
+
+    default: //oc: most of the time, there are only 4 frames
+      frame3 = new SplitText(frame3Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+      frame4 = new SplitText(frame4Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+  } //end switch
+
 
 };
 
@@ -446,6 +493,15 @@ asApp.addHandsFrameToTimeline = function() {
 
 asApp.addGetINFrameToTimeline = function() {
 
+  //oc: add SplitText
+  getIN = new SplitText('#getIN', {
+    type: "words",
+    wordsClass: "word++"
+  });
+
+  //oc: set style
+  $("#getIN .word2").attr('class', 'whiteIN');
+
   //oc: GetIn Frame BEGIN
   tl.staggerFrom(getIN.words, 0.2, {
     left: -300
@@ -459,6 +515,15 @@ asApp.addGetINFrameToTimeline = function() {
 };
 
 asApp.addHereINFrameToTimeline = function() {
+
+  //oc: Split text
+  hereIN = new SplitText('#hereIN', {
+    type: "words",
+    wordsClass: "word++"
+  });
+
+  //oc: set style
+  $("#hereIN .word2").attr('class', 'whiteIN');
 
   //oc: HereIn Frame BEGIN
   tl.staggerFrom(hereIN.words, 0.2, {
@@ -511,7 +576,7 @@ asApp.addImageFramesToTimeline = function($variation) {
     delay: 2
   });
 
-  if ((asApp.variation == 'DW') || (asApp.variation == 'DW2P')) {
+  if ((asApp.variation == 'DW1') || (asApp.variation == 'DW2P')) {
     console.log('only DW')
     $(".frame3 .word2").attr('class', 'txtLtBlue');
 
@@ -528,6 +593,8 @@ asApp.addImageFramesToTimeline = function($variation) {
   if (asApp.variation == 'DW2P') {
     console.log('only DW')
     $(".frame3 .word2").attr('class', 'txtLtBlue');
+
+    //oc:
 
 
     tl.staggerFrom(frame6.words, 0.2, {
@@ -561,7 +628,7 @@ asApp.addNRImageFramesToTimeline = function($variation) {
   }, 0.07)
 
   //oc: fade
-  tl.to(".frame3", 0.3, {
+  tl.to("#NR .frame3", 0.3, {
     autoAlpha: 0,
     delay: 2
   });
@@ -687,11 +754,10 @@ asApp.addBS3FramesToTimeline = function($variation) {
   });
 }; //end asApp.add3ImageFramesToTimeline function
 
-
+//oc: add variation
 asApp.addBS2FramesToTimeline = function($variation) {
 
-  //sb : oc: selection
-  var selector = $variation + ".frame3";
+  //sb :
   $(".frame3 .word1").attr('class', 'txtOrange');
 
   tl.to("#bkgReveal", 0.7, {
@@ -724,7 +790,7 @@ asApp.addBS2FramesToTimeline = function($variation) {
     top: -200,
     ease: Sine.easeOut
   });
-}; //end asApp.add3ImageFramesToTimeline function
+}; //end asApp.add2ImageFramesToTimeline function
 
 asApp.addWDTimeline = function($variation) {
   tl.to("#bkgReveal", 0.7, {
@@ -769,7 +835,7 @@ asApp.addLandingToTimeline = function($variation) {
     autoAlpha: 1
   });
 
-  if (asApp.variation == 'DW') {
+  if (asApp.variation == 'DW1') {
     tl.to("#onlyAllstate", 0.5, {
       left: 0
     });
@@ -823,7 +889,6 @@ asApp.addLandingToTimeline = function($variation) {
           Top-aligned large copy - 36 px
           Larger opy: “ACCIDENT FORGIVENESS”
           Smaller copy - 18px
-
 */
 
 //show CFR
@@ -863,9 +928,39 @@ asApp.accidentForgivenessInit = function() {
 
 } //end accidentForgivenessInit() function
 
+//oc: show Auto Home
+asApp.bundleSaveInitAH = function() {
+  console.info('oc: asApp.bundleSaveInitAH():');
+
+  //show bundleSave elements
+  $('#BSAH, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addBS2FramesToTimeline();
+  asApp.addLandingToTimeline();
+
+
+  console.debug('oc: Auto Home');
+}; //end function bundleSaveInit
+
+//oc: show Auto Home WITH Percentage
+asApp.bundleSaveInitAHP = function() {
+  console.info('oc: asApp.bundleSaveInitAHP():');
+
+  //show bundleSave elements
+  $('#BSAHP, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+  asApp.addBS2FramesToTimeline();
+  asApp.addLandingToTimeline();
+
+
+  console.debug('oc: Auto Home with percent');
+}; //end function bundleSaveInit
+
 //show Auto Home Life
 asApp.bundleSaveInitAHL = function() {
-  console.info('asApp.bundleSaveInitAHL():' + $option);
+  console.info('asApp.bundleSaveInitAHL()');
 
   //show bundleSave elements
   $('#BSAHL, #getIN').css('display', 'block');
@@ -908,6 +1003,23 @@ asApp.bundleSaveInitAL = function() {
   asApp.addLandingToTimeline();
 
   console.debug('Auto Life');
+}; //end function bundleSaveInit
+
+
+//cw: show Auto Life %
+asApp.bundleSaveInitALP = function() {
+  console.info('asApp.bundleSaveInitALP()');
+
+  //show bundleSave elements
+  $('#BSALP, #getIN').css('display', 'block');
+  asApp.addHandsFrameToTimeline();
+  asApp.addGetINFrameToTimeline();
+
+  asApp.addBS3FramesToTimeline();
+  asApp.addLandingToTimeline();
+
+
+  console.debug('Auto Life %');
 }; //end function bundleSaveInit
 
 
@@ -974,9 +1086,12 @@ asApp.bundleSaveInitHLI = function(pp) {
 //show CFD
 asApp.claimFreeDiscountInit = function() {
   console.info('claimFreeDiscountInit');
+<<<<<<< HEAD
   $(".frame3 .word6 .chars25, .frame3 .word6 .chars26").attr('class', 'txtOrange');
   $(".frame4 .word6 .chars20, .frame4 .word6 .chars21").attr('class', 'txtOrange');
 
+=======
+>>>>>>> origin/master
   $('#CFD, #hereIN').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
@@ -997,11 +1112,17 @@ asApp.claimFreeRewardsInit = function() {
 
 } //end CFR
 
+<<<<<<< HEAD
 //show CFR
 asApp.claimRateGuardInit = function() {
   console.info('claimRateGuardInit');
   $(".frame3 .word5 .chars28, .frame3 .word5 .chars29").attr('class', 'txtWhite');
   $(".frame4 .word6 .chars25, .frame4 .word6 .chars26").attr('class', 'txtWhite');
+=======
+//cw: show CRG
+asApp.claimRateGuardInit = function() {
+  console.info('claimRateGuardInit');
+>>>>>>> origin/master
 
   $('#CRG, #hereIN').css('display', 'block');
   asApp.addHereINFrameToTimeline();
@@ -1009,7 +1130,23 @@ asApp.claimRateGuardInit = function() {
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
 
+<<<<<<< HEAD
 } //end CFR
+=======
+} //end CRG
+
+//cw: show CSG
+asApp.claimSatGuardInit = function() {
+  console.info('claimSatGuardInit');
+
+  $('#CSG, #hereIN').css('display', 'block');
+  asApp.addHereINFrameToTimeline();
+  asApp.addHandsFrameToTimeline();
+  asApp.addImageFramesToTimeline();
+  asApp.addLandingToTimeline();
+
+} //end CSG
+>>>>>>> origin/master
 
 //show DW
 asApp.driveWiseInit = function() {
@@ -1017,12 +1154,12 @@ asApp.driveWiseInit = function() {
   $(".frame4 .word5 .chars27,.frame4 .word5 .chars28").attr('class', 'txtLtBlue');
   $(".frame5 .word4 .chars20, .frame5 .word4 .chars21").attr('class', 'txtLtBlue');
 
-  $('#DW').css('display', 'block');
+  $('#DW1').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
 
-  console.log('DW');
+  console.log('DW1');
 
 } //end DW
 
@@ -1034,6 +1171,7 @@ asApp.driveWiseInit2P = function() {
   $(".frame6 .word2 .chars9, .frame6 .word2 .chars10").attr('class', 'txtLtBlue');
 
   $('#DW2P').css('display', 'block');
+
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
