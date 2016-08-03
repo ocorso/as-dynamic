@@ -13,7 +13,7 @@ var devDynamicContent = {};
 
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFR"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "WD"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -425,7 +425,7 @@ asApp.splitText = function() {
       });
       break;
 
-      case asApp.type.CFD:
+    case asApp.type.CFD:
       frame3 = new SplitText(frame3Selector, {
         type: "lines,words,chars",
         wordsClass: "word++",
@@ -460,7 +460,7 @@ asApp.splitText = function() {
 
       break;
 
-    
+
     case asApp.type.TA1:
       frame3 = new SplitText(frame3Selector, {
         type: "words",
@@ -474,6 +474,15 @@ asApp.splitText = function() {
         type: "words",
         wordsClass: "word++"
       });
+      //cw: For only Greater Rochester Area do this on frame5
+      if ((dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation == "TA1") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == "Greater Rochester Area")) {
+        $('.frame5').html('in<br>the <span class="market-name">Greater Rochester Area</span>');
+        frame5 = new SplitText(frame5Selector, {
+          type: "words",
+          wordsClass: "word++"
+        });
+      }
+      ;
 
       break;
 
@@ -582,6 +591,16 @@ asApp.addHereINFrameToTimeline = function() {
 
   //oc: set style
   $("#hereIN .word2").attr('class', 'whiteIN');
+
+  //cw: For only BSHLI and Massachusetts
+  //sb: set style
+  $("#hereIN .word3").attr('class', 'the');
+  $("#hereIN").addClass(dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation);
+  //cw:
+  if ((dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == "Massachusetts") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation == "BSHLI")) {
+    $('#hereIN.BSHLI .the').css("display", "none");
+  }
+  ;
 
   //oc: HereIn Frame BEGIN
   tl.staggerFrom(hereIN.words, 0.2, {
@@ -824,7 +843,7 @@ asApp.addBS2FramesToTimeline = function($variation) {
 
   tl.staggerFrom(frame4.words, 0.2, {
     left: -300,
-    delay:2, 
+    delay: 2,
   }, 0.07)
 
   tl.to("#bgImg2", 0.5, {
@@ -856,7 +875,7 @@ asApp.addWDTimeline = function($variation) {
 
   tl.to("#bkgColor", 0.7, {
     top: 0,
-    delay:2.5,
+    delay: 2.5,
     ease: Sine.easeOut
   });
 
