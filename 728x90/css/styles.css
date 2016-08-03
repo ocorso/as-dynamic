@@ -1,0 +1,408 @@
+body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, sans-serif; width: 100%; }
+#atAd728x90 { visibility:hidden; }
+.hide{display: none;}
+#bgImg1 { position: absolute; top:0px;right:0px; }
+
+#bgImg2 { position: absolute;top:0px; right:-500px; }
+
+#bgImg3 { position: absolute;top:0px; right:-500px; }
+
+#phone { position: absolute;top:-20px; left:728px; }
+
+.colorIN{
+	color:#FF9E16;
+}
+#bkgColor {
+	position: absolute;
+	top:0;
+	left:0;
+	width:728px;
+	height:90px;
+	z-index: 190;
+}
+
+#loader img{
+  display: block;
+  margin: 35% auto;
+  width: 48px;
+  height: 48px;
+}
+/* logos */
+
+#Allstate{
+	position: absolute;
+    width:76px;
+    height:16px;
+    top:8px;
+    right:5px;
+    background-image:url(../img/Allstate.svg);
+    background-repeat: no-repeat;
+    z-index: 300;
+}
+
+#Allstate_Home{
+	position: absolute;
+    width: 95px;
+    height: 31px;
+    top: 7px;
+    right: -7px;
+    background-image:url(../img/AllstateHome.svg);
+    background-repeat: no-repeat;
+    z-index: 300;
+}
+
+#hands{
+	position: absolute;
+	width:59px;
+	top:24px;
+	left:540px;
+	z-index: 299;
+	opacity: 1;
+}
+
+#toBeIn {
+	position: absolute;
+	color:#001C71;
+	font-size:53px;
+	width:700px;
+	left:30px;
+	top:14px;
+  	text-align: left;
+  	word-spacing: -0.05em;
+	z-index: 210;
+}
+
+
+/* FRAMES */
+
+#hereIN, #getIN, .frame3, .frame3a, .frame4, .frame5, .frame6, .frame7, .frame8, #landing {
+	font-family: 'ITC Avant Garde Gothic';
+	font-weight: 700;
+	-webkit-font-smoothing: antialiased;
+	text-transform: uppercase;
+	position: absolute;
+	width: 728px;
+}
+#hereIN{
+	font-size:32px;
+	line-height: 30px;
+	top:18px;
+	left: 15px;
+  	text-align: left;
+  	width: 600px;
+	z-index: 200;
+}
+
+#getIN {
+	font-size:35px;
+	line-height: 30px;
+	top:18px;
+	left: 15px;
+  	text-align: left;
+  	width: 600px;
+	z-index: 200;
+}
+
+.frame3{
+	font-size:32px;
+	line-height: 30px;
+	top:30px;
+	left: 15px;
+  	text-align: left;
+  	margin:0;
+	padding:0;
+	z-index: 100;
+}
+.frame3a{
+	font-size:30px;
+	line-height: 30px;
+	top:44px;
+	left: 16px;
+  	text-align: left;
+	z-index: 100;
+}
+.frame4{
+	font-size:32px;
+	line-height: 30px;
+	top:30px;
+	left: 15px;
+  	text-align: left;
+  	margin:0;
+	padding:0;
+	z-index: 100;
+}
+.frame5{
+	font-size:32px;
+	line-height: 30px;
+	top:30px;
+	left: 15px;
+  	text-align: left;
+	z-index: 100;
+}
+.frame6{
+	font-size:32px;
+	line-height: 30px;
+	top:30px;
+	left: 15px;
+  	text-align: left;
+	z-index: 100;
+}
+.frame7{
+	font-size:32px;
+	line-height: 30px;
+	top:30px;
+	left: 15px;
+  	text-align: left;
+	z-index: 100;
+}
+.frame8{
+	font-size:32px;
+	line-height: 30px;
+	top:30px;
+	left: 15px;
+  	text-align: left;
+	z-index: 100;
+}
+
+.plus{
+	color:#FFFFFF;
+	bottom: 6px;
+}
+
+#onlyAllstate, #onlyAllstate2{
+	position: relative;
+	left:728px;
+	top: -50px;
+	z-index: 210;
+}
+
+.reg{
+	font-family: 'Allstate Sans';
+	font-size: 20px;
+	line-height: 20px;
+  left: 0px;
+  bottom: 15px;
+}
+.reg2{
+	font-family: 'Allstate Sans';
+	font-size: 20px;
+	line-height: 20px;
+  left: -5px;
+  bottom: 2px;
+}
+
+#landing {
+	position: absolute;
+	width:728px;
+	font-size:35px;
+	line-height: 31px;
+	left:15px;
+	top:25px;
+  	text-align: left;
+	z-index: 210;
+}
+.landing-percent {
+	font-size:35px;
+	line-height: 31px;
+  	text-align: left;
+	z-index: 210;
+	opacity: 0;
+}
+.landing-name {
+	top:24px;
+	font-size:35px;
+	line-height: 31px;
+  	text-align: left;
+	z-index: 210;
+	opacity: 0;
+}
+
+.landing-name-side {
+	font-size:26px;
+	line-height: 24px;
+	left:133px;
+  	text-align: left;
+	z-index: 210;
+	opacity: 0;
+}
+
+.landing-subText {
+	font-family: 'Allstate Sans';
+	text-transform: none; /*capitalize*/
+	font-size: 14px;
+	line-height: 15px;
+	width:728px;
+	top:58px;
+	z-index: 300;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	opacity: 0;
+}
+.landing-name-P {
+	font-size:30px;
+	line-height: 28px;
+  	text-align: left;
+	z-index: 210;
+	opacity: 0;
+	display: inline-block;
+	width: 250px;
+	vertical-align: top;
+}
+.landing-subText-P {
+	font-family: 'Allstate Sans';
+	text-transform: none; /*capitalize*/
+	font-size: 14px;
+	line-height: 14px;
+	z-index: 300;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	opacity: 0;
+	display: inline-block;
+	width: 300px;
+}
+
+.landing-percent-large{
+	text-transform: uppercase;
+	font-family: 'ITC Avant Garde Gothic';
+	font-weight: 700;
+	font-size:62px;
+	line-height: 62px;
+	left:13px;
+	opacity: 0;
+	display: inline-block;
+}
+
+#subText {
+	display: block;
+	margin-top: 5px;
+}
+.TA{
+	font-size:32px;
+	line-height: 30px;
+	top:30px;
+	left:13px;
+	width: 360px;
+}
+
+.DF{
+	font-size:23px;
+	line-height: 20px;
+	top:20px;
+	left:13px;
+	width:350px;
+}
+.DFL{
+	font-size:32px;
+	line-height: 28px;
+}
+
+.AF{
+	
+}
+
+.BS{
+	font-size:24px;
+	line-height: 26px;
+	top:14px;
+}
+
+.BSP{
+	font-size:20px;
+	line-height: 20px;
+	top:5px;
+}
+
+.CSG{
+	font-size:32px;
+	line-height: 30px;
+	top:20px;
+	width: 360px;
+}
+
+.CFD{
+	font-size:22px;
+	line-height: 20px;
+	top:154px;
+}
+
+.CRG{
+	font-size:26px;
+	line-height: 24px;
+	top:7px;
+	width: 305px;
+	left:50px;
+}
+.CFR{
+	font-size:24px;
+	line-height: 22px;
+	top:25px;
+	width: 325px;
+}
+
+.BSHLI {
+	font-size:28px;
+	line-height: 26px;
+	top:20px;
+	width: 325px;
+	left:50px;
+}
+
+.DW1{
+	top:20px;
+	font-size: 32px;
+	line-height: 28px;
+	width: 360px;
+}
+
+.DW_Get{
+	top:20px;
+	font-size: 30px;
+	line-height: 26px;
+	width: 375px;
+}
+
+.DW2P{
+	top:140px;
+	font-size: 31px;
+	line-height: 28px;
+}
+
+.WD{
+	top:8px;
+	left:15px;
+	font-size: 28px;
+	line-height: 24px;
+	width: 300px;
+	left: 50px;
+}
+.NR{
+	top:30px;
+	left:40px;
+	font-size: 25px;
+	line-height: 23px;
+}
+
+#Col1 {
+	display: inline-block;
+	width: 250px;
+	vertical-align: top;
+}
+
+#Col2 {
+	display: inline-block;
+	width: 350px;
+}
+
+
+
+
+/* CTA */
+/* Quote Now */
+/*#btn_cta { font-weight: 700; position: absolute; width: 165px; height:25px; top: 195px; right:-165px; background: #001C71; text-transform: uppercase; padding: 3px 10px 4px 15px; font-size: 20px; font-weight:900; text-align: left; overflow: hidden; z-index: 350; cursor: pointer; opacity: 0 }
+#ctaCopy { position: relative; z-index: 350; color:#fff; }
+#arrow { position: absolute; top:0; left:130px; padding-top: 5px; padding-left: 18px; }*/
+
+/*GET IN*/
+#btn_cta { font-weight: 700; position: absolute; width:120px; height:35px; bottom: 10px; right:-110px; background: #001C71; text-transform: uppercase; padding:0px 10px 0px 10px; font-size:23px; font-weight:700; text-align: left; overflow: hidden; z-index: 350; cursor: pointer; opacity: 0;line-height:35px; }
+#ctaCopy { position: relative; z-index: 350; color:#fff; }
+#arrow { position: absolute; top:0; left:100px; padding-top:1px;}
