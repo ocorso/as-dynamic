@@ -13,6 +13,7 @@ var devDynamicContent = {};
 
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
+
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "WD"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
@@ -964,7 +965,7 @@ asApp.addLandingToTimeline = function($variation) {
 asApp.defaultInit = function() {
   console.info('defaultInit');
   $(".frame4 .word8").attr('class', 'reg2');
-  $('#DF, #getIN').css('display', 'block');
+  $('#DF, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addImageFramesToTimeline();
@@ -976,7 +977,7 @@ asApp.defaultInit = function() {
 asApp.accidentForgivenessInit = function() {
   console.info('accidentForgivenessInit');
 
-  $('#AF, #getIN').css('display', 'block');
+  $('#AF, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addImageFramesToTimeline();
@@ -990,7 +991,7 @@ asApp.bundleSaveInitAH = function() {
   console.info('oc: asApp.bundleSaveInitAH():');
 
   //show bundleSave elements
-  $('#BSAH, #getIN').css('display', 'block');
+  $('#BSAH, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addBS2FramesToTimeline();
@@ -1005,7 +1006,7 @@ asApp.bundleSaveInitAHP = function() {
   console.info('oc: asApp.bundleSaveInitAHP():');
 
   //show bundleSave elements
-  $('#BSAHP, #getIN').css('display', 'block');
+  $('#BSAHP, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addBS2FramesToTimeline();
@@ -1020,7 +1021,7 @@ asApp.bundleSaveInitAHL = function() {
   console.info('asApp.bundleSaveInitAHL()');
 
   //show bundleSave elements
-  $('#BSAHL, #getIN').css('display', 'block');
+  $('#BSAHL, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addBS3FramesToTimeline();
@@ -1035,7 +1036,7 @@ asApp.bundleSaveInitAHLP = function() {
   console.info('asApp.bundleSaveInitAHLP()');
 
   //show bundleSave elements
-  $('#BSAHLP, #getIN').css('display', 'block');
+  $('#BSAHLP, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
 
@@ -1053,7 +1054,7 @@ asApp.bundleSaveInitAL = function() {
   console.info('asApp.bundleSaveInitAL()');
 
   //show bundleSave elements
-  $('#BSAL, #getIN').css('display', 'block');
+  $('#BSAL, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addBS2FramesToTimeline();
@@ -1068,7 +1069,7 @@ asApp.bundleSaveInitALP = function() {
   console.info('asApp.bundleSaveInitALP()');
 
   //show bundleSave elements
-  $('#BSALP, #getIN').css('display', 'block');
+  $('#BSALP, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
 
@@ -1085,7 +1086,7 @@ asApp.bundleSaveInitAHMP = function() {
   console.info('asApp.bundleSaveInitAHMP()');
 
   //show bundleSave elements
-  $('#BSAHMP, #getIN').css('display', 'block');
+  $('#BSAHMP, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addBS3FramesToTimeline();
@@ -1100,7 +1101,7 @@ asApp.bundleSaveInitAHMP = function() {
 asApp.bundleSaveInitAHL = function() {
   //show Auto Home Moto $option) {
 
-  $('#BSAHL, #getIN').css('display', 'block');
+  $('#BSAHL, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addBS3FramesToTimeline();
@@ -1116,7 +1117,7 @@ asApp.bundleSaveInitACP = function(pp) {
   console.info('asApp.bundleSaveInitACP()');
 
   //show bundleSave elements
-  $('#BSACP, #getIN').css('display', 'block');
+  $('#BSACP, #getIN, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addBS2FramesToTimeline();
@@ -1132,7 +1133,7 @@ asApp.bundleSaveInitHLI = function(pp) {
   $(".frame4 .word5").attr('class', 'txtWhite');
 
   //show bundleSave elements
-  $('#BSHLI, #hereIN').css('display', 'block');
+  $('#BSHLI, #hereIN, #Allstate').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
@@ -1147,7 +1148,7 @@ asApp.claimFreeDiscountInit = function() {
   $(".frame3 .word6 .chars25, .frame3 .word6 .chars26").attr('class', 'txtWhite');
   $(".frame4 .word6 .chars20, .frame4 .word6 .chars21").attr('class', 'txtWhite');
 
-  $('#CFD, #hereIN').css('display', 'block');
+  $('#CFD, #hereIN, #Allstate_Home').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
@@ -1159,7 +1160,7 @@ asApp.claimFreeDiscountInit = function() {
 asApp.claimFreeRewardsInit = function() {
   console.info('claimFreeRewardsInit');
 
-  $('#CFR, #hereIN').css('display', 'block');
+  $('#CFR, #hereIN, #Allstate_Home').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
@@ -1173,7 +1174,7 @@ asApp.claimRateGuardInit = function() {
   $(".frame3 .word5 .chars28, .frame3 .word5 .chars29").attr('class', 'txtWhite');
   $(".frame4 .word6 .chars25, .frame4 .word6 .chars26").attr('class', 'txtWhite');
 
-  $('#CRG, #hereIN').css('display', 'block');
+  $('#CRG, #hereIN, #Allstate_Home').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
@@ -1185,7 +1186,7 @@ asApp.claimRateGuardInit = function() {
 asApp.claimSatGuardInit = function() {
   console.info('claimSatGuardInit');
 
-  $('#CSG, #hereIN').css('display', 'block');
+  $('#CSG, #hereIN, #Allstate').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
@@ -1199,7 +1200,7 @@ asApp.driveWiseInit = function() {
   $(".frame4 .word5 .chars27,.frame4 .word5 .chars28").attr('class', 'txtWhite');
   $(".frame5 .word4 .chars20, .frame5 .word4 .chars21").attr('class', 'txtWhite');
 
-  $('#DW1').css('display', 'block');
+  $('#DW1, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
   asApp.addLandingToTimeline();
@@ -1215,7 +1216,7 @@ asApp.driveWiseInit2P = function() {
   $(".frame5 .word4 .chars20, .frame5 .word4 .chars21").attr('class', 'txtWhite');
   $(".frame6 .word2 .chars9, .frame6 .word2 .chars10").attr('class', 'txtWhite');
 
-  $('#DW2P').css('display', 'block');
+  $('#DW2P, #Allstate').css('display', 'block');
 
   asApp.addHandsFrameToTimeline();
   asApp.addImageFramesToTimeline();
@@ -1231,7 +1232,7 @@ asApp.welcomeDiscountInit = function(pp) {
   console.info('asApp.welcomeDiscountInit()');
 
   //show bundleSave elements
-  $('#WD, #getIN').css('display', 'block');
+  $('#WD, #getIN, #Allstate_Home').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addGetINFrameToTimeline();
   asApp.addWDTimeline();
@@ -1249,7 +1250,7 @@ asApp.newRoofInit = function() {
   console.info('asApp.newRoofInit()');
 
   //show bundleSave elements
-  $('#NR, #hereIN').css('display', 'block');
+  $('#NR, #hereIN, #Allstate_Home').css('display', 'block');
   asApp.addHereINFrameToTimeline();
   asApp.addHandsFrameToTimeline();
   asApp.addNRImageFramesToTimeline();
@@ -1265,7 +1266,7 @@ asApp.trustedAdvisorInit = function() {
   $(".frame5 .word1").attr('class', 'txtWhite');
 
   //show bundleSave elements
-  $('#TA1').css('display', 'block');
+  $('#TA1, #Allstate').css('display', 'block');
   asApp.addHandsFrameToTimeline();
   asApp.addTAImageFramesToTimeline();
   asApp.addLandingToTimeline();
