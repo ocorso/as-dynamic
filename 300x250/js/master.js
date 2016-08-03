@@ -312,9 +312,6 @@ asApp.parseDynamicContent = function() {
   var marketNameAOrAn = document.getElementsByClassName('market-name-a-An');
   var marketNameText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
 
-  if (marketNameText = "Greater Rochester Area") {
-    marketNameText = "Greater Rochester<br />Area";
-  }
 
   var firstCharMarketName = marketNameText.charAt(0);
 
@@ -376,6 +373,7 @@ asApp.splitText = function() {
   var frame4Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame4';
   var frame5Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame5';
   console.log('frame3Selector:' + frame3Selector);
+
 
   //oc: only split what we have to and in the right way.
   switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) {
@@ -452,12 +450,14 @@ asApp.splitText = function() {
         wordsClass: "word++"
       });
 
-      if ((dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation == "TA1") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name != "Greater Rochester Area")) {
-        frame5 = new SplitText(frame5Selector, {
-          type: "words",
-          wordsClass: "word++"
-        });
-      } else {
+
+      frame5 = new SplitText(frame5Selector, {
+        type: "words",
+        wordsClass: "word++"
+      });
+
+      //cw: For only Greater Rochester Area do this on frame5
+      if ((dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation == "TA1") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == "Greater Rochester Area")) {
         $('.frame5').html('in<br>the <span class="market-name">Greater Rochester Area</span>');
         frame5 = new SplitText(frame5Selector, {
           type: "words",
