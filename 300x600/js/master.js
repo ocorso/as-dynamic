@@ -14,7 +14,7 @@ var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
 
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CSG"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "NR"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -709,12 +709,19 @@ asApp.addNRImageFramesToTimeline = function($variation) {
   });
 
   tl.to("#bgImg1", 0.5, {
-    bottom: -2,
+    left: -300,
     ease: Sine.easeOut
   });
 
-  tl.to("#bgImg2", 0.5, {
+  tl.to("#bgImg2", 0, {
     bottom: -2,
+    left: 300,
+    ease: Sine.easeOut,
+    delay: -0.5
+  });
+
+  tl.to("#bgImg2", 0.5, {
+    left: 0,
     ease: Sine.easeOut,
     delay: -0.5
   });
