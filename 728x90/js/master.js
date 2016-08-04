@@ -693,6 +693,12 @@ asApp.addImageFramesToTimeline = function($variation) {
 
 asApp.addNRImageFramesToTimeline = function($variation) {
 
+  tl.to("#bgImg2", 0, {
+    left: 1456,
+    ease: Sine.easeOut,
+    delay: -0.5
+  });
+
   tl.to("#bkgColor", 0.7, {
     left: -728,
     ease: Sine.easeOut
@@ -709,14 +715,13 @@ asApp.addNRImageFramesToTimeline = function($variation) {
   });
 
   tl.to("#bgImg1", 0.5, {
-    left: 728,
+    left: -728,
     ease: Sine.easeOut
   });
 
   tl.to("#bgImg2", 0.5, {
-    right: 0,
+    left: 0,
     ease: Sine.easeOut,
-    delay: -0.5
   });
 
   tl.staggerFrom(frame4.lines, 0.2, {
