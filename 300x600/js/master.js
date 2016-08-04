@@ -640,7 +640,7 @@ asApp.addImageFramesToTimeline = function($variation) {
   });
 
   tl.to("#bgImg2", 0.5, {
-    left: 0,
+    bottom: -2,
     ease: Sine.easeOut
   });
 
@@ -709,12 +709,12 @@ asApp.addNRImageFramesToTimeline = function($variation) {
   });
 
   tl.to("#bgImg1", 0.5, {
-    left: 300,
+    bottom: -2,
     ease: Sine.easeOut
   });
 
   tl.to("#bgImg2", 0.5, {
-    left: 0,
+    bottom: -2,
     ease: Sine.easeOut,
     delay: -0.5
   });
