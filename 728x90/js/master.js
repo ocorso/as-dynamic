@@ -941,9 +941,7 @@ asApp.addLandingToTimeline = function($variation) {
     tl.to("#onlyAllstate", 0.5, {
       left: 230
     });
-    tl.to("#phone", 0.3, {
-      left: 425
-    });
+
     console.log("version1")
   }
   if (asApp.variation == 'DW2P') {
