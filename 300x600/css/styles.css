@@ -323,7 +323,7 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 #phone{
 	position: absolute;
 	top:170px;
-	left: -200px; 
+	left: -200px;
 }
 
 .WD{
@@ -374,7 +374,8 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	padding:0;
 }
 
-#getIN {
+#getIN, #hereIN {
 	width:250px;
-	margin:0 auto;
+	margin:0 10px 0 -10px;
+	font-size:34px;
 }
