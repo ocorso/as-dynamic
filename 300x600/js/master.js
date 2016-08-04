@@ -714,7 +714,7 @@ asApp.addNRImageFramesToTimeline = function($variation) {
   });
 
   tl.to("#bgImg2", 0, {
-    bottom: -2,
+    bottom: -5,
     left: 300,
     ease: Sine.easeOut,
     delay: -0.5
