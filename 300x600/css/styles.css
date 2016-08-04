@@ -374,7 +374,7 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	padding:0;
 }
 
-#getIN, #hereIN {
+#getIN, #hereIN, .frame5.TA {
 	width:250px;
 	margin:0 10px 0 -10px;
 	font-size:34px;
