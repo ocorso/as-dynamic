@@ -14,13 +14,13 @@ var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
 
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFD"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW2P"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "33%";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Greater Rochester Area";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Charleston-<br>Huntington Area";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
@@ -313,6 +313,7 @@ asApp.parseDynamicContent = function() {
   var marketNameAOrAn = document.getElementsByClassName('market-name-a-An');
   var marketNameText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
 
+
   if (marketNameText = "Greater Rochester Area") {
     marketNameText = "Greater Rochester<br />Area";
   }
@@ -353,12 +354,24 @@ asApp.parseDynamicContent = function() {
   }
   "" !== d ? "A" == i || "E" == i || "I" == i || "O" == i ? marketNameAOrAnText = "an " + d : marketNameAOrAnText = "a " + d : marketNameAOrAnText = "an ";
   for (var p = 0; p < n.length; p++) n[p].innerHTML = d; //oc: use html text from feed...n[p].innerText ? n[p].innerText = d : n[p].textContent && (n[p].textContent = d);
-  for (var p = 0; p < o.length; p++) o[p].innerHTML = marketNameAOrAnText; //oc: use html text from feed... o[p].innerText ? o[p].innerText = marketNameAOrAnText : o[p].textContent && (o[p].textContent = marketNameAOrAnText);
+  for (var p = 0; p < o.length; p++) {
+
+    //cw: for Charlesont-Huntington... only
+    var checkMarketName = marketNameAOrAnText.substring(0, 13);
+    if (checkMarketName == "a Charleston-") {
+      marketNameAOrAnText = "a Charleston-Huntington Area";
+    }
+    ;
+
+    o[p].innerHTML = marketNameAOrAnText; //oc: use html text from feed... o[p].innerText ? o[p].innerText = marketNameAOrAnText : o[p].textContent && (o[p].textContent = marketNameAOrAnText);
+  }
+  ;
   for (var r = document.getElementsByClassName("savings-percentage"),
       m = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage, p = 0; p < r.length; p++) r[p].innerText ? r[p].innerText = m : r[p].textContent && (r[p].textContent = m);
   var c = document.getElementById("aAd_legalTxt"),
     A = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy;
   c.innerText ? c.innerText = A : c.textContent && (c.textContent = A);
+
 
 
   //cw: Set legal copy
@@ -382,12 +395,26 @@ asApp.splitText = function() {
   //oc: only split what we have to and in the right way.
   switch (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation) {
     case asApp.type.DW2P:
+
+      //cs: for Charleson.... only
+      var checkMarketName = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name.substring(0, 11);
+      if (checkMarketName == "Charleston-") {
+        $('.frame3').html('get In on this, <span class="market-name">Charleston-Huntington Area</span>');
+        frame3 = new SplitText(frame3Selector, {
+          type: "lines,words",
+          wordsClass: "word++"
+        });
+      }
+      ;
+
+
       var frame6Selector = '#' + dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation + ' .frame6';
       frame6 = new SplitText(frame6Selector, {
         type: "lines,words,chars",
         wordsClass: "word++",
         charsClass: "chars++"
       });
+
 
     case asApp.type.DW:
       frame3 = new SplitText(frame3Selector, {
@@ -509,14 +536,17 @@ asApp.splitText = function() {
       break;
 
     default: //oc: most of the time, there are only 4 frames
+
       frame3 = new SplitText(frame3Selector, {
         type: "lines,words",
         wordsClass: "word++"
       });
+
       frame4 = new SplitText(frame4Selector, {
         type: "lines,words",
         wordsClass: "word++"
       });
+
   } //end switch
 
 
@@ -792,7 +822,7 @@ asApp.addBS3FramesToTimeline = function($variation) {
     ease: Sine.easeOut
   });
 
-  tl.staggerFrom( [frame3.lines,frame3a.lines], 0.2, {
+  tl.staggerFrom([frame3.lines, frame3a.lines], 0.2, {
     left: -728,
   }, 0.07)
 
@@ -836,7 +866,7 @@ asApp.addBS2FramesToTimeline = function($variation) {
     ease: Sine.easeOut
   });
 
-  tl.staggerFrom( [frame3.lines,frame3a.lines], 0.2, {
+  tl.staggerFrom([frame3.lines, frame3a.lines], 0.2, {
     left: -728,
   }, 0.07)
 
