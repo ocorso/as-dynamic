@@ -512,20 +512,18 @@ asApp.splitText = function() {
         type: "lines,words",
         wordsClass: "word++"
       });
+      //cw: For only Greater Rochester Area do this on frame5
+      if (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == "Greater Rochester") {
+        console.info('***************************************************');
+        console.info('***********TA1 Greater Rochester Area**************');
+        $('#TA1 .frame5').html('in<br>the <span class="market-name">Greater Rochester Area</span>');
+      }
+      ;
       frame5 = new SplitText(frame5Selector, {
         type: "lines,words",
         wordsClass: "word++"
       });
-      //cw: For only Greater Rochester Area do this on frame5
-      if ((dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation == "TA1") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == "Greater Rochester Area")) {
-        console.log("3423423423423423423423423423423423423423423423423");
-        $('.frame5').html('in<br>the <span class="market-name">Greater Rochester Area</span>');
-        frame5 = new SplitText(frame5Selector, {
-          type: "lines,words",
-          wordsClass: "word++"
-        });
-      }
-      ;
+
 
       break;
 
