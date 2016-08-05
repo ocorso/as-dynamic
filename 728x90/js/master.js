@@ -14,13 +14,13 @@ var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
 
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "TA1"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSHLI"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "33%";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Greater Rochester Area";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Massachusetts";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
@@ -313,11 +313,6 @@ asApp.parseDynamicContent = function() {
   var marketNameAOrAn = document.getElementsByClassName('market-name-a-An');
   var marketNameText = dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name;
 
-  if ((marketNameText == "Massachusetts Area") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSHLI")) {
-    marketNameAOrAnText = "Massachusetts";
-  }
-  ;
-
 
   var firstCharMarketName = marketNameText.charAt(0);
 
@@ -364,11 +359,6 @@ asApp.parseDynamicContent = function() {
     }
     ;
 
-    //cw: for Massachusetts and BSHLI
-    if ((marketNameText == "Massachusetts Area") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSHLI")) {
-      marketNameAOrAnText = "a Massachusetts";
-    }
-    ;
 
     //cw: for New York Area and CFD
     if ((marketNameText == "New York Area") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFD")) {
@@ -642,7 +632,7 @@ asApp.addHereINFrameToTimeline = function() {
   $("#hereIN").addClass(dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation);
 
   //cw:
-  if ((dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == "Massachusetts Area") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation == "BSHLI")) {
+  if ((dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == "Massachusetts") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation == "BSHLI")) {
     $('#hereIN.BSHLI').html('here in <br><span class="market-name">Massachusetts</span>');
   }
   ;

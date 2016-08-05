@@ -14,7 +14,7 @@ var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
 
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "DW1"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSHLI"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
@@ -902,7 +902,7 @@ asApp.addLandingToTimeline = function($variation) {
     tl.to("#onlyAllstate", 0.5, {
       left: 0
     });
-    
+
     console.log("version1")
   }
   if (asApp.variation == 'DW2P') {
