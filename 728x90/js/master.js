@@ -14,13 +14,13 @@ var devDynamicContent = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed = [{}];
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0]._id = 0;
 
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSHLI"; //oc: hardcode to variation for dev
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFD"; //oc: hardcode to variation for dev
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Is_Default = true;
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL = {};
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url = "https://www.onallstate.com/LP/2016/brand-campaign/localagents/";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].elemType = "LI ID";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Savings_Percentage = "33%";
-devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "Massachusetts Area";
+devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name = "New York Area";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Legal_Copy = "Savings &amp; coverage subject to terms, conditions and availability. Savings Vary. Allstate Indemnity Co. &amp; Allstate Fire and Casualty Insurance Co. &amp; their Affiliates: Northbrook, IL. &copy;2015 Allstate Insurance Co.";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Background_Color = "#FF9E16";
 devDynamicContent.aslocalfeed_Allstate_Local_Feed[0].Image1_160x600 = {};
@@ -366,8 +366,13 @@ asApp.parseDynamicContent = function() {
 
     //cw: for Massachusetts and BSHLI
     if ((marketNameText == "Massachusetts Area") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "BSHLI")) {
-      marketNameText = "Massachusetts";
       marketNameAOrAnText = "a Massachusetts";
+    }
+    ;
+
+    //cw: for New York Area and CFD
+    if ((marketNameText == "New York Area") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFD")) {
+      marketNameAOrAnText = "a New York";
     }
     ;
 
@@ -643,6 +648,11 @@ asApp.addHereINFrameToTimeline = function() {
   }
   ;
 
+  //cw: for New York Area and CFD
+  if ((dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Market_Name == "New York Area") && (dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Variation = "CFD")) {
+    $('#hereIN.CFD').html('here in <br><span class="market-name">New York</span>');
+  }
+  ;
 
   //oc: HereIn Frame BEGIN
   tl.staggerFrom(hereIN.lines, 0.2, {
