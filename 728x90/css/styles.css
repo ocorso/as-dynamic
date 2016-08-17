@@ -313,7 +313,7 @@ body{ margin: 0; padding: 0; font-family: 'Allstate Sans', Arial, Helvetica, san
 	top:5px;
 }
 
-.CSG{
+.CSG, .CSGN {
 	font-size:32px;
 	line-height: 30px;
 	top:20px;
