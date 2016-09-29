@@ -1290,6 +1290,7 @@ div1.mouseleave(function() {
  */
 function onExitClick(event) {
   console.info('onExitClick()');
-  Enabler.exitOverride('CTA Exit', dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url)
+  // Enabler.exitOverride('CTA Exit', dynamicContent.aslocalfeed_Allstate_Local_Feed[0].Exit_URL.Url)
+  Enabler.exit();
 }
 ;
