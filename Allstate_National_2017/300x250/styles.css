@@ -27,6 +27,7 @@
     background-image:url(Allstate.svg);
     background-repeat: no-repeat;
     z-index: 300;
+    display: none;
 }
 
 #Allstate_home{
@@ -38,6 +39,7 @@
     background-image:url(Allstate_home.svg);
     background-repeat: no-repeat;
     z-index: 300;
+    display: none;
 }
 
 
