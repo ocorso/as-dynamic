@@ -86,6 +86,14 @@
 var asApp = {};
 asApp.type = {};
 asApp.type.A1 = 'A1';
+asApp.type.A2 = 'A2';
+asApp.type.A3 = 'A3';
+asApp.type.H1 = 'H1';
+asApp.type.H2 = 'H2';
+asApp.type.H3 = 'H3';
+asApp.type.S1 = 'S1';
+asApp.type.S2 = 'S2';
+asApp.type.S3 = 'S3';
 asApp.type.DF = 'DF';
 
 if (!Enabler.isInitialized()) {
@@ -165,7 +173,47 @@ asApp.init = function() {
       console.log('Run A1 Variation');
       asApp.defaultInit();
       break;
-    
+
+    case asApp.type.A2:
+      console.log('Run A2 Variation');
+      asApp.defaultInit();
+      break;
+
+    case asApp.type.A3:
+      console.log('Run A3 Variation');
+      asApp.defaultInit();
+      break;
+
+    case asApp.type.H1:
+      console.log('Run H1 Variation');
+      asApp.defaultInit();
+      break;
+
+    case asApp.type.H2:
+      console.log('Run H2 Variation');
+      asApp.defaultInit();
+      break;
+
+    case asApp.type.H3:
+      console.log('Run H3 Variation');
+      asApp.defaultInit();
+      break;
+
+    case asApp.type.S1:
+      console.log('Run S1 Variation');
+      asApp.defaultInit();
+      break;
+
+    case asApp.type.S2:
+      console.log('Run S2 Variation');
+      asApp.defaultInit();
+      break;
+
+    case asApp.type.S3:
+      console.log('Run S3 Variation');
+      asApp.defaultInit();
+      break;
+
     default:
       console.log('Run default ad');
       asApp.defaultInit();
@@ -330,6 +378,29 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Allstate_Nationa
       break;
 
       case asApp.type.A2:
+        document.getElementById("frame1").className += 'right ';
+        document.getElementById("frame2").className += 'right ';
+
+        var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
+        var frame2Selector = ' #frame2';
+
+        frame1 = new SplitText(frame1Selector, {
+          type: "lines,words,chars",
+          wordsClass: "word++",
+          charsClass: "chars++"
+        });
+
+        frame2 = new SplitText(frame2Selector, {
+          type: "lines,words,chars",
+          wordsClass: "word++",
+          charsClass: "chars++"
+        });
+
+        document.getElementById("frame1").className += dbDefaultPath.Frame1_Copy_CSS_Class;
+        document.getElementById("frame2").className += dbDefaultPath.Frame2_Copy_CSS_Class;
+        document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_Copy1_CSS;
+        document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_Copy2_CSS;
+        break;
       case asApp.type.A3:
       case asApp.type.H1:
       case asApp.type.H3:
@@ -337,7 +408,7 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Allstate_Nationa
       case asApp.type.S3:
       var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
       var frame2Selector = ' #frame2';
-      
+
       frame1 = new SplitText(frame1Selector, {
         type: "lines,words,chars",
         wordsClass: "word++",
