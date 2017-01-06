@@ -16,9 +16,9 @@
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed= [{}];
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0]._id = 0;
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].ID = 1;
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Variation = "A2";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Variation = "A1";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Reporting_Label = "";
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Is_Default = "false";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Is_Default = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Exit_URL = {};
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Exit_URL.Url = "http://allstate.com";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Savings_Percentage = "";
@@ -37,7 +37,7 @@
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame1_Image_728x90 = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame2_Copy = "means<br>earning<br>serious<br>rewards";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame2_Copy_CSS_Class = "txtWhite mediumFont shadow bottom right";
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame2_SplitText_Target = "#frame2 .chars10, #frame2 .chars11";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame2_SplitText_Target = "#frame2 .char10, #frame2 .char11";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame2_SplitText_Action = "txtTeal";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame2_Image_300x250 = {};
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame2_Image_300x250.Type = "file";
@@ -49,9 +49,7 @@
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Copy_CSS_Class = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_SplitText_Target = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_SplitText_Action = "";
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_300x250 = {};
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_300x250.Type = "file";
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170104122216812_A1_300x250_image2.jpg";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_300x250 = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_300x600 = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_160x600 = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_728x90 = "";
@@ -66,7 +64,7 @@
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].End_Frame_Copy1 = "<span class=\"mediumFont\">Safe drivers<\/span><br>save 45%";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].End_Frame_Copy1_CSS = "largeFont tightLeading txtBlue";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].End_Frame_Copy2 = "or more with Allstate";
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].End_Frame_Copy2_CSS = "txtWhite marginTop smallFont lowercase";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].End_Frame_Copy2_CSS = "txtWhite marginTop smallFont hide";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].End_Frame_CTA_Copy = "QUOTE NOW";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].End_Frame_CTA_Color = "logoPink";
     Enabler.setDevDynamicContent(devDynamicContent);
@@ -86,6 +84,8 @@
 var asApp = {};
 asApp.type = {};
 asApp.type.A1 = 'A1';
+asApp.type.A1 = 'A2';
+
 asApp.type.DF = 'DF';
 
 if (!Enabler.isInitialized()) {
