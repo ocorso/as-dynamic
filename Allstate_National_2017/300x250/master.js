@@ -16,7 +16,7 @@
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed= [{}];
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0]._id = 0;
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].ID = 1;
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Variation = "A2";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Variation = "DF";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Reporting_Label = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Is_Default = "false";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Exit_URL = {};
@@ -456,6 +456,8 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Allstate_Nationa
         wordsClass: "word++",
         charsClass: "chars++"
       });
+
+
 
       document.getElementById("frame1").className += dbDefaultPath.Frame1_Copy_CSS_Class;
       document.getElementById("frame2").className += dbDefaultPath.Frame2_Copy_CSS_Class;
