@@ -13,18 +13,19 @@
     var devDynamicContent = {};
 
 
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed= [{}];
+     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed= [{}];
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0]._id = 0;
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].ID = 1;
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Variation = "DF";
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Reporting_Label = "";
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Is_Default = "false";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Variation = "A1";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Reporting_Label = "A1";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Is_Default = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Exit_URL = {};
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Exit_URL.Url = "http://allstate.com";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Savings_Percentage = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Market_Name = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Legal_Copy = "this is test legal copy";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Background_CSS_Class = "bgTeal";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Logo = "auto";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame1_Copy = "taking safe<br>driving<br>seriously";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame1_Copy_CSS_Class = "txtWhite mediumFont shadow bottom right";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame1_SplitText_Target = "";
@@ -49,9 +50,7 @@
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Copy_CSS_Class = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_SplitText_Target = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_SplitText_Action = "";
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_300x250 = {};
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_300x250.Type = "file";
-    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170104122216812_A1_300x250_image2.jpg";
+    devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_300x250 = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_300x600 = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_160x600 = "";
     devDynamicContent.Allstate_National_Feed__2017_Allstate_National_Feed[0].Frame3_Image_728x90 = "";
@@ -181,32 +180,32 @@ asApp.init = function() {
 
     case asApp.type.A3:
       console.log('Run A3 Variation');
-      asApp.defaultInit();
+      asApp.noColorInit();
       break;
 
     case asApp.type.H1:
       console.log('Run H1 Variation');
-      asApp.defaultInit();
+      asApp.frame1ColorInit();
       break;
 
     case asApp.type.H2:
       console.log('Run H2 Variation');
-      asApp.defaultInit();
+      asApp.twoFrameInit();
       break;
 
     case asApp.type.H3:
       console.log('Run H3 Variation');
-      asApp.defaultInit();
+      asApp.frame1and2ColorInit();
       break;
 
     case asApp.type.S1:
       console.log('Run S1 Variation');
-      asApp.defaultInit();
+      asApp.fourFrameInit();
       break;
 
     case asApp.type.S2:
       console.log('Run S2 Variation');
-      asApp.defaultInit();
+      asApp.frame1ColorInit();
       break;
 
     case asApp.type.S3:
@@ -249,6 +248,16 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Allstate_Nationa
   //Set bg color
 document.getElementById("atAd300x250").className += dbDefaultPath.Background_CSS_Class;
 document.getElementById("bkgColor").className += dbDefaultPath.Background_CSS_Class;
+
+  //Set logo
+var logo = dbDefaultPath.Logo;
+if (logo == 'home') {
+    document.getElementById('Allstate_home').style.display = 'block';
+    } else {
+  document.getElementById('Allstate').style.display = 'block';
+}
+
+console.log(logo)
 
 
   //Map Images
@@ -378,9 +387,6 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Allstate_Nationa
       break;
 
       case asApp.type.A2:
-        document.getElementById("frame1").className += 'right ';
-        document.getElementById("frame2").className += 'right ';
-
         var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
         var frame2Selector = ' #frame2';
 
@@ -498,6 +504,7 @@ asApp.addFrame3CopyColorToTimeline = function() {
     eval(splitTextTargetValue + splitTextClassValue);
     // END FOR CHANGING TEXT COLOR
 };
+
 
 asApp.addGet1ImageFrameToTimeline = function(){
   tl.staggerFrom(frame1.lines, 0.2, {
@@ -628,6 +635,42 @@ asApp.defaultInit = function() {
     asApp.addLandingToTimeline();
     asApp.addCTAToTimeline();
 }
+
+asApp.frame1ColorInit = function() {
+    asApp.addFrame1CopyColorToTimeline();
+    asApp.addGet2ImageFrameToTimeline();
+    asApp.addLandingToTimeline();
+    asApp.addCTAToTimeline();
+}
+
+asApp.frame1and2ColorInit = function() {
+    asApp.addFrame1CopyColorToTimeline();
+    asApp.addFrame2CopyColorToTimeline();
+    asApp.addGet2ImageFrameToTimeline();
+    asApp.addLandingToTimeline();
+    asApp.addCTAToTimeline();
+}
+
+
+asApp.noColorInit = function() {
+    asApp.addGet2ImageFrameToTimeline();
+    asApp.addLandingToTimeline();
+    asApp.addCTAToTimeline();
+}
+
+asApp.twoFrameInit = function() {
+    asApp.addGet1ImageFrameToTimeline();
+    asApp.addLandingToTimeline();
+    asApp.addCTAToTimeline();
+}
+
+asApp.fourFrameInit = function() {
+    asApp.addGet3ImageFrameToTimeline();
+    asApp.addLandingToTimeline();
+    asApp.addCTAToTimeline();
+}
+
+
 
 
 
