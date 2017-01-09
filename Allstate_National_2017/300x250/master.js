@@ -56,7 +56,9 @@
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_SplitText_Action1 = "";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_SplitText_Target2 = "";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_SplitText_Action2 = "";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x250 = "";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x250 = {};
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x250.Type = "file";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170109132532645_Blank_300x250.jpg";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x600 = "";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_160x600 = "";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_728x90 = "";
@@ -275,7 +277,7 @@ console.log(logo)
   img2.src = dbDefaultPath.Frame2_Image_300x250.Url;
   var img3 = document.getElementById('img3');
   img3.src = dbDefaultPath.Frame3_Image_300x250.Url;
-  console.log()
+  console.log(img3)
 
 
   var c = document.getElementById("aAd_legalTxt"),
