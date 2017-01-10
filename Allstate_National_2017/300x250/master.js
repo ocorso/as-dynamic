@@ -395,10 +395,10 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         charsClass: "chars++"
       });
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_Copy2_CSS;    
+      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x250_Copy_CSS_Class;
+      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x250_Copy_CSS_Class;
+      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x250_Copy1_CSS;
+      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x250_Copy2_CSS;
       break;
 
       case asApp.type.H2:
@@ -411,9 +411,9 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         charsClass: "chars++"
       });
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_Copy2_CSS;      
+      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x250_Copy_CSS_Class;
+      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x250_Copy1_CSS;
+      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x250_Copy2_CSS;
       break;
 
       case asApp.type.S1:
@@ -442,11 +442,11 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         charsClass: "chars++"
       });
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_Copy_CSS_Class;
-      document.getElementById("frame3").className += dbDefaultPath.Frame3_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_Copy2_CSS;      
+      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x250_Copy_CSS_Class;
+      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x250_Copy_CSS_Class;
+      document.getElementById("frame3").className += dbDefaultPath.Frame3_300x250_Copy_CSS_Class;
+      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x250_Copy1_CSS;
+      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x250_Copy2_CSS;
       break;
 
       case asApp.type.A2:
@@ -467,10 +467,10 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
           charsClass: "chars++"
         });
 
-        document.getElementById("frame1").className += dbDefaultPath.Frame1_Copy_CSS_Class;
-        document.getElementById("frame2").className += dbDefaultPath.Frame2_Copy_CSS_Class;
-        document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_Copy1_CSS;
-        document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_Copy2_CSS;
+        document.getElementById("frame1").className += dbDefaultPath.Frame1_300x250_Copy_CSS_Class;
+        document.getElementById("frame2").className += dbDefaultPath.Frame2_300x250_Copy_CSS_Class;
+        document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x250_Copy1_CSS;
+        document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x250_Copy2_CSS;
         break;
       case asApp.type.A3:
       case asApp.type.H1:
@@ -494,10 +494,10 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         charsClass: "chars++"
       });
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_Copy2_CSS;
+      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x250_Copy_CSS_Class;
+      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x250_Copy_CSS_Class;
+      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x250_Copy1_CSS;
+      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x250_Copy2_CSS;
       break;
 
       case asApp.type.ZZ:
@@ -536,12 +536,12 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
 
 
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_Copy_CSS_Class;
-      document.getElementById("frame3").className += dbDefaultPath.Frame3_Copy_CSS_Class;
-      document.getElementById("frame4").className += dbDefaultPath.Frame3_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_Copy2_CSS;     
+      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x250_Copy_CSS_Class;
+      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x250_Copy_CSS_Class;
+      document.getElementById("frame3").className += dbDefaultPath.Frame3_300x250_Copy_CSS_Class;
+      document.getElementById("frame4").className += dbDefaultPath.Frame3_300x250_Copy_CSS_Class;
+      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x250_Copy1_CSS;
+      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x250_Copy2_CSS;
       break;
     
   } //end switch
