@@ -17,8 +17,8 @@ a { text-decoration: none; color:#ffffff; }
 #border160x600 { position: absolute; width: 158px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300} 
 #atAd160x600 { position: absolute; width: 160px; height: 600px; overflow: hidden;  } 
 
-#border300x600 { position: absolute; width: 298px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300} 
-#atAd300x600 { position: absolute; width: 300px; height: 600px; overflow: hidden;  } 
+#border300x600 { position: absolute; width: 298px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd300x600 { position: absolute; width: 300px; height: 600px; overflow: hidden;  }
 
 #border970x250 { position: absolute; width: 968px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
 #atAd970x250 { position: absolute; width: 970px; height: 250px; overflow: hidden;  } 
