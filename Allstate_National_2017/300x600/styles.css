@@ -52,9 +52,12 @@
 	top:75px;
 	left:20px;
 	right:20px;
-	height:225px;
+	height:185px;
 	line-height: 1;
   	text-align: left;
+/*  	white-space: normal;
+  	word-break: keep-all;*/
+  	/*border:1px solid red;*/
 }
 #landing, #landingCopy1, #landingCopy2 {
 	opacity: 0;
@@ -123,7 +126,9 @@
 .right{ text-align: right!important; right:0; }
 
 
-.bottom{ position:absolute; bottom:-55px; }
+.bottom{ position:absolute; bottom: 0;}
+
+.landingBottom{ margin-top: 90px; display: inline-block; }
 
 
 /*CTA*/
