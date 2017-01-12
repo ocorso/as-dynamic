@@ -375,8 +375,6 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
   //oc: only split what we have to and in the right way.
   switch (dbDefaultPath.Variation) {
     case asApp.type.A1:
-      document.getElementById("frame1").className += 'right ';
-      document.getElementById("frame2").className += 'right ';
 
       var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
       var frame2Selector = ' #frame2';
@@ -567,6 +565,15 @@ asApp.addFrame1CopyColor2ToTimeline = function() {
     // END FOR CHANGING TEXT COLOR
 };
 
+asApp.addFrame1CopyWhiteToTimeline = function() {
+    var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0];
+    // USE FOR CHANGING TEXT COLOR
+    var splitTextTargetValue = '$("' + dbDefaultPath.Frame1_SplitText_Target1 + '").attr('; //feedSplitTextTarget - from the feed
+    var splitTextClassValue = '"class","txtWhite")'; // feedSplitTextAction - from the feed
+    eval(splitTextTargetValue + splitTextClassValue);
+    // END FOR CHANGING TEXT TO WHITE
+};
+
 
 asApp.addFrame2CopyColor1ToTimeline = function() {
     var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0];
@@ -587,6 +594,15 @@ asApp.addFrame2CopyColor2ToTimeline = function() {
     console.log(splitTextTargetValue + splitTextClassValue)
 };
 
+asApp.addFrame2CopyWhiteToTimeline = function() {
+    var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0];
+    // USE FOR CHANGING TEXT COLOR
+    var splitTextTargetValue = '$("' + dbDefaultPath.Frame2_SplitText_Target1 + '").attr('; //feedSplitTextTarget - from the feed
+    var splitTextClassValue = '"class","txtWhite")'; // feedSplitTextAction - from the feed
+    eval(splitTextTargetValue + splitTextClassValue);
+    // END FOR CHANGING TEXT TO WHITE
+};
+
 asApp.addFrame3CopyColor1ToTimeline = function() {
     var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0];
     // USE FOR CHANGING TEXT COLOR
@@ -603,6 +619,15 @@ asApp.addFrame3CopyColor2ToTimeline = function() {
     var splitTextClassValue = '"class","' + dbDefaultPath.Frame3_SplitText_Action2 + '")'; // feedSplitTextAction - from the feed
     eval(splitTextTargetValue + splitTextClassValue);
     // END FOR CHANGING TEXT COLOR
+};
+
+asApp.addFrame3CopyWhiteToTimeline = function() {
+    var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0];
+    // USE FOR CHANGING TEXT COLOR
+    var splitTextTargetValue = '$("' + dbDefaultPath.Frame3_SplitText_Target1 + '").attr('; //feedSplitTextTarget - from the feed
+    var splitTextClassValue = '"class","txtWhite")'; // feedSplitTextAction - from the feed
+    eval(splitTextTargetValue + splitTextClassValue);
+    // END FOR CHANGING TEXT TO WHITE
 };
 
 asApp.addFrame4CopyColor1ToTimeline = function() {
@@ -623,11 +648,20 @@ asApp.addFrame4CopyColor2ToTimeline = function() {
     // END FOR CHANGING TEXT COLOR
 };
 
+asApp.addFrame4CopyColor1ToTimeline = function() {
+    var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0];
+    // USE FOR CHANGING TEXT COLOR
+    var splitTextTargetValue = '$("' + dbDefaultPath.Frame4_SplitText_Target1 + '").attr('; //feedSplitTextTarget - from the feed
+    var splitTextClassValue = '"class","txtWhite")'; // feedSplitTextAction - from the feed
+    eval(splitTextTargetValue + splitTextClassValue);
+    // END FOR CHANGING TEXT TO WHITE
+};
+
 
 
 asApp.addGet1ImageFrameToTimeline = function(){
   tl.staggerFrom(frame1.lines, 0.2, {
-        left: -300,
+        left: -728,
         delay:0.5
     }, 0.07)
 
@@ -635,7 +669,7 @@ asApp.addGet1ImageFrameToTimeline = function(){
 
 asApp.addGet2ImageFrameToTimeline = function(){
   tl.staggerFrom(frame1.lines, 0.2, {
-        left: -300,
+        left: -728,
         delay:0.5
     }, 0.07)
 
@@ -650,7 +684,7 @@ asApp.addGet2ImageFrameToTimeline = function(){
     });
 
     tl.staggerFrom(frame2.lines, 0.2, {
-        left: -300,
+        left: -728,
         delay:0.5
     }, 0.07)
 
@@ -658,7 +692,7 @@ asApp.addGet2ImageFrameToTimeline = function(){
 
 asApp.addGet3ImageFrameToTimeline = function(){
   tl.staggerFrom(frame1.lines, 0.2, {
-        left: -300,
+        left: -728,
         delay:0.5
     }, 0.07)
 
@@ -672,7 +706,7 @@ asApp.addGet3ImageFrameToTimeline = function(){
     });
 
     tl.staggerFrom(frame2.lines, 0.2, {
-        left: -300,
+        left: -728,
         delay:0.5
     }, 0.07)
 
@@ -686,7 +720,7 @@ asApp.addGet3ImageFrameToTimeline = function(){
     });
 
     tl.staggerFrom(frame3.lines, 0.2, {
-        left: -300,
+        left: -728,
         delay:0.5
     }, 0.07)
 
@@ -749,9 +783,9 @@ asApp.addCTAToTimeline = function() {
 
 
 asApp.defaultInit = function() {
-    asApp.addFrame1CopyColor1ToTimeline();
+    asApp.addFrame1CopyWhiteToTimeline();
     asApp.addFrame1CopyColor2ToTimeline();
-    asApp.addFrame2CopyColor1ToTimeline();
+    asApp.addFrame2CopyWhiteToTimeline();
     asApp.addFrame2CopyColor2ToTimeline();
     asApp.addGet2ImageFrameToTimeline();
     asApp.addLandingToTimeline();
@@ -760,20 +794,16 @@ asApp.defaultInit = function() {
 
 
 asApp.twoFrameInit = function() {
-    asApp.addFrame1CopyColor1ToTimeline();
-    asApp.addFrame1CopyColor2ToTimeline();
+    asApp.addFrame1CopyWhiteToTimeline();
     asApp.addGet1ImageFrameToTimeline();
     asApp.addLandingToTimeline();
     asApp.addCTAToTimeline();
 }
 
 asApp.fourFrameInit = function() {
-    asApp.addFrame1CopyColor1ToTimeline();
-    asApp.addFrame1CopyColor2ToTimeline();
-    asApp.addFrame2CopyColor1ToTimeline();
-    asApp.addFrame2CopyColor2ToTimeline();
-    asApp.addFrame3CopyColor1ToTimeline();
-    asApp.addFrame3CopyColor2ToTimeline();
+    asApp.addFrame1CopyWhiteToTimeline();
+    asApp.addFrame2CopyWhiteToTimeline();
+    asApp.addFrame3CopyWhiteToTimeline();
     asApp.addGet3ImageFrameToTimeline();
     asApp.addLandingToTimeline();
     asApp.addCTAToTimeline();
