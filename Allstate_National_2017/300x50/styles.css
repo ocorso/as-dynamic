@@ -1,0 +1,136 @@
+#bgImg1 { position: absolute; top:0; }
+
+#bgImg2 { position: absolute; top:0; opacity: 0 }
+
+#bgImg3 { position: absolute; top:0; opacity: 0 }
+
+/*.colorIN{ 
+	color:#FF9E16;
+}*/
+#bkgColor {
+	position: absolute;
+	top:0;
+	left:0;
+	width:300px;
+	height:250px;
+	z-index: 190;
+	opacity: 0;
+
+}
+
+#Allstate{
+	position: absolute;
+    width: 77px;
+    height: 18px;
+    top: 5px;
+    right: 5px;
+    background-image:url(Allstate.svg);
+    background-repeat: no-repeat;
+    z-index: 300;
+    display: none;
+}
+
+#Allstate_home{
+	position: absolute;
+    width: 81px;
+    height: 26px;
+    top: 7px;
+    right: 5px;
+    background-image:url(Allstate_home.svg);
+    background-repeat: no-repeat;
+    z-index: 300;
+    display: none;
+}
+
+
+.frame1, .frame2, .frame3, .frame4, #landing {
+	font-family: 'ITC Avant Garde Gothic';
+	font-weight: 700;
+	-webkit-font-smoothing: antialiased;
+	text-transform: uppercase;
+	position: absolute;
+	top:35px;
+	left:20px;
+	right:20px;
+	height:140px;
+	line-height: 1;
+  	text-align: left;
+}
+#landing, #landingCopy1, #landingCopy2 {
+	opacity: 0;
+	z-index: 300
+}
+#small1, #small2, #small3, #landing2 {
+	font-family: 'ITC Avant Garde Gothic';
+	font-weight: 700;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+}
+
+
+.landing {opacity: 0; z-index: 200}
+
+.hide { opacity: 0 }
+
+.marginTop {margin-top:10px; display: inline-block;}
+
+.textTop { z-index: 200; }
+
+.shadow {
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.noWrap {white-space: nowrap;}
+
+.tightLeading {line-height: .9!important;}
+
+.moreLeading {line-height: 1.1!important;}
+
+.uppercase {text-transform: uppercase!important;}
+
+.lowercase {text-transform: none!important;}
+
+
+.xsmallFont{
+	font-size:11px;
+	
+}
+
+.smallFont{
+	font-size:16px;
+}
+
+.small2Font{
+	font-size:18px;
+}
+
+.mediumFont{
+	font-size:26px;
+}
+
+.medium2Font{
+	font-size:32px;
+}
+
+.largeFont{
+	font-size:40px;
+}
+
+.xlargeFont{
+	font-size:60px;
+}
+
+.right{ text-align: right!important; right:0; white-space: pre-wrap;}
+
+
+.bottom{ position:absolute; bottom:-55px; }
+
+
+/*CTA*/
+#btn_cta { position: absolute; bottom: 20px; z-index: 350; right: -200px;}
+#cta { z-index: 350; color:#fff; background: #001C71; padding: 3px 15px 3px 10px; font-size:19px;font-family: 'ITC Avant Garde Gothic';
+	font-weight: 700;
+	-webkit-font-smoothing: antialiased;
+	text-transform: uppercase;}
+#arrow { top:0; display: inline-block; }
