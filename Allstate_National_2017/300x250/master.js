@@ -113,7 +113,7 @@
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110092627192_Blank_728x90.png";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_Copy1 = "<span class=\"mediumFont\">Safe drivers<\/span><br>save 45%";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x250_Copy1_CSS = "largeFont tightLeading txtBlue";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x600_Copy1_CSS = "largeFont tightLeading txtBlue landingBottom";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x600_Copy1_CSS = "largeFont tightLeading txtBlue";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_160x600_Copy1_CSS = "";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_728x90_Copy1_CSS = "";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_Copy2 = "or more with Allstate";
