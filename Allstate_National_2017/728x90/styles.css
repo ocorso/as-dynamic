@@ -53,8 +53,18 @@
 	left:310px;
 	right:105px;
 	height:80px;
+	width: 310px;
 	line-height: 1;
   	text-align: left;
+  	display: table;
+}
+.frame1 > div {
+	display: table-cell;
+    vertical-align: middle;
+}
+.frame2 > div {
+	display: table-cell;
+    vertical-align: middle;
 }
 #landing {
 	font-family: 'ITC Avant Garde Gothic';
@@ -62,17 +72,23 @@
 	-webkit-font-smoothing: antialiased;
 	text-transform: uppercase;
 	position: absolute;
-	top:5px;
 	left:35px;
 	right:175px;
-	height:80px;
+	height:90px;
+	width: 520px;
 	line-height: 1;
   	text-align: left;
+  	display: table;
 }
 #landing, #landingCopy1, #landingCopy2 {
 	opacity: 0;
 	z-index: 300
 }
+#landing > div{
+	display: table-cell;
+    vertical-align: middle;
+}
+
 #small1, #small2, #small3, #landing2 {
 	font-family: 'ITC Avant Garde Gothic';
 	font-weight: 700;
@@ -140,7 +156,7 @@
 
 
 /*CTA*/
-#btn_cta { position: absolute; bottom: 20px; z-index: 350; right: -200px;}
+#btn_cta { position: absolute; bottom: 10px; z-index: 350; right: -200px;}
 #cta { z-index: 350; color:#fff; background: #001C71; padding: 3px 15px 3px 10px; font-size:19px;font-family: 'ITC Avant Garde Gothic';
 	font-weight: 700;
 	-webkit-font-smoothing: antialiased;
