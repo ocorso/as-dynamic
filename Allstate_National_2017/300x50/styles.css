@@ -56,6 +56,7 @@
 	line-height: 1;
   	text-align: left;
 	display: table;
+	width:190px;
 }
 .frame1 > div {
 	display: table-cell;
