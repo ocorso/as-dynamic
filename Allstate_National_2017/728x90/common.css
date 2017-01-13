@@ -88,7 +88,7 @@ a { text-decoration: none; color:#ffffff; }
 	display: none;
 }
 
-.hide-728x90, .hide-300x600, .hide-160x600, .hide-300x250 {
+#atAd728x90 .hide-728x90, #atAd300x600 .hide-300x600, #atAd160x600 .hide-160x600, #atAd300x250 .hide-300x250,  #atAd300x50 .hide-300x50,  #atAd320x50 .hide-320x50 {
 	display:none;
 }
 
