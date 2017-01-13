@@ -210,8 +210,8 @@ asApp.init = function() {
   //oc: Step 1: map dynamic values to elements in markup
   asApp.parseDynamicContent();
 
-  //oc: Step 2: Add Legal text behavior
-  buildLegal();
+  // //oc: Step 2: Add Legal text behavior
+  // buildLegal();
 
   //oc: Step 3: config split text
   asApp.splitText();
@@ -329,8 +329,8 @@ console.log(logo)
     A = dbDefaultPath.Legal_Copy;
 
  //cw: Set legal copy
-  var legalCopy = document.getElementById('aAd_legalTxt');
-  legalCopy.innerHTML = dbDefaultPath.Legal_Copy;   
+ //  var legalCopy = document.getElementById('aAd_legalTxt');
+ //  legalCopy.innerHTML = dbDefaultPath.Legal_Copy;
 
   //Set Frame1 copy
   var frame1Copy = document.getElementById('frame1');
@@ -375,8 +375,8 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
   //oc: only split what we have to and in the right way.
   switch (dbDefaultPath.Variation) {
     case asApp.type.A1:
-      document.getElementById("frame1").className += 'right ';
-      document.getElementById("frame2").className += 'right ';
+      // document.getElementById("frame1").className += 'right ';
+      // document.getElementById("frame2").className += 'right ';
 
       var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
       var frame2Selector = ' #frame2';
@@ -395,10 +395,12 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         charsClass: "chars++"
       });
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x50_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x50_Copy2_CSS;
+      document.getElementById("frame1").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
+      document.getElementById("frame2").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
+      document.getElementById("frame3").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame3_300x50_Copy_CSS_Class;
+      document.getElementById("frame4").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame4_300x50_Copy_CSS_Class;
+      document.getElementById("landingCopy1").className += 'smallFont tightLeading txtBlue'; // dbDefaultPath.End_Frame_300x50_Copy1_CSS;
+      document.getElementById("landingCopy2").className += 'txtWhite xsmallFont lowercase'; // dbDefaultPath.End_Frame_300x50_Copy2_CSS;
       break;
 
       case asApp.type.H2:
@@ -411,9 +413,12 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         charsClass: "chars++"
       });
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x50_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x50_Copy2_CSS;
+        document.getElementById("frame1").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
+        document.getElementById("frame2").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
+        document.getElementById("frame3").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame3_300x50_Copy_CSS_Class;
+        document.getElementById("frame4").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame4_300x50_Copy_CSS_Class;
+        document.getElementById("landingCopy1").className += 'smallFont tightLeading txtBlue'; // dbDefaultPath.End_Frame_300x50_Copy1_CSS;
+        document.getElementById("landingCopy2").className += 'txtWhite xsmallFont lowercase'; // dbDefaultPath.End_Frame_300x50_Copy2_CSS;
       break;
 
       case asApp.type.S1:
@@ -442,11 +447,12 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         charsClass: "chars++"
       });
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
-      document.getElementById("frame3").className += dbDefaultPath.Frame3_300x50_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x50_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x50_Copy2_CSS;
+        document.getElementById("frame1").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
+        document.getElementById("frame2").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
+        document.getElementById("frame3").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame3_300x50_Copy_CSS_Class;
+        document.getElementById("frame4").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame4_300x50_Copy_CSS_Class;
+        document.getElementById("landingCopy1").className += 'smallFont tightLeading txtBlue'; // dbDefaultPath.End_Frame_300x50_Copy1_CSS;
+        document.getElementById("landingCopy2").className += 'txtWhite xsmallFont lowercase'; // dbDefaultPath.End_Frame_300x50_Copy2_CSS;
       break;
 
       case asApp.type.A2:
@@ -467,10 +473,12 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         charsClass: "chars++"
         });
 
-        document.getElementById("frame1").className += dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
-        document.getElementById("frame2").className += dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
-        document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x50_Copy1_CSS;
-        document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x50_Copy2_CSS;
+        document.getElementById("frame1").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
+        document.getElementById("frame2").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
+        document.getElementById("frame3").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame3_300x50_Copy_CSS_Class;
+        document.getElementById("frame4").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame4_300x50_Copy_CSS_Class;
+        document.getElementById("landingCopy1").className += 'smallFont tightLeading txtBlue'; // dbDefaultPath.End_Frame_300x50_Copy1_CSS;
+        document.getElementById("landingCopy2").className += 'txtWhite xsmallFont lowercase'; // dbDefaultPath.End_Frame_300x50_Copy2_CSS;
         break;
       case asApp.type.A3:
       case asApp.type.H1:
@@ -493,10 +501,12 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         charsClass: "chars++"
       });
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x50_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x50_Copy2_CSS;
+        document.getElementById("frame1").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
+        document.getElementById("frame2").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
+        document.getElementById("frame3").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame3_300x50_Copy_CSS_Class;
+        document.getElementById("frame4").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame4_300x50_Copy_CSS_Class;
+        document.getElementById("landingCopy1").className += 'smallFont tightLeading txtBlue'; // dbDefaultPath.End_Frame_300x50_Copy1_CSS;
+        document.getElementById("landingCopy2").className += 'txtWhite xsmallFont lowercase'; // dbDefaultPath.End_Frame_300x50_Copy2_CSS;
       break;
 
       case asApp.type.S3:
@@ -517,10 +527,12 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         charsClass: "chars++"
       });
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x50_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x50_Copy2_CSS;
+        document.getElementById("frame1").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
+        document.getElementById("frame2").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
+        document.getElementById("frame3").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame3_300x50_Copy_CSS_Class;
+        document.getElementById("frame4").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame4_300x50_Copy_CSS_Class;
+        document.getElementById("landingCopy1").className += 'smallFont tightLeading txtBlue'; // dbDefaultPath.End_Frame_300x50_Copy1_CSS;
+        document.getElementById("landingCopy2").className += 'txtWhite xsmallFont lowercase'; // dbDefaultPath.End_Frame_300x50_Copy2_CSS;
       break;
 
       case asApp.type.ZZ:
@@ -559,12 +571,13 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
 
 
 
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
-      document.getElementById("frame3").className += dbDefaultPath.Frame3_300x50_Copy_CSS_Class;
-      document.getElementById("frame4").className += dbDefaultPath.Frame3_300x50_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x50_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x50_Copy2_CSS;
+      document.getElementById("frame1").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame1_300x50_Copy_CSS_Class;
+      document.getElementById("frame2").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame2_300x50_Copy_CSS_Class;
+      document.getElementById("frame3").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame3_300x50_Copy_CSS_Class;
+      document.getElementById("frame4").className += 'txtWhite smallFont shadow'; //dbDefaultPath.Frame4_300x50_Copy_CSS_Class;
+        document.getElementById("landingCopy1").className += 'smallFont tightLeading txtBlue'; // dbDefaultPath.End_Frame_300x50_Copy1_CSS;
+        document.getElementById("landingCopy2").className += 'txtWhite xsmallFont lowercase'; // dbDefaultPath.End_Frame_300x50_Copy2_CSS;
+
       break;
     
   } //end switch

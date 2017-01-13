@@ -12,7 +12,7 @@
 	top:0;
 	left:0;
 	width:300px;
-	height:250px;
+	height:50px;
 	z-index: 190;
 	opacity: 0;
 
@@ -49,16 +49,29 @@
 	-webkit-font-smoothing: antialiased;
 	text-transform: uppercase;
 	position: absolute;
-	top:35px;
-	left:20px;
+	top:3px; /*35px*/
+	left:10px; /*20px*/
 	right:20px;
-	height:140px;
+	height:40px; //140px;
 	line-height: 1;
   	text-align: left;
+	display: table;
+}
+.frame1 > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+.frame2 > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+#landing > div{
+	display: table-cell;
+	vertical-align: middle;
 }
 #landing, #landingCopy1, #landingCopy2 {
 	opacity: 0;
-	z-index: 300
+	z-index: 300;
 }
 #small1, #small2, #small3, #landing2 {
 	font-family: 'ITC Avant Garde Gothic';
@@ -128,8 +141,8 @@
 
 
 /*CTA*/
-#btn_cta { position: absolute; bottom: 20px; z-index: 350; right: -200px;}
-#cta { z-index: 350; color:#fff; background: #001C71; padding: 3px 15px 3px 10px; font-size:19px;font-family: 'ITC Avant Garde Gothic';
+#btn_cta { position: absolute; bottom: 3px; z-index: 350; right: -200px;}
+#cta { z-index: 350; color:#fff; background: #001C71; padding: 3px 15px 3px 10px; font-size:12px;font-family: 'ITC Avant Garde Gothic';
 	font-weight: 700;
 	-webkit-font-smoothing: antialiased;
 	text-transform: uppercase;}
