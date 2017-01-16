@@ -257,7 +257,7 @@ asApp.init = function() {
 
     case asApp.type.S1:
       console.log('Run S1 Variation');
-      asApp.fourFrameInit();
+      asApp.defaultInit();
       break;
 
     case asApp.type.S2:
@@ -413,36 +413,6 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
       document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x600_Copy2_CSS;
       break;
 
-      case asApp.type.S1:
-      var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation + '
-      var frame2Selector = ' #frame2';
-      var frame3Selector = ' #frame3';
-      
-      frame1 = new SplitText(frame1Selector, {
-        type: "words,chars",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
-
-      frame2 = new SplitText(frame2Selector, {
-        type: "words,chars",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
-
-       frame3 = new SplitText(frame3Selector, {
-        type: "words,chars",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
-
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x600_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x600_Copy_CSS_Class;
-      document.getElementById("frame3").className += dbDefaultPath.Frame3_300x600_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x600_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x600_Copy2_CSS;
-      break;
-
       case asApp.type.A2:
         var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
         var frame2Selector = ' #frame2';
@@ -469,6 +439,7 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
       case asApp.type.H3:
       case asApp.type.S2:
       case asApp.type.S3:
+      case asApp.type.S1:
       var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
       var frame2Selector = ' #frame2';
 
