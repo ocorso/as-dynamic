@@ -1,0 +1,100 @@
+/* constant */
+body { margin: 0; padding: 0; font-family: 'Allstate Sans'; width: 100%; }
+
+a { text-decoration: none; color:#ffffff; }
+
+
+/* AD SIZES */
+#border300x50 { position: absolute; width: 298px; height: 48px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd300x50 { position: absolute; width: 300px; height: 50px; overflow: hidden;  }
+
+#border320x50 { position: absolute; width: 318px; height: 48px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd320x50 { position: absolute; width: 320px; height: 50px; overflow: hidden;  }
+
+#border300x250 { position: absolute; width: 298px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
+#atAd300x250 { position: absolute; width: 300px; height: 250px; overflow: hidden;  } 
+
+#border728x90 { position: absolute; width: 726px; height: 88px; top:0; left:0; border:1px solid #000; z-index: 300} 
+#atAd728x90 { position: absolute; width: 728px; height: 90px; overflow: hidden;  } 
+
+#border160x600 { position: absolute; width: 158px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300} 
+#atAd160x600 { position: absolute; width: 160px; height: 600px; overflow: hidden;  } 
+
+#border300x600 { position: absolute; width: 298px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd300x600 { position: absolute; width: 300px; height: 600px; overflow: hidden;  }
+
+#border970x250 { position: absolute; width: 968px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
+#atAd970x250 { position: absolute; width: 970px; height: 250px; overflow: hidden;  } 
+
+#border620x250 { position: absolute; width: 618px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
+#atAd620x250 { position: absolute; width: 620px; height: 250px; overflow: hidden;  }
+
+#border640x100 { position: absolute; width: 638px; height: 98px; top:0; left:0; border:1px solid #000; z-index: 300} 
+#atAd640x100 { position: absolute; width: 640px; height: 100px; overflow: hidden;  }  
+
+#border500x250 { position: absolute; width: 498px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
+#atAd500x250 { position: absolute; width: 500px; height: 250px; overflow: hidden;  }  
+
+#border600x500 { position: absolute; width: 598px; height: 498px; top:0; left:0; border:1px solid #000; z-index: 300} 
+#atAd600x500 { position: absolute; width: 600px; height: 500px; overflow: hidden;  }  
+
+
+/* COLORS */
+.bgBlue { background-color: #001C71; }
+.bgPink { background-color: #F55197; }
+.bgOrange { background-color: #FF9E16; }
+.bgYellow { background-color: #FFD100; }
+.bgGreen { background-color: #95D600; }
+.bgLtBlue { background-color: #57C1E8; }
+.bgTeal { background-color: #49C3B1; }
+.bgPurple { background-color: #8b86ca; }
+
+.txtBlue { color: #001C71; }
+.txtPink { color: #F55197; }
+.txtOrange { color: #FF9E16; }
+.txtYellow { color: #FFD100; }
+.txtGreen { color: #95D600; }
+.txtLtBlue { color: #57C1E8; }
+.txtTeal { color: #49C3B1; }
+.txtPurple { color: #8b86ca; }
+.txtWhite { color: #FFFFFF; }
+
+.logoBlue { fill:#001C71; }
+.logoLtBlue { fill:#57C1E8; }
+.logoWhite{ fill:#FFFFFF; }
+.logoPink{ fill:#F55197; }
+.logoOrange { fill: #FF9E16; }
+.logoYellow { fill: #FFD100; }
+.logoGreen { fill: #95D600; }
+.logoTeal { fill: #49C3B1; }
+.logoPurple { fill: #8b86ca; }
+
+.shadow {
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.legal_shadow {
+	text-shadow: rgb(0, 0, 0) 0.5px 0.5px 0.5px;
+}
+
+.image_shadow { 
+	-webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.8)); 
+	filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.8));
+	overflow:visible;
+	height:50px; 
+}
+
+.image_shadow_off { 
+	display: none;
+}
+
+#atAd728x90 .hide-728x90, #atAd300x600 .hide-300x600, #atAd160x600 .hide-160x600, #atAd300x250 .hide-300x250,  #atAd300x50 .hide-300x50,  #atAd320x50 .hide-320x50 {
+	display:none;
+}
+
+sup {vertical-align: top; font-size: 0.3em;}
+.sup {vertical-align: top; font-size: 0.3em;}
+
+/* CLICK TAG */
+#clickArea { position: absolute; z-index: 350; width: 100%; height: 100%; }
+#clickArea .clickAreaFull { width: 100%; height: 100%; background-color: #ff9900; }
