@@ -49,10 +49,11 @@
 	-webkit-font-smoothing: antialiased;
 	text-transform: uppercase;
 	position: absolute;
-	top:75px;
-	left:20px;
-	right:20px;
-	height:225px;
+	width:150px;
+	top:175px;
+	left:5px;
+	right:5px;
+	height:195px;
 	line-height: 1;
   	text-align: left;
 }
@@ -96,12 +97,20 @@
 	
 }
 
+.smallHisFont{
+	font-size:14px;
+}
+
 .smallFont{
 	font-size:16px;
 }
 
 .small2Font{
 	font-size:18px;
+}
+
+.small3Font{
+	font-size:22px;
 }
 
 .mediumFont{
