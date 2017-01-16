@@ -12,8 +12,6 @@
     Enabler.setProfileId(1103547);
     var devDynamicContent = {};
 
-
-<<<<<<< HEAD
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed= [{}];
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0]._id = 0;
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].ID = 1;
@@ -125,120 +123,6 @@
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_CTA_Copy = "QUOTE NOW";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_CTA_Color = "logoPink";
     Enabler.setDevDynamicContent(devDynamicContent);
-=======
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed= [{}];
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0]._id = 0;
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].ID = 1;
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Variation = "A1";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Reporting_Label = "A1";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Is_Default = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Exit_URL = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Exit_URL.Url = "http://allstate.com";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].elemType = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Savings_Percentage = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Market_Name = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Legal_Copy = "this is test legal copy";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Background_CSS_Class = "bgTeal";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Logo = "auto";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Copy = "taking safe <br class='hide-728x90' /> driving <br class='hide-728x90' /> seriously";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_300x250_Copy_CSS_Class = "txtWhite mediumFont shadow bottom";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_300x600_Copy_CSS_Class = "txtBlue medium2Font bottom";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_160x600_Copy_CSS_Class = "txtBlue medium2Font bottom";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_728x90_Copy_CSS_Class = "txtBlue mediumFont";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_SplitText_Target1 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_SplitText_Action1 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_SplitText_Target2 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_SplitText_Action2 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_300x250 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_300x250.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170104122212510_A1_300x250_image1.jpg";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_300x600 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_300x600.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110080031205_A1_300x600_image1.jpg";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_160x600 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_160x600.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110080021782_A1_160x600_image1.jpg";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_728x90 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_728x90.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Image_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110080039673_A1_728x90_image1.jpg";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Copy = "means earning <br class='hide-728x90' /> serious rewards";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_300x250_Copy_CSS_Class = "txtWhite mediumFont shadow bottom";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_300x600_Copy_CSS_Class = "txtBlue medium2Font bottom";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_160x600_Copy_CSS_Class = "txtBlue medium2Font bottom";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_728x90_Copy_CSS_Class = "txtBlue mediumFont";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_SplitText_Target1 = "#frame2 .chars10, #frame2 .chars11";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_SplitText_Action1 = "txtTeal";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_SplitText_Target2 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_SplitText_Action2 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_300x250 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_300x250.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170104122216812_A1_300x250_image2.jpg";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_300x600 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_300x600.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110080035587_A1_300x600_image2.jpg";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_160x600 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_160x600.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110080026791_A1_160x600_image2.jpg";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_728x90 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_728x90.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame2_Image_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110080043999_A1_728x90_image2.jpg";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Copy = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_300x250_Copy_CSS_Class = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_300x600_Copy_CSS_Class = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_160x600_Copy_CSS_Class = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_728x90_Copy_CSS_Class = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_SplitText_Target1 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_SplitText_Action1 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_SplitText_Target2 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_SplitText_Action2 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x250 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x250.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170109124530955_Blank_300x250.png";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x600 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x600.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110092621448_Blank_300x600.png";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_160x600 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_160x600.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110092616112_Blank_160x600.png";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_728x90 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_728x90.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame3_Image_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110092627192_Blank_728x90.png";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Copy = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_300x250_Copy_CSS_Class = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_300x600_Copy_CSS_Class = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_160x600_Copy_CSS_Class = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_728x90_Copy_CSS_Class = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_SplitText_Target1 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_SplitText_Action1 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_SplitText_Target2 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_SplitText_Action2 = "";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_300x250 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_300x250.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_300x250.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170109124530955_Blank_300x250.png";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_300x600 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_300x600.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_300x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110092621448_Blank_300x600.png";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_160x600 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_160x600.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_160x600.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110092616112_Blank_160x600.png";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_728x90 = {};
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_728x90.Type = "file";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110092627192_Blank_728x90.png";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_Copy1 = "<span class=\"mediumFont\">Safe drivers<\/span><br>save 45%";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x250_Copy1_CSS = "largeFont tightLeading txtBlue";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x600_Copy1_CSS = "largeFont tightLeading txtBlue landingBottom";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_160x600_Copy1_CSS = "largeFont tightLeading txtBlue landingBottom";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_728x90_Copy1_CSS = "mediumFont tightLeading txtBlue";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_Copy2 = "or more with Allstate";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x250_Copy2_CSS = "txtWhite marginTop smallFont lowercase";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x600_Copy2_CSS = "txtWhite marginTop smallFont lowercase";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_160x600_Copy2_CSS = "txtWhite marginTop smallFont lowercase";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_728x90_Copy2_CSS = "txtWhite smallFont lowercase";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_CTA_Copy = "QUOTE NOW";
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_CTA_Color = "logoPink";
-Enabler.setDevDynamicContent(devDynamicContent);
->>>>>>> origin/master
-
 
 
 
@@ -369,7 +253,7 @@ asApp.init = function() {
 
     case asApp.type.S1:
       console.log('Run S1 Variation');
-      asApp.fourFrameInit();
+      asApp.defaultInit();
       break;
 
     case asApp.type.S2:
@@ -530,39 +414,6 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
       document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x250_Copy2_CSS;
       break;
 
-      case asApp.type.S1:
-      var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation + '
-      var frame2Selector = ' #frame2';
-      var frame3Selector = ' #frame3';
-      
-      frame1 = new SplitText(frame1Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
-
-      frame2 = new SplitText(frame2Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
-
-       frame3 = new SplitText(frame3Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
-
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_300x250_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_300x250_Copy_CSS_Class;
-      document.getElementById("frame3").className += dbDefaultPath.Frame3_300x250_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_300x250_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_300x250_Copy2_CSS;
-      break;
-
       case asApp.type.A2:
         var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
         var frame2Selector = ' #frame2';
@@ -590,6 +441,7 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
       case asApp.type.H1:
       case asApp.type.H3:
       case asApp.type.S2:
+      case asApp.type.S1:
       var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
       var frame2Selector = ' #frame2';
 
