@@ -11,19 +11,17 @@
 	position: absolute;
 	top:0;
 	left:0;
-	width:320px;
+	width:300px;
 	height:50px;
 	z-index: 190;
-	opacity: 0;
-
 }
 
 #Allstate{
 	position: absolute;
-    width: 77px;
-    height: 18px;
-    top: 5px;
-    right: 5px;
+    width: 65px;
+    height: 15px;
+    top: 3px;
+    right: 3px;
     background-image:url(Allstate.svg);
     background-repeat: no-repeat;
     z-index: 300;
@@ -32,10 +30,10 @@
 
 #Allstate_home{
 	position: absolute;
-    width: 81px;
-    height: 26px;
-    top: 7px;
-    right: 5px;
+    width: 65px;
+    height: 20px;
+    top: 3px;
+    right: 3px;
     background-image:url(Allstate_home.svg);
     background-repeat: no-repeat;
     z-index: 300;
@@ -52,11 +50,11 @@
 	top:3px; /*35px*/
 	left:10px; /*20px*/
 	right:20px;
-	height:40px; //140px;
-	line-height: 1;
+	height:40px; 
+	line-height: .9;
   	text-align: left;
 	display: table;
-	width:210px;
+	width:180px;
 }
 .frame1 > div {
 	display: table-cell;
@@ -74,6 +72,10 @@
 	opacity: 0;
 	z-index: 300;
 }
+#landingCopy2 {
+    display:block;
+    margin-top:5px;
+}
 #small1, #small2, #small3, #landing2 {
 	font-family: 'ITC Avant Garde Gothic';
 	font-weight: 700;
@@ -82,6 +84,7 @@
 	position: absolute;
 }
 
+#landing.noMarginTop {top:0!important;}
 
 .landing {opacity: 0; z-index: 200}
 
@@ -111,6 +114,10 @@
 	
 }
 
+.xsmall2Font{
+	font-size:14px;
+}
+
 .smallFont{
 	font-size:16px;
 }
@@ -120,7 +127,7 @@
 }
 
 .mediumFont{
-	font-size:26px;
+	font-size:16px;
 }
 
 .medium2Font{
