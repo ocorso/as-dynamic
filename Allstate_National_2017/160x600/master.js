@@ -448,15 +448,13 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
       var frame2Selector = ' #frame2';
 
       frame1 = new SplitText(frame1Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
+        type: "words,chars",
         wordsClass: "word++",
         charsClass: "chars++"
       });
 
       frame2 = new SplitText(frame2Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
+        type: "words,chars",
         wordsClass: "word++",
         charsClass: "chars++"
       });
@@ -601,7 +599,7 @@ asApp.addGet1ImageFrameToTimeline = function(){
 };
 
 asApp.addGet2ImageFrameToTimeline = function(){
-  tl.staggerFrom(frame1.lines, 0.2, {
+  tl.staggerFrom(frame1.words, 0.2, {
         left: -160,
         delay:0.5
     }, 0.07)
@@ -616,7 +614,7 @@ asApp.addGet2ImageFrameToTimeline = function(){
         autoAlpha: 1,
     });
 
-    tl.staggerFrom(frame2.lines, 0.2, {
+    tl.staggerFrom(frame2.words, 0.2, {
         left: -160,
         delay:0.5
     }, 0.07)
