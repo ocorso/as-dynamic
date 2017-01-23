@@ -88,8 +88,12 @@ a { text-decoration: none; color:#ffffff; }
 	display: none;
 }
 
-#atAd728x90 .hide-728x90, #atAd300x600 .hide-300x600, #atAd160x600 .hide-160x600, #atAd300x250 .hide-300x250,  #atAd300x50 .hide-300x50,  #atAd320x50 .hide-320x50 {
-	display:none;
+br.special {
+display:none;
+}
+
+#atAd728x90 br.special.show728x90, #atAd300x600 br.special.show300x600, #atAd160x600 br.special.show160x600, #atAd300x250 br.special.show300x250,  #atAd300x50 br.special.show300x50,  #atAd320x50 br.special.show320x50 {
+	display:block;
 }
 
 sup {vertical-align: top; font-size: 0.3em;}

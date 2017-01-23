@@ -20,8 +20,8 @@ a { text-decoration: none; color:#ffffff; }
 #border160x600 { position: absolute; width: 158px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300} 
 #atAd160x600 { position: absolute; width: 160px; height: 600px; overflow: hidden;  } 
 
-#border300x600 { position: absolute; width: 298px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300} 
-#atAd300x600 { position: absolute; width: 300px; height: 600px; overflow: hidden;  } 
+#border300x600 { position: absolute; width: 298px; height: 598px; top:0; left:0; border:1px solid #000; z-index: 300}
+#atAd300x600 { position: absolute; width: 300px; height: 600px; overflow: hidden;  }
 
 #border970x250 { position: absolute; width: 968px; height: 248px; top:0; left:0; border:1px solid #000; z-index: 300} 
 #atAd970x250 { position: absolute; width: 970px; height: 250px; overflow: hidden;  } 
@@ -88,8 +88,12 @@ a { text-decoration: none; color:#ffffff; }
 	display: none;
 }
 
-#atAd728x90 .hide-728x90, #atAd300x600 .hide-300x600, #atAd160x600 .hide-160x600, #atAd300x250 .hide-300x250,  #atAd300x50 .hide-300x50,  #atAd320x50 .hide-320x50 {
-	display:none;
+br.special {
+display:none;
+}
+
+#atAd728x90 br.special.show728x90, #atAd300x600 br.special.show300x600, #atAd160x600 br.special.show160x600, #atAd300x250 br.special.show300x250,  #atAd300x50 br.special.show300x50,  #atAd320x50 br.special.show320x50 {
+	display:block;
 }
 
 sup {vertical-align: top; font-size: 0.3em;}
