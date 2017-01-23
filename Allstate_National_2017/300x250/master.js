@@ -26,7 +26,7 @@
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Legal_Copy = "this is test legal copy";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Background_CSS_Class = "bgTeal";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Logo = "auto";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Copy = "taking safe driving seriously";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_Copy = "taking<br class=\"special\"> safe <br class=\"special\"> driving<br class=\"special\"> seriously";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_300x250_Copy_CSS_Class = "txtWhite mediumFont shadow bottom";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_300x600_Copy_CSS_Class = "txtBlue medium2Font bottom";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame1_160x600_Copy_CSS_Class = "";
@@ -216,7 +216,8 @@ asApp.init = function() {
 
   //oc: Step 4: Init TimelineLite, defaults to paused.
   tl = new TimelineLite({
-    paused: 'true'
+    paused: 'true',
+    onComplete:allDone
   });
 
   //oc: Step 5: handle variations independently.
@@ -446,17 +447,14 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
       var frame2Selector = ' #frame2';
 
       frame1 = new SplitText(frame1Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
+        type: "words",
         wordsClass: "word++",
-        charsClass: "chars++"
+
       });
 
       frame2 = new SplitText(frame2Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
+        type: "words",
         wordsClass: "word++",
-        charsClass: "chars++"
       });
 
       document.getElementById("frame1").className += dbDefaultPath.Frame1_300x250_Copy_CSS_Class;
@@ -623,7 +621,7 @@ asApp.addGet1ImageFrameToTimeline = function(){
 };
 
 asApp.addGet2ImageFrameToTimeline = function(){
-  tl.staggerFrom(frame1.lines, 0.2, {
+  tl.staggerFrom(frame1.words, 0.2, {
         left: -300,
         delay:0.5
     }, 0.07)
@@ -638,12 +636,14 @@ asApp.addGet2ImageFrameToTimeline = function(){
         autoAlpha: 1,
     });
 
-    tl.staggerFrom(frame2.lines, 0.2, {
+    tl.staggerFrom(frame2.words, 0.2, {
         left: -300,
         delay:0.5
     }, 0.07)
 
+
 };
+
 
 asApp.addGet2ImageHispanicFrameToTimeline = function(){
   tl.staggerFrom(frame1.lines, 0.2, {
@@ -758,7 +758,10 @@ asApp.addCTAToTimeline = function() {
 
 };
 
-
+function allDone() {
+    frame1.revert()
+    frame2.revert()
+}
 
 asApp.defaultInit = function() {
     asApp.addFrame1CopyColor1ToTimeline();
