@@ -219,7 +219,8 @@ asApp.init = function() {
 
   //oc: Step 4: Init TimelineLite, defaults to paused.
   tl = new TimelineLite({
-    paused: 'true'
+    paused: 'true',
+    onComplete:allDone
   });
 
   //oc: Step 5: handle variations independently.
@@ -231,12 +232,12 @@ asApp.init = function() {
 
     case asApp.type.A2:
       console.log('Run A2 Variation');
-      asApp.defaultInit();
+      asApp.noImage1Init();
       break;
 
     case asApp.type.A3:
       console.log('Run A3 Variation');
-      asApp.defaultInit();
+      asApp.noImage2Init();
       break;
 
     case asApp.type.H1:
@@ -256,7 +257,7 @@ asApp.init = function() {
 
     case asApp.type.S1:
       console.log('Run S1 Variation');
-      asApp.fourFrameInit();
+      asApp.defaultInit();
       break;
 
     case asApp.type.S2:
@@ -380,19 +381,19 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
       var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
       var frame2Selector = ' #frame2';
       
-      frame1 = new SplitText(frame1Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
+      // frame1 = new SplitText(frame1Selector, {
+      //   type: "lines,words,chars",
+      //   linesClass: "line++",
+      //   wordsClass: "word++",
+      //   charsClass: "chars++"
+      // });
 
-      frame2 = new SplitText(frame2Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
+      // frame2 = new SplitText(frame2Selector, {
+      //   type: "lines,words,chars",
+      //   linesClass: "line++",
+      //   wordsClass: "word++",
+      //   charsClass: "chars++"
+      // });
 
       document.getElementById("frame1").className += dbDefaultPath.Frame1_728x90_Copy_CSS_Class;
       document.getElementById("frame2").className += dbDefaultPath.Frame2_728x90_Copy_CSS_Class;
@@ -406,50 +407,18 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
       case asApp.type.H2:
       var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
       
-      frame1 = new SplitText(frame1Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
+      // frame1 = new SplitText(frame1Selector, {
+      //   type: "lines,words,chars",
+      //   linesClass: "line++",
+      //   wordsClass: "word++",
+      //   charsClass: "chars++"
+      // });
 
       document.getElementById("frame1").className += dbDefaultPath.Frame1_728x90_Copy_CSS_Class;
       document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_728x90_Copy1_CSS;
       document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_728x90_Copy2_CSS;
       break;
 
-      case asApp.type.S1:
-      var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation + '
-      var frame2Selector = ' #frame2';
-      var frame3Selector = ' #frame3';
-      
-      frame1 = new SplitText(frame1Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
-
-      frame2 = new SplitText(frame2Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
-
-       frame3 = new SplitText(frame3Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
-
-      document.getElementById("frame1").className += dbDefaultPath.Frame1_728x90_Copy_CSS_Class;
-      document.getElementById("frame2").className += dbDefaultPath.Frame2_728x90_Copy_CSS_Class;
-      document.getElementById("frame3").className += dbDefaultPath.Frame3_728x90_Copy_CSS_Class;
-      document.getElementById("landingCopy1").className += dbDefaultPath.End_Frame_728x90_Copy1_CSS;
-      document.getElementById("landingCopy2").className += dbDefaultPath.End_Frame_728x90_Copy2_CSS;
-      break;
 
       case asApp.type.A2:
         var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
@@ -479,22 +448,23 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
       case asApp.type.H3:
       case asApp.type.S2:
       case asApp.type.S3:
+      case asApp.type.S1:
       var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
       var frame2Selector = ' #frame2';
 
-      frame1 = new SplitText(frame1Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
+      // frame1 = new SplitText(frame1Selector, {
+      //   type: "lines,words,chars",
+      //     linesClass: "line++",
+      //     wordsClass: "word++",
+      //     charsClass: "chars++"
+      // });
 
-      frame2 = new SplitText(frame2Selector, {
-        type: "lines,words,chars",
-        linesClass: "line++",
-        wordsClass: "word++",
-        charsClass: "chars++"
-      });
+      // frame2 = new SplitText(frame2Selector, {
+      //   type: "lines,words,chars",
+      //     linesClass: "line++",
+      //     wordsClass: "word++",
+      //     charsClass: "chars++"
+      // });
 
       document.getElementById("frame1").className += dbDefaultPath.Frame1_728x90_Copy_CSS_Class;
       document.getElementById("frame2").className += dbDefaultPath.Frame2_728x90_Copy_CSS_Class;
@@ -664,16 +634,16 @@ asApp.addFrame4CopyColor1ToTimeline = function() {
 
 
 asApp.addGet1ImageFrameToTimeline = function(){
-  tl.staggerFrom(frame1.lines, 0.2, {
+  tl.from(".frame1", 0.2, {
         left: -728,
         delay:0.5
-    }, 0.07)
+    });
 
 };
 
 asApp.addGet2ImageFrameToTimeline = function(){
-  tl.staggerFrom(frame1.lines, 0.2, {
-        left: -728,
+  tl.staggerFrom(".frame1", 0.2, {
+        left: -700,
         delay:0.5
     }, 0.07)
 
@@ -687,16 +657,42 @@ asApp.addGet2ImageFrameToTimeline = function(){
         autoAlpha: 1,
     });
 
-    tl.staggerFrom(frame2.lines, 0.2, {
-        left: -728,
+    tl.staggerFrom(".frame2", 0.2, {
+        left: -700,
         delay:0.5
     }, 0.07)
 
 };
 
-asApp.addGet3ImageFrameToTimeline = function(){
-  tl.staggerFrom(frame1.lines, 0.2, {
-        left: -728,
+asApp.addNoImageFrame1ToTimeline = function(){
+
+
+  tl.staggerFromTo(".frame1", 0.2, 
+    { left: -700, delay:0.5 },
+    { left: 35, width:600}
+    , 0.07)
+
+  tl.to("#frame1", 0.3, {
+        autoAlpha: 0,
+        delay:2
+    });
+
+
+    tl.to("#bgImg2", 0.3, {
+        autoAlpha: 1,
+    });
+
+    tl.staggerFrom(".frame2", 0.2, {
+        left: -700,
+        delay:0.5
+    }, 0.07)
+
+};
+
+asApp.addNoImageFrame2ToTimeline = function(){
+
+  tl.staggerFrom(".frame1", 0.2, {
+        left: -700,
         delay:0.5
     }, 0.07)
 
@@ -709,8 +705,30 @@ asApp.addGet3ImageFrameToTimeline = function(){
         autoAlpha: 1,
     });
 
-    tl.staggerFrom(frame2.lines, 0.2, {
-        left: -728,
+    tl.staggerFromTo(".frame2", 0.2, 
+    { left: -700, delay:0.5 },
+    { left: 35, width:600}
+    , 0.07)
+
+};
+
+asApp.addGet3ImageFrameToTimeline = function(){
+  tl.staggerFrom(".frame1", 0.2, {
+        left: -700,
+        delay:0.5
+    }, 0.07)
+
+  tl.to("#frame1", 0.3, {
+        autoAlpha: 0,
+        delay:2
+    });
+
+    tl.to("#bgImg2", 0.3, {
+        autoAlpha: 1,
+    });
+
+    tl.staggerFrom(".frame2", 0.2, {
+        left: -700,
         delay:0.5
     }, 0.07)
 
@@ -723,8 +741,8 @@ asApp.addGet3ImageFrameToTimeline = function(){
         autoAlpha: 1,
     });
 
-    tl.staggerFrom(frame3.lines, 0.2, {
-        left: -728,
+    tl.staggerFrom(".frame3", 0.2, {
+        left: -700,
         delay:0.5
     }, 0.07)
 
@@ -784,7 +802,10 @@ asApp.addCTAToTimeline = function() {
 
 };
 
-
+function allDone() {
+    frame1.revert()
+    frame2.revert()
+}
 
 asApp.defaultInit = function() {
     asApp.addFrame1CopyWhiteToTimeline();
@@ -792,6 +813,26 @@ asApp.defaultInit = function() {
     asApp.addFrame2CopyWhiteToTimeline();
     asApp.addFrame2CopyColor2ToTimeline();
     asApp.addGet2ImageFrameToTimeline();
+    asApp.addLandingToTimeline();
+    asApp.addCTAToTimeline();
+}
+
+asApp.noImage1Init = function() {
+    asApp.addFrame1CopyWhiteToTimeline();
+    asApp.addFrame1CopyColor2ToTimeline();
+    asApp.addFrame2CopyWhiteToTimeline();
+    asApp.addFrame2CopyColor2ToTimeline();
+    asApp.addNoImageFrame1ToTimeline();
+    asApp.addLandingToTimeline();
+    asApp.addCTAToTimeline();
+}
+
+asApp.noImage2Init = function() {
+    asApp.addFrame1CopyWhiteToTimeline();
+    asApp.addFrame1CopyColor2ToTimeline();
+    asApp.addFrame2CopyWhiteToTimeline();
+    asApp.addFrame2CopyColor2ToTimeline();
+    asApp.addNoImageFrame2ToTimeline();
     asApp.addLandingToTimeline();
     asApp.addCTAToTimeline();
 }
