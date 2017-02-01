@@ -158,6 +158,8 @@
 
 .bottom{ position:absolute; bottom:-55px; }
 
+#landingCopy1 > div{ display:inline; }
+
 
 /*CTA*/
 #btn_cta { position: absolute; bottom: 10px; z-index: 350; right: -200px;}
