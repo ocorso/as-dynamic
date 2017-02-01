@@ -47,14 +47,13 @@
 	-webkit-font-smoothing: antialiased;
 	text-transform: uppercase;
 	position: absolute;
-	top:3px; /*35px*/
 	left:10px; /*20px*/
 	right:20px;
-	height:40px; 
+	height:50px; 
 	line-height: .9;
   	text-align: left;
 	display: table;
-	width:180px;
+	width:190px;
 }
 .frame1 > div {
 	display: table-cell;
@@ -73,8 +72,7 @@
 	z-index: 300;
 }
 #landingCopy2 {
-    display:block;
-    margin-top:5px;
+    margin-top:3px;
 }
 #small1, #small2, #small3, #landing2 {
 	font-family: 'ITC Avant Garde Gothic';
@@ -147,6 +145,13 @@
 
 .bottom{ position:absolute; bottom:-55px; }
 
+#landingCopy1 > span { display: none; }
+
+.block {display: block}
+
+.inline {display: inline}
+
+.noDisplay {display:none;}
 
 /*CTA*/
 #btn_cta { position: absolute; bottom: 3px; z-index: 350; right: -200px;}
