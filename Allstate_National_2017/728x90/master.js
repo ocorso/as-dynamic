@@ -424,19 +424,19 @@ var dbDefaultPath = dynamicContent.Allstate_National_Feed__2017_Final_Allstate_N
         var frame1Selector = ' #frame1'; //'#' + dbDefaultPath.Variation +
         var frame2Selector = ' #frame2';
 
-        frame1 = new SplitText(frame1Selector, {
-          type: "lines,words,chars",
-          linesClass: "line++",
-          wordsClass: "word++",
-          charsClass: "chars++"
-        });
+        // frame1 = new SplitText(frame1Selector, {
+        //   type: "lines,words,chars",
+        //   linesClass: "line++",
+        //   wordsClass: "word++",
+        //   charsClass: "chars++"
+        // });
 
-        frame2 = new SplitText(frame2Selector, {
-          type: "lines,words,chars",
-          linesClass: "line++",
-          wordsClass: "word++",
-          charsClass: "chars++"
-        });
+        // frame2 = new SplitText(frame2Selector, {
+        //   type: "lines,words,chars",
+        //   linesClass: "line++",
+        //   wordsClass: "word++",
+        //   charsClass: "chars++"
+        // });
 
         document.getElementById("frame1").className += dbDefaultPath.Frame1_728x90_Copy_CSS_Class;
         document.getElementById("frame2").className += dbDefaultPath.Frame2_728x90_Copy_CSS_Class;
@@ -642,7 +642,7 @@ asApp.addGet1ImageFrameToTimeline = function(){
 };
 
 asApp.addGet2ImageFrameToTimeline = function(){
-  tl.staggerFrom(".frame1", 0.2, {
+  tl.staggerFrom(".frame1", 0.5, {
         left: -700,
         delay:0.5
     }, 0.07)
@@ -657,7 +657,7 @@ asApp.addGet2ImageFrameToTimeline = function(){
         autoAlpha: 1,
     });
 
-    tl.staggerFrom(".frame2", 0.2, {
+    tl.staggerFrom(".frame2", 0.5, {
         left: -700,
         delay:0.5
     }, 0.07)
@@ -667,7 +667,7 @@ asApp.addGet2ImageFrameToTimeline = function(){
 asApp.addNoImageFrame1ToTimeline = function(){
 
 
-  tl.staggerFromTo(".frame1", 0.2, 
+  tl.staggerFromTo(".frame1", 0.5, 
     { left: -700, delay:0.5 },
     { left: 35, width:600}
     , 0.07)
@@ -682,7 +682,7 @@ asApp.addNoImageFrame1ToTimeline = function(){
         autoAlpha: 1,
     });
 
-    tl.staggerFrom(".frame2", 0.2, {
+    tl.staggerFrom(".frame2", 0.5, {
         left: -700,
         delay:0.5
     }, 0.07)
@@ -691,7 +691,7 @@ asApp.addNoImageFrame1ToTimeline = function(){
 
 asApp.addNoImageFrame2ToTimeline = function(){
 
-  tl.staggerFrom(".frame1", 0.2, {
+  tl.staggerFrom(".frame1", 0.5, {
         left: -700,
         delay:0.5
     }, 0.07)
@@ -705,7 +705,7 @@ asApp.addNoImageFrame2ToTimeline = function(){
         autoAlpha: 1,
     });
 
-    tl.staggerFromTo(".frame2", 0.2, 
+    tl.staggerFromTo(".frame2", 0.5, 
     { left: -700, delay:0.5 },
     { left: 35, width:600}
     , 0.07)
@@ -713,7 +713,7 @@ asApp.addNoImageFrame2ToTimeline = function(){
 };
 
 asApp.addGet3ImageFrameToTimeline = function(){
-  tl.staggerFrom(".frame1", 0.2, {
+  tl.staggerFrom(".frame1", 0.5, {
         left: -700,
         delay:0.5
     }, 0.07)
@@ -727,7 +727,7 @@ asApp.addGet3ImageFrameToTimeline = function(){
         autoAlpha: 1,
     });
 
-    tl.staggerFrom(".frame2", 0.2, {
+    tl.staggerFrom(".frame2", 0.5, {
         left: -700,
         delay:0.5
     }, 0.07)
@@ -741,7 +741,7 @@ asApp.addGet3ImageFrameToTimeline = function(){
         autoAlpha: 1,
     });
 
-    tl.staggerFrom(".frame3", 0.2, {
+    tl.staggerFrom(".frame3", 0.5, {
         left: -700,
         delay:0.5
     }, 0.07)
