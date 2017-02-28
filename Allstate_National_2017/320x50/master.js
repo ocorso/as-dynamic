@@ -13,17 +13,16 @@
     var devDynamicContent = {};
 
 
-devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed= [{}];
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed= [{}];
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0]._id = 0;
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].ID = 1;
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Variation = "A1";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Reporting_Label = "A1";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Is_Default = "";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Exit_URL = {};
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Exit_URL.Url = "http://allstate.com";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].elemType = "";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Savings_Percentage = "";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Market_Name = "";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].elemType = "Auto";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Language = "English";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Geo = "CA,SD,ND,NC";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Legal_Copy = "Savings vary. Subject to terms, conditions & availability. Allstate Fire and Casualty Ins. Co. & its affiliates: Northbrook, IL \u00A9 2017 Allstate Insurance Co.";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Background_CSS_Class = "bgLtBlue";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Logo = "auto";
@@ -111,18 +110,18 @@ devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed= [{}
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_728x90 = {};
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_728x90.Type = "file";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Frame4_Image_728x90.Url = "https://s0.2mdn.net/ads/richmedia/studio/37231879/37231879_20170110092627192_Blank_728x90.png";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_Copy1 = "<span class=\"mediumFont\">Safe drivers<\/span><br>save 45%";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_Copy1 = "<div class=\"mediumFont\">Safe drivers<\/div> save 45%";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x250_Copy1_CSS = "largeFont tightLeading txtBlue";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x600_Copy1_CSS = "largeFont tightLeading txtBlue landingBottom";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_160x600_Copy1_CSS = "mediumFont tightLeading txtBlue landingBottom";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_728x90_Copy1_CSS = "mediumFont tightLeading txtBlue";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_mobile_Copy1_CSS = "mediumFont tightLeading txtBlue";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x600_Copy1_CSS = "xlargeFont tightLeading txtBlue landingBottom";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_160x600_Copy1_CSS = "largeFont tightLeading txtBlue landingBottom";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_728x90_Copy1_CSS = "largeFont tightLeading txtBlue";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_mobile_Copy1_CSS = "smallFont tightLeading txtBlue";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_Copy2 = "or more with Allstate";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x250_Copy2_CSS = "txtWhite marginTop smallFont lowercase";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x600_Copy2_CSS = "txtWhite marginTop smallFont lowercase";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_160x600_Copy2_CSS = "txtWhite marginTop smallFont lowercase";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_728x90_Copy2_CSS = "txtWhite smallFont lowercase";
-    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_mobile_Copy2_CSS = "txtWhite smallFont lowercase";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x250_Copy2_CSS = "txtWhite small2Font lowercase";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_300x600_Copy2_CSS = "txtWhite smallFont lowercase";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_160x600_Copy2_CSS = "txtWhite smallFont lowercase";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_728x90_Copy2_CSS = "txtWhite small2Font lowercase";
+    devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_mobile_Copy2_CSS = "txtWhite xsmallFont lowercase block";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_CTA_Copy = "QUOTE NOW";
     devDynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].End_Frame_CTA_Color = "logoPink";
     Enabler.setDevDynamicContent(devDynamicContent);
@@ -614,7 +613,7 @@ asApp.addCTAToTimeline = function() {
     var div1 = $("div#btn_cta"),
         tn1 = TweenMax.to(div1, .3, {
             right: -10,
-            repeat: -1,
+            repeat: 5,
             yoyo: true,
             ease: Linear.easeNone,
             paused: true
@@ -651,15 +650,13 @@ asApp.topMarginInit = function() {
     asApp.addCTAToTimeline();
 }
 
-    
-
-
-
-
-
-    
-
-
-
-
-
+/**
+ * This function handles the Background and CTA clicks
+ * And overrides the system's exit to navigate to a dynamic exit url
+ */
+function onExitClick(event) {
+  console.info('onExitClick()');
+  Enabler.exitOverride('CTA Exit', dynamicContent.Allstate_National_Feed__2017_Final_Allstate_National_Feed[0].Exit_URL.Url)
+// Enabler.exit();
+}
+;

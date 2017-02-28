@@ -100,5 +100,7 @@ sup {vertical-align: top; font-size: 0.3em;}
 .sup {vertical-align: top; font-size: 0.3em;}
 
 /* CLICK TAG */
-#clickArea { position: absolute; z-index: 350; width: 100%; height: 100%; }
+#cta { cursor:pointer; }
+#clickArea { position: absolute; z-index: 350; width: 100%; height: 100%;cursor:pointer; }
 #clickArea .clickAreaFull { width: 100%; height: 100%; background-color: #ff9900; }
+

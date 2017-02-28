@@ -91,6 +91,8 @@
 
 .lowercase {text-transform: none!important;}
 
+#landingCopy1 > span { display: none; }
+
 
 .xsmallFont{
 	font-size:11px;
